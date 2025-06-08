@@ -5,7 +5,7 @@ I was born (at a very young age) in Malaysia in 2003. I picked up C++ during sec
 
 |
 
-.. figure:: images/about.png
+.. figure:: images/about.jpg
    :width: 600
    :alt: Me winning a bronze award from Malaysian Computing Olympiad (MCO) 2019
 
