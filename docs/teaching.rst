@@ -12,7 +12,7 @@ My main goal as a TA is to help students learn. It is important to emphasize tha
 Teaching Philosophy
 -------------------
 
-*[to be constructed]*
+*[WIP]* idk man i just explain and they just get it like wth
 
 Teaching Feedback
 -----------------
