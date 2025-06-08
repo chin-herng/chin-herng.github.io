@@ -25,7 +25,7 @@ National University of Singapore (NUS)
 
 *Bachelor of Computing (Hons) in Computer Science*
 
-* 2022-2026 (expected)
+* 2022 - 2026 (expected)
 * Minor in Mathematics
 * GPA: 4.58/5 (First Class Honours)
 * Academic Year 2022/2023 Semester 1 Deans' List
