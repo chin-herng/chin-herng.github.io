@@ -28,8 +28,9 @@ National University of Singapore (NUS)
 * 2022 - 2026 (expected)
 * Minor in Mathematics
 * GPA: 4.58/5 (First Class Honours)
-* Academic Year 2022/2023 Semester 1 Deans' List
+* Academic Year 2022/2023 Semester 1 Dean's List
 * Academic Year 2023/2024 Honour List of Student Tutors
+* Academic Year 2024/2025 Semester 2 Dean's List
 
 Chong Hwa Independent High School, Kuala Lumpur
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
