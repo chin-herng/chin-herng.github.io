@@ -3,7 +3,7 @@ Teaching
 
 .. note::
 
-   I heavily adapted the layout of this page from `Dr. Eric Han's personal website <https://eric-han.com/teaching>`_. He was my tutor for *CS2109S Introduction to AI and Machine Learning* and he is also a very inspiring educator.
+  I heavily adapted the layout of this page from `Dr. Eric Han's personal website <https://eric-han.com/teaching>`_. He was my tutor for *CS2109S Introduction to AI and Machine Learning* and he is also a very inspiring educator.
 
 I have been an undergraduate teaching assistant (TA) for two courses per semester since my sophomore year. This means that I host weekly tutorial/laboratory sessions with a class size of less than 20 students for at least twice a week. These sessions usually involve a recap on lecture contents followed by a discussion on an assigned worksheet. I also contribute/check/grade assignment/exam questions as well as invigilate examinations to make sure no one is doing anything nasty.
 
@@ -17,71 +17,124 @@ Teaching Philosophy
 Teaching Feedback
 -----------------
 
-Over the years I have received many kind words from my students, which I am very grateful for. Here is one feedback from each of the courses I have taught in the past two semesters:
+Over the years I have received many kind words from my students, all of which I am very grateful for. Pressing the button below generates one random positive feedback.
 
-    "I could tell that he's extremely passionate about teaching right from the first tutorial! He's also extremely clear with his explanations, skipping basic concepts while spending sufficient time breaking down more complex ideas and the thought process behind how to devise various algos :) Overall super duper chill and friendly ta that I can approach if I have any doubts! I'm not the biggest fan of 2040s but he really makes it a lot more enjoyable yay"
+.. raw:: html
 
-    -- Student from CS2040S Data Structures and Algorithms, AY2024/25 Semester 2
+  <div style="margin-top: 2em;">
+    <div style="text-align: center;">
+      <button id="show-button" onclick="showRandomTestimonial()" style="
+        padding: 0.5em 1em;
+        background-color: var(--color-guilabel-background);
+        color: var(--color-background);
+        border: none;
+        border-radius: 6px;
+        font-size: 1em;
+        cursor: pointer;
+      ">
+        Show Another
+      </button>
+    </div>
 
-|
+    <div id="testimonial-box" style="
+      margin-top: 2em;
+      padding: 1em;
+      border-left: 4px solid var(--color-background-border);
+      background-color: var(--color-background-secondary);
+      color: var(--color-foreground-primary);
+    ">
+      <div id="testimonial-quote"></div>
+      <div id="testimonial-meta" style="
+        text-align: right;
+        font-weight: 600;
+        margin-top: 0.75em;
+        color: var(--color-foreground-primary);
+      "></div>
+    </div>
+  </div>
 
-    "Chin Herng is very supportive to provide insightful comments on how to solve hard problems easily with clear explaination of the logic behind his explaination. I can learn the concepts fast through his clear and patient explaination. Morever, he is helpful and kind to provide extra consultation even though it is midterm period. Thanks for his consultation, I can learn discrete math much easier."
+  <script>
+    let testimonials = [];
+    const quoteBox = document.getElementById("testimonial-quote");
+    const metaBox = document.getElementById("testimonial-meta");
 
-    -- Student from CS1231S Discrete Structures, AY2024/25 Semester 2
+    fetch("_static/testimonials.json")
+      .then(response => response.json())
+      .then(data => {
+        testimonials = flattenTestimonials(data);
+        showRandomTestimonial();
+      })
+      .catch(error => {
+        quoteBox.innerText = "Failed to load testimonials.";
+        metaBox.innerText = "";
+        console.error("Error loading testimonials:", error);
+      });
 
-|
+    function flattenTestimonials(data) {
+      const flat = [];
+      for (const semester in data) {
+        for (const course in data[semester]) {
+          for (const quote of data[semester][course]) {
+            flat.push({ quote, course, semester });
+          }
+        }
+      }
+      return flat;
+    }
 
-    "TA Chin Herng provided timely responses to my questions, even outside of CS2040S (help with understanding solutions to OA questions about topics such as divide and conquer, dynamic programming). He is also passionate and definitely knowledgeable about theoretical computer science, and DSA. He is approachable and i think he put a lot of thought into how to structure his labs and help us understand each topic. Despite his likely also buys schedule, he goes out of his way to provide explanations and examples, further than what was asked, showing his care for student's development and learning."
+    function showRandomTestimonial() {
+      if (testimonials.length === 0) return;
+      const t = testimonials[Math.floor(Math.random() * testimonials.length)];
+      quoteBox.innerText = `“${t.quote}”`;
+      metaBox.innerText = `— Student from ${t.course}, ${t.semester}`;
+    }
+  </script>
 
-    -- Student from CS2040S Data Structures and Algorithms, AY2024/25 Semester 1
+.. note::
 
-|
-
-    "nice fun cute"
-
-    -- Student from CS1231S Discrete Structures, AY2024/25 Semester 1
+  Special thanks to `Tan Chee Xiang <https://www.linkedin.com/in/palloncx/>`_ for suggesting the idea of a random testimonial generator. You can find the full list of testimonials in my GitHub repository.
 
 Effectiveness
 -------------
 
 .. list-table::
-   :widths: 16 48 16 16
-   :header-rows: 1
-   :align: center
+  :widths: 16 48 16 16
+  :header-rows: 1
+  :align: center
 
-   * - Academic Year
-     - Course
-     - Score
-     - Nomination
-   * - AY2024/25 S2
-     - CS2040S Data Structures and Algorithms
-     - 5.0/5.0
-     - 5/13 (38%)
-   * - AY2024/25 S2
-     - CS1231S Discrete Structures
-     - 4.4/5.0
-     - 6/22 (27%)
-   * - AY2024/25 S1
-     - CS2040S Data Structures and Algorithms
-     - 4.9/5.0
-     - 5/16 (31%)
-   * - AY2024/25 S1
-     - CS1231S Discrete Structures
-     - 4.8/5.0
-     - 13/37 (35%)
-   * - AY2023/24 S2
-     - CS2040S Data Structures and Algorithms
-     - 4.6/5.0
-     - 6/17 (35%)
-   * - AY2023/24 S2
-     - CS1231S Discrete Structures
-     - 4.9/5.0
-     - 6/19 (32%)
-   * - AY2023/24 S1
-     - TIC2001 Data Structures and Algorithms
-     - 4.3/5.0
-     - 2/10 (20%)
-   * - AY2023/24 S1
-     - CS1231S Discrete Structures
-     - 4.6/5.0
-     - 4/19 (21%)
+  * - Academic Year
+    - Course
+    - Score
+    - Nomination
+  * - AY2024/25 S2
+    - CS2040S Data Structures and Algorithms
+    - 5.0/5.0
+    - 5/13 (38%)
+  * - AY2024/25 S2
+    - CS1231S Discrete Structures
+    - 4.4/5.0
+    - 6/22 (27%)
+  * - AY2024/25 S1
+    - CS2040S Data Structures and Algorithms
+    - 4.9/5.0
+    - 5/16 (31%)
+  * - AY2024/25 S1
+    - CS1231S Discrete Structures
+    - 4.8/5.0
+    - 13/37 (35%)
+  * - AY2023/24 S2
+    - CS2040S Data Structures and Algorithms
+    - 4.6/5.0
+    - 6/17 (35%)
+  * - AY2023/24 S2
+    - CS1231S Discrete Structures
+    - 4.9/5.0
+    - 6/19 (32%)
+  * - AY2023/24 S1
+    - TIC2001 Data Structures and Algorithms
+    - 4.3/5.0
+    - 2/10 (20%)
+  * - AY2023/24 S1
+    - CS1231S Discrete Structures
+    - 4.6/5.0
+    - 4/19 (21%)
