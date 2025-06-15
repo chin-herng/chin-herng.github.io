@@ -92,7 +92,7 @@ Over the years I have received many kind words from my students, all of which I 
 
 .. note::
 
-  Special thanks to `Tan Chee Xiang <https://www.linkedin.com/in/palloncx/>`_ for suggesting the idea of a random testimonial generator. You can find the full list of testimonials in my GitHub repository.
+  Special thanks to `Tan Chee Xiang <https://www.linkedin.com/in/palloncx/>`_ for suggesting the idea of a random testimonial generator. You can find the full list of testimonials in my `GitHub repository <https://github.com/chin-herng/chin-herng.github.io/blob/main/docs/_static/testimonials.json>`_.
 
 Effectiveness
 -------------
