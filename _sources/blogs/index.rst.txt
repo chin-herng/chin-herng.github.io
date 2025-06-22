@@ -11,6 +11,7 @@ Blogs
    on-learning-and-teaching-mathematics/index
    nus-cs-course-reviews-part-3a/index
    nus-cs-course-reviews-part-5/index
+   recap-on-ay24-25-semester-2/index
 
 .. raw:: html
 
@@ -42,5 +43,9 @@ Blogs
      <a href="nus-cs-course-reviews-part-5/index.html" class="card">
        <h3>NUS CS Course Reviews Part 5</h3>
        <p>Review on CS3236 and CS5230</p>
+     </a>
+     <a href="recap-on-ay24-25-semester-2/index.html" class="card">
+       <h3>Recap on AY24/25 Semester 2</h3>
+       <p>An overview of my commitments and some remarks for the semester.</p>
      </a>
    </div>
