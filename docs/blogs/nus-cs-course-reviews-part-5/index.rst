@@ -1,6 +1,8 @@
 NUS CS Course Reviews Part 5
 ============================
 
+*Published: May 20, 2025*
+
 My Year 3 has come to an end. I picked up some basic Vietnamese and did an introductory course in economics, right when Donald Trump announced his Liberation Day tariffs. On the technical side, I did a course in information theory, as well as a course in computational complexity. On the teaching side, it has also been a lot of fun tutoring the semester-2 iteration of CS2040S for the second time, and tutoring CS1231S under a different course instructor for the first time.
 
 CS3236 Introduction to Information Theory

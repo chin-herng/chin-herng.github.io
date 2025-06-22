@@ -1,6 +1,8 @@
 NUS CS Course Reviews Part 3A
 =============================
 
+*Published: December 16, 2024*
+
 I covered all the CS Foundation Courses I have taken in part 1 to 3. One semester later, I took 2 more CS courses in the Algorithms & Theory focus area, and today I shall give my review to both of them.
 
 CS3231 Theory of Computation

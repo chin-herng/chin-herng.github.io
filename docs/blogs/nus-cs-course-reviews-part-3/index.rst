@@ -1,6 +1,8 @@
 NUS CS Course Reviews Part 3
 ============================
 
+*Published: August 9, 2024*
+
 The almost-one-month gap between part 2 and part 3 is mostly due to my engagement as a CS2040S TA in the upcoming semester. Long story short, I was told to finish 7 problem sets as soon as possible. This, together with course registration, internship work and my patriotism arising from the 2024 Paris Olympics contributed significantly to this delay.
 
 |

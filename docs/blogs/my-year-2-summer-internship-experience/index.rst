@@ -1,6 +1,8 @@
 My Year 2 Summer Internship Experience
 ======================================
 
+*Published: August 14, 2024*
+
 Apart from creating a personal website, one of the more significant things I have done during the recently-concluded summer vacation was that I did an internship as a software engineer in a startup going by the name of MixtureAI.
 
 I am aware that there are only at most 3 summer internships one can do over the course of a 4-year degree, and I am already on the second one, so I was really trying to get the most out of it. This is exactly why I have been documenting my experience throughout the journey, so that I can conveniently look back right now and have a clear record of what happened during the internship. I then sort of promised my supervisor to write a blog about the experience, so here I am.
