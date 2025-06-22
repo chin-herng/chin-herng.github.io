@@ -1,6 +1,8 @@
 On Learning and Teaching Mathematics
 ====================================
 
+*Published: December 15, 2024*
+
 The following content is adapted from my submission to the individual essay assignment of the course EL1101E The Nature of Language. The given instruction is to find some original data and discuss the data from the perspective of semantics, pragmatics, sociolinguistics, or ethnolinguistics, or a combination of these perspectives. Essentially, I took an introductory course in linguistics, wrote an essay for an assignment, and decided to put it here. Note that what follows is almost a direct copy-paste from my essay, e.g. I did not bother to modify the tone/wordings to align more closely to a blog post than a homework submission.
 
 As a person who enjoys mathematics and as an undergraduate tutor under NUS School of Computing currently in his third semester of teaching discrete mathematics, I constantly think about different ways to make learning mathematics easier and to teach mathematics more effectively. Motivated by Terence Tao's article `"There's More to Mathematics Than Rigour and Proofs" <https://terrytao.wordpress.com/career-advice/theres-more-to-mathematics-than-rigour-and-proofs/>`_, as well as drawing insights from the various perspectives of linguistics, I want to make an observation that in order to learn or teach any piece of maths (can be a mathematical definition, proof, or a result), one must break it down into its extension and intension, the latter of which is typically buried within the formalism of the language. Note that the discussion that follows will be focused on written maths.
