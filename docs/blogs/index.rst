@@ -9,6 +9,8 @@ Blogs
    nus-cs-course-reviews-part-3/index
    my-year-2-summer-internship-experience/index
    on-learning-and-teaching-mathematics/index
+   nus-cs-course-reviews-part-3a/index
+   nus-cs-course-reviews-part-5/index
 
 .. raw:: html
 
@@ -32,5 +34,13 @@ Blogs
      <a href="on-learning-and-teaching-mathematics/index.html" class="card">
        <h3>On Learning and Teaching Mathematics</h3>
        <p>My Essay Submission for <i>EL1101E The Nature of Language</i></p>
+     </a>
+     <a href="nus-cs-course-reviews-part-3a/index.html" class="card">
+       <h3>NUS CS Course Reviews Part 3A</h3>
+       <p>Review on CS3231 and CS4234</p>
+     </a>
+     <a href="nus-cs-course-reviews-part-5/index.html" class="card">
+       <h3>NUS CS Course Reviews Part 5</h3>
+       <p>Review on CS3236 and CS5230</p>
      </a>
    </div>
