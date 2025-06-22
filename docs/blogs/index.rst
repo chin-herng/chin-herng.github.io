@@ -8,6 +8,7 @@ Blogs
    nus-cs-course-reviews-part-2/index
    nus-cs-course-reviews-part-3/index
    my-year-2-summer-internship-experience/index
+   on-learning-and-teaching-mathematics/index
 
 .. raw:: html
 
@@ -27,5 +28,9 @@ Blogs
      <a href="my-year-2-summer-internship-experience/index.html" class="card">
        <h3>My Year 2 Summer Internship Experience</h3>
        <p>A mix of NLP Research and Software Engineering.</p>
+     </a>
+     <a href="on-learning-and-teaching-mathematics/index.html" class="card">
+       <h3>On Learning and Teaching Mathematics</h3>
+       <p>My Essay Submission for <i>EL1101E The Nature of Language</i></p>
      </a>
    </div>
