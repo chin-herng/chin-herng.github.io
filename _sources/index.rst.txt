@@ -20,3 +20,4 @@ My long-term goal is to get into academia and education where I can contribute t
    about_me
    teaching
    blogs/index
+   contact
