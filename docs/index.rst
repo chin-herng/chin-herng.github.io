@@ -10,10 +10,6 @@ I am mostly interested in the research of algorithms, theory of computation and 
 
 My long-term goal is to get into academia and education where I can contribute to the total sum of human knowledge.
 
-.. note::
-
-   This personal website is under active development to replace `my old website <https://chongahzong.wixsite.com/chin-herng>`_.
-
 .. toctree::
    :hidden:
 
