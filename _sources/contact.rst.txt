@@ -12,11 +12,11 @@ I wash my ears and listen to you respectfully.
         </div>
         <div class="contact-item">
             <i class="fab fa-linkedin"></i>    
-            <a href="https://linkedin.com/in/chong-chin-herng" target="_blank">linkedin.com/in/chong-chin-herng</a>
+            <a href="https://linkedin.com/in/chong-chin-herng" target="_blank">Chong Chin Herng</a>
         </div>
         <div class="contact-item">
             <i class="fab fa-github"></i>
-            <a href="https://github.com/chin-herng" target="_blank">github.com/chin-herng</a>
+            <a href="https://github.com/chin-herng" target="_blank">chin-herng</a>
         </div>
         <div class="contact-item">
             <i class="fab fa-instagram"></i>
