@@ -12,6 +12,7 @@ Blogs
    nus-cs-course-reviews-part-3a/index
    nus-cs-course-reviews-part-5/index
    recap-on-ay24-25-semester-2/index
+   on-my-22nd-birthday/index
 
 .. raw:: html
 
@@ -55,5 +56,10 @@ Blogs
        <h3>Recap on AY24/25 Semester 2</h3>
        <p>An overview of my commitments and some remarks for the semester.</p>
        <span class="card-date">Published on June 22, 2025</span>
+     </a>
+     <a href="on-my-22nd-birthday/index.html" class="card">
+       <h3>On My 22nd Birthday</h3>
+       <p>Random thoughts on the night before my 22nd birthday.</p>
+       <span class="card-date">Published on July 4, 2025</span>
      </a>
    </div>
