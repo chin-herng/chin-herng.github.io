@@ -63,8 +63,7 @@ __________________________________
 
 I took this in AY22/23 Sem 1 under Prof. Adi Yoga Sidi Prabawa. My final grade is A.
 
-Diagnostic Quizzes (5%)
-
+* Diagnostic Quizzes (5%)
 * PE1 (10%)
 * Midterm (10%)
 * PE2 (20%)

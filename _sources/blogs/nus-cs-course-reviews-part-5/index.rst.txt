@@ -79,7 +79,7 @@ I realized I have been going a bit off-topic so anyways here is an overview of w
 1. Models of computation and the asymptotic notation
 2. Different complexity measures and hierarchy, diagonalization
 3. :math:`\text{LOGSPACE}` and its relation to :math:`\text{P}`
-4. :math:`\text{NLOGSPACE}`, :math:`\text{ALOGSPACE}`, :math:`\text{ALOGSPACE}`, :math:`\text{NC}` and Savitch's theorem
+4. :math:`\text{NLOGSPACE}`, :math:`\text{ALOGSPACE}`, :math:`\text{POLYLOGSPACE}`, :math:`\text{NC}` and Savitch's theorem
 5. :math:`\text{LINSPACE}`, :math:`\text{NLINSPACE}`, :math:`\text{CSL}` and the LBA problems
 6. :math:`\text{P}`, :math:`\text{NP}`, :math:`\text{coNP}` and :math:`\text{NP}`-complete problems
 7. DPLL algorithms in :math:`\text{EXP}` and/or :math:`\text{EXPSPACE}`, the Exponential Time Hypothesis (ETH)
