@@ -86,7 +86,7 @@ I realized I have been going a bit off-topic so anyways here is an overview of w
 8. :math:`\text{RP}`, :math:`\text{PP}`, :math:`\text{BPP}`, the Valiant-Vazirani theorem and the complexity of counting
 9. Conditional lower bounds for problems in :math:`\text{P}`
 10. The complexity of multiplication and matrix multiplication, nondeterministic deciders
-11. The Poylnomial hierarchy and :math:`\text{AP} = \text{PSPACE}`
+11. The Polynomial hierarchy and :math:`\text{AP} = \text{PSPACE}`
 12. :math:`\text{PSPACE}` and beyond
 
 Seeing the different complexity classes and the relations between them makes me appreciate complexity theory as a subject that essentially classifies computational problems, or puzzles, into hierarchies of computational hardness. Some puzzles are easy to solve, like finding a certain element in a list. Some are hard to solve, but it is easy to verify a proposed solution, like sudoku. Are these two classes of puzzles the same? Some puzzles are not only hard to solve, but also hard to verify a proposed solution, like chess. If given a certain configuration on the chess board someone makes a move and claims that it is optimal, how do we know whether they're right?
