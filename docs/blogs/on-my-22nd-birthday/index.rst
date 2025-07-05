@@ -17,7 +17,7 @@ My life sort of had a turning point when I was 20. Between the year 2023 and 202
 
 And so I began taking care of myself.
 
-It was around this time I started this blog. I hope that through writing (like this one), I get to understand myself better, just as how taking notes makes you learn more effectively. I will not intend to give advice, for everyone's life is different. The point is to have a space on the Internet for which I can write whatever I want to write (although I ended up writing course reviews most of the time which is kinda funny)
+It was around this time I started this blog. I hope that through writing (like this one), I get to understand myself better, just as how taking notes makes you learn more effectively. I will not intend to give advice, for everyone's life is different. The point is to have a space on the Internet for which I can write whatever I want to write (although I ended up writing course reviews most of the time which is kinda funny).
 
 Why did I care about socialising so much? I feel like the way I grew up makes me tend to seek attention from people around me. People who know me know that I like cracking jokes all the time. I used to think that that makes me funny and brings me friends, and having many friends is impressive -- sort of the mindset of a typical primary school bully. As stupid as it sounds, it isn't until it has been put into words, and not many people out there are willing to criticise themselves like that. It is then I realised that I don't really need/deserve that much of socialising. All the time my intention has been a mix of wanting to impress people and wanting to genuinely connect with people, and it is important to distinguish when one outweighs another.
 
