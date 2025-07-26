@@ -85,7 +85,7 @@ I realized I have been going a bit off-topic so anyways here is an overview of w
 7. DPLL algorithms in :math:`\text{EXP}` and/or :math:`\text{EXPSPACE}`, the Exponential Time Hypothesis (ETH)
 8. :math:`\text{RP}`, :math:`\text{PP}`, :math:`\text{BPP}`, the Valiant-Vazirani theorem and the complexity of counting
 9. Conditional lower bounds for problems in :math:`\text{P}`
-10. The complexity of multiplication and matrix multiplication, nondeterministic deciders
+10. Non-trivial upper bounds for problems in :math:`\text{P}`, the Nondeterministic ETH (NETH)
 11. The Polynomial hierarchy and :math:`\text{AP} = \text{PSPACE}`
 12. :math:`\text{PSPACE}` and beyond
 
