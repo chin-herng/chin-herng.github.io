@@ -15,6 +15,6 @@ My long-term goal is to get into academia and education where I can contribute t
 
    about_me
    teaching
-   cs1231s-discrete-structures/index
    blogs/index
+   cs1231s-discrete-structures/index
    contact

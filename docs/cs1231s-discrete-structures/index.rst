@@ -6,14 +6,12 @@ CS1231S Discrete Structures
 
     tutorial-1/index
     
-I intend to post write-ups for each of the 11 tutorials in the Semester 1 iteration of CS1231S. A write-up consists of reviews of lecture contents that are relevant for the tutorial, as well as solutions to the tutorial questions. It is possible that I interleave reviews of lecture contents and discussions of tutorial questions for ease of discussion throughout the tutorial. Each write-up more or less describes how I will usually host my physical tutorial sessions.
-
 Below is an overview of the course, followed by some advice for students taking the course.
 
 Overview
 ________
 
-CS1231S is one of the first CS-coded courses every NUS Computer Science undergraduate will ever take that doesn't involve any coding. Instead, this course dives into the area of discrete mathematics, which is (up to some exceptions) essentially the intersection between computer science and mathematics. In MIT, this equivalent course seems to be "Mathematics for Computer Science", though that course covers many more equally important topics which we couldn't fit into CS1231S (e.g. asymptotic analysis). The NUS Mathematics Department offers an equivalent course known as MA1100 Basic Discrete Mathematics. The key difference between CS1231S and MA1100 lies on the topics covered towards the end of the semester. MA1100 goes into number theory, while CS1231S specialises into graph theory, which is in fact a lot more relevant to the field of computer science in general.
+CS1231S is one of the first CS-coded courses every NUS Computer Science undergraduate will ever take that doesn't involve any coding. Instead, this course dives into the area of discrete mathematics, which is (up to some exceptions) essentially the intersection between computer science and mathematics. In MIT, the equivalent course seems to be "Mathematics for Computer Science", though that course covers many more equally important topics which we couldn't fit into CS1231S (e.g. asymptotic analysis). The NUS Mathematics Department offers an equivalent course known as MA1100 Basic Discrete Mathematics. The key difference between CS1231S and MA1100 lies on the topics covered towards the end of the semester. MA1100 goes into number theory, while CS1231S specialises into graph theory, which is in fact a lot more relevant to the field of computer science in general.
 
 This course has two main objectives:
 
@@ -53,4 +51,4 @@ __________
 
 Aligning to the course objectives listed above, it is insufficient to only intuitively understand the mathematical concepts being covered, or to only understand how to read and write mathematical proofs. You need the former to deal with the big picture, and the latter to correctly deal with the finer details. When you need to write down a proof, understand that an intuition must first be formed. When you are reading mathematics, do not stop at the symbolic level, but aim to go further into the author's mind.
 
-With all of these out of the way, the course will spend the first two weeks on logic, to make sure we are familiar with the various logical connectives and the laws relating them, as well as working with quantifiers. We will then apply them in whatever further topics we explore (starting with set theory).
+With all of these out of the way, the course will spend the first two weeks on logic, to make sure we are familiar with the various logical connectives and the laws relating them, as well as working with quantifiers. We will then apply them in whatever further topics we explore.
