@@ -1,0 +1,14 @@
+.tables {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.center-table td {
+    text-align: center;
+}
+
+.center-table caption {
+    caption-side: bottom;
+}
