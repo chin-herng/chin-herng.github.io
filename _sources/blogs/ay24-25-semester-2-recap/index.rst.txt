@@ -1,9 +1,7 @@
-Recap on AY24/25 Semester 2
-===========================
+AY24/25 Semester 2 Recap
+========================
 
 *Published: June 22, 2025*
-
-This is no new content. I found myself yapping a little too much in the closing remarks of my most recent course reviews, so I decided to move that last section to make it standalone.
 
 This semester opened my eyes into the field of information theory and allowed me to dive into computational complexity theory. I am well aware that I am barely scratching the surface of both fields, and I will as much as possible continue to engage with these materials.
 
