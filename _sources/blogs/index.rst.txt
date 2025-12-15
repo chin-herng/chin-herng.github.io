@@ -4,6 +4,7 @@ Blogs
 .. toctree::
   :hidden:
 
+  nus-cs-course-reviews-part-6/index
   the-bridge-between-secondary-school-and-university-level-education/index
   on-my-22nd-birthday/index
   recap-on-ay24-25-semester-2/index
@@ -18,10 +19,16 @@ Blogs
 .. raw:: html
 
   <div class="card-grid">
+    <a href="nus-cs-course-reviews-part-6/index.html" class="card">
+      <h3>NUS CS Course Reviews Part 6</h3>
+      <p>Review on CS5234.</p>
+      <span class="card-date">Published on December 15, 2025</span>
+    </a>
     <a href="the-bridge-between-secondary-school-and-university-level-education/index.html" class="card">
       <h3>The Bridge Between Secondary School and University-Level Education</h3>
       <p>Exploring the relationships between exams and learning.</p>
       <span class="card-date">Published on July 14, 2025</span>
+    </a>
     <a href="on-my-22nd-birthday/index.html" class="card">
       <h3>On My 22nd Birthday</h3>
       <p>Random thoughts on the night before my 22nd birthday.</p>
