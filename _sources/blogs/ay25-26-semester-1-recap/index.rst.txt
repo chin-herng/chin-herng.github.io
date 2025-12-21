@@ -15,6 +15,12 @@ Metric TSP
 
 Back in 1992, `Arora et al. proved the highly celebrated PCP theorem <https://www.cs.umd.edu/~gasarch/TOPICS/pcp/ALMSS.pdf>`_ which implied a polynomial-time inapproximability result on :math:`\text{MAX-SAT}`. This result is to the theory of hardness of approximation what Cook's Theorem is to the theory of NP-completeness: once inapproximability of one problem has been non-trivially established, the inapproximability of many other problems can be obtained relatively easily via approximation-preserving reductions. Johan Håstad subsequently `improved the PCP theorem <https://www.cs.umd.edu/~gasarch/BLOGPAPERS/max3satl.pdf>`_ and obtained a number of optimal inapproximability results, one of which is that of :math:`\text{MAX-E3-LIN-2}`. Towards showing the inapproximability of :math:`\text{TSP}`, `Karpinski et al. <https://arxiv.org/pdf/1303.6437>`_ used a generalization of expander graphs (known as amplifiers) as gadgets and managed to reduce :math:`\text{MAX-E3-LIN-2}` to :math:`\text{TSP}`, arriving at an inapproximability bound of :math:`\frac{123}{122}`. The last bit of advancement came from `Chlebík and Chlebíková in 2020 <https://link.springer.com/article/10.1007/s10878-020-00659-0>`_, who parametrised the use of bi-wheel amplifers and found a better admissible set of parameters which led to a modest improvement in the inapproximability bound to :math:`\frac{117}{116}`.
 
+.. figure:: images/ramanujan_expander_graph.png
+   :width: 300
+   :alt: A Ramanujan expander graph. Expander graphs are important gadgets in the theory of hardness of approximation.
+
+   `A Ramanujan expander graph. Expander graphs are important gadgets in reducing vertex degrees. <https://www.researchgate.net/figure/Ramanujan-expander-graph-GV-E-X-X-5-17-with-18-nodes-where-each-node-has-6_fig2_224675919>`_
+
 Following this direction, improving on the current inapproximability bound boils down to finding better admissible set of parameters. The admissibility of a set of parameters is defined based on the existence of bi-wheel amplifiers with such parameters. In turn, such existence is typically proven using probabilistic methods. It follows that the search for better parameters is essentially a problem in the area of combinatorics and graph theory.
 
 On the other hand, `Christofides' algorithm <https://en.wikipedia.org/wiki/Christofides_algorithm>`_ serves as an upper bound by deterministically achieving an approximation factor of :math:`\frac{3}{2}`. Remarkably, if we allow randomization, `there is an algorithm by Karlin et al. in 2023 <https://arxiv.org/pdf/2007.01409>`_ achieving factor :math:`\frac{3}{2} - \epsilon` for some :math:`\epsilon > 10^{-34}` in expectation. The open problem is thus to close the gap between :math:`\frac{117}{116}` and :math:`\frac{3}{2}`.
@@ -32,6 +38,12 @@ We are particularly interested in the direction of lower bounds. In particular, 
 
 For now, I leave it to the interested readers to ask further questions about these results in attempting to improve upon them :)
 
+.. figure:: images/geogebra.png
+   :width: 300
+   :alt: Towards reducing tripartite vertex cover to (1, 3)-TSPN instances, visualized in GeoGebra.
+
+   Towards reducing tripartite vertex cover to :math:`(1, 3)\text{-TSPN}` instances, visualized in GeoGebra.
+
 MA2214 Combinatorics and Graphs I
 _________________________________
 
@@ -45,6 +57,12 @@ I felt mildly disappointed to learn that the course is designed to be more appli
 
 As for the exams, they are designed to have an overwhelming number of problems to solve in an extremely tight time constraint. I did not do well in these exams, but I maintain the stance that the course materials are easy. Being able to do well in the exams required additional strategizing efforts. For example, the final exam had a total mark of 120 but started with 30 True/False questions worth 1 mark each. It is rather obvious to not spend too much time on the True/False questions, but I personally just couldn't care less. I had lots of fun attempting the True/False questions but I ultimately ran out of time to attempt questions with very high weightages. I'm pretty sure I didn't score well in the end.
 
+.. figure:: images/ma2214.png
+   :width: 300
+   :alt: One of problems discussed in MA2214 to illustrate the power of recurrence relations. We want to count the number of parallelograms for any given n.
+
+   `One of problems discussed in MA2214 to illustrate the power of recurrence relations. We want to count the number of parallelograms for any given n. <https://www.isinj.com/mt-amc12/Principles%20and%20Techniques%20in%20Combinatorics%20-%20Chen%20Chuan-Chong,%20Koh%20Khee-Meng%20(WS,1992).pdf>`_
+
 Course administration seemed objectively bad. The lecturer does not seem to reply to my emails. Texts in lecture slides often overflow and go out of frames. Tutorials begin on Wednesdays but most of the time the tutorial questions only get uploaded on Tuesdays. The midterm itself has its starting time heavily delayed due to printing problems (which, to be fair, may or may not be avoidable). I only received my graded midterm scripts in week 13.
 
 The materials covered in the course is beautiful for its own sake. The lecturer being humorous made me enjoyed attending them and paying attention to any new content along the way. There are materials that I have informally read about every once in a while but never got to learn properly. This included generating functions and solving linear recurrence relations. This course did a decent job covering those topics. As for graph theory, I find the Havel-Hakimi theorem pretty cool, and this course did a decent job introducing me to spectral graph theory through the Laplacian matrix representation of graphs.
@@ -54,7 +72,7 @@ For my next and final semester, I look forward to the (same) lecturer doing a be
 Teaching
 ________
 
-As an undergraduate, this is my last semester teaching CS1231S, and last semester teaching the "practical-style" CS2040S under Prof. Halim.
+As an undergraduate, this is my last semester teaching CS1231S, and last semester teaching the "practical-style" CS2040S under `Prof. Halim <https://visualgo.net/en>`_.
 
 CS1231S
 ^^^^^^^
@@ -63,7 +81,13 @@ Here's a perhaps not-so-fun-fact: I originally planned to make full-blown tutori
 
 Speaking of not finishing, I particularly did not expect time management to become an issue this semester. Honestly, I feel like I have had so much experience to the point where I have too many remarks to share per tutorial question, including even those simpler warm-up ones. It did not occur to me that I needed to start making decisions on what to say and what not to say. It is no longer practical to dump whatever information I know as fast as possible. It also doesn't help that my tutorial room is being used to host practical exams every two weeks, so I had to release students earlier than intended.
 
-I had the opportunity to set some counting problems for the second assignment. With the help of MA2214 resources, a textbook, and some personal inspirations, I proposed a set of questions, a few of which made it in the assignment. In short, it didn't go well. Many of the wordings in the questions ended up being ambiguous enough that it needed clarifications after release. I genuinely regret not spending enough time thinking through my wordings and ensuring that they're clear.
+I had the opportunity to set some counting problems for the second assignment. With the help of MA2214 resources, a textbook, and some personal inspirations, I proposed a set of questions, a few of which made it in the assignment (including one in which my friend Pallon are among the people being seated into chairs). In short, it didn't go well. Many of the wordings in the questions ended up being ambiguous enough that it needed clarifications after release. I genuinely regret not spending enough time thinking through my wordings and ensuring that they're clear.
+
+.. figure:: images/meme.png
+   :width: 600
+   :alt: Relevant meme to avoid wall of text.
+
+   `Relevant meme to avoid wall of text. <https://www.reddit.com/r/mathmemes/comments/1lgc6ro/average_combinatorics_class/>`_
 
 I particularly want to spend a few paragraphs discussing a little bit about the inconvenient formalization of counting problems. For example, consider two formulations of the same counting problem:
 
@@ -83,6 +107,12 @@ or equivalently,
 Now the difference is stark. The answer to the counting problem above is :math:`1` if :math:`r\leq n` and :math:`0` otherwise, because if all chairs are identical, it does not matter which chair seats which person. As long as there are at least as many chairs as there are people, there will be one and only one possible arrangement, in which exactly :math:`r` chairs seat one person each, and the remanining chairs do not.
 
 The catch is that my entire reasoning depends on the interpretation of the word "identical". If everyone agrees that question 3 interprets as question 4, then there should be no dispute on the answer. Those who got the "wrong answer", after all, might not be wrong due to combinatorial misconceptions. What if identical chairs meant that the chairs individually looked the same, but they are still arranged in a row, and we regard two arrangements different if the position of some person is different?
+
+.. figure:: images/chairs.jpg
+   :width: 300
+   :alt: Do you consider the chairs here identical?
+
+   `Do you consider the chairs here identical? <https://www.istockphoto.com/photo/row-of-five-white-chairs-on-gray-wall-background-in-office-or-living-room-nobody-gm1352654720-427999696>`_
 
 With a little bit of thought, one recognizes that the issue is more linguistic than mathematical. Well, the example above is admittedly a silly one, since it is a well-established convention (by `Gian-Carlo Rota's classification of distribution problems <https://en.wikipedia.org/wiki/Twelvefold_way>`_, for example) what it means for balls/bins to be distinct/identical. My point is that if we all agree to ask counting problems in the form similar to question 1 and 3, then it is of utmost importance that we communicate the terminological conventions clearly when teaching combinatorics. This aligns with our endeavour of teaching students how to read mathematics.
 
