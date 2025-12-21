@@ -61,9 +61,9 @@ I summarise all my major commitments throughout each semester and give some brie
 .. raw:: html
 
   <div class="card-grid">
-    <a href="" class="card">
+    <a href="ay25-26-semester-1-recap/index.html" class="card">
       <h3>AY25/26 Semester 1</h3>
-      <span class="card-date">Published on ???</span>
+      <span class="card-date">Published on December 21, 2025</span>
     </a>
     <a href="ay24-25-semester-2-recap/index.html" class="card">
       <h3>AY24/25 Semester 2</h3>
