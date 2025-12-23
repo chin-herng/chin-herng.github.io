@@ -3,7 +3,7 @@ AY25-26 Semester 1 Recap
 
 *Published: December 21, 2025*
 
-Hope everyone has been enjoying the winter solstice. This semester is characterised by the relatively small number of major commitments I have. My FYP has officially begun. I took my second graduate-level course, i.e. CS5234 Algorithms at Scale, the review of which can be found in `the blog I published a few days ago <https://chin-herng.github.io/blogs/nus-cs-course-reviews-part-6/index.html>`_. Also, for reasons to be clarified later, I took MA2214 Combinatorics and Graphs I. On the teaching side, I taught CS1231S and CS2040S as usual.
+Hope everyone has been enjoying the winter solstice. This semester is characterised by the relatively small number of major commitments I have. This does not mean that I had more time to spare, but rather I get to spent more time on each commitment. My FYP has officially begun. I took my second graduate-level course, i.e. CS5234 Algorithms at Scale, the review of which can be found in `the blog I published a few days ago <https://chin-herng.github.io/blogs/nus-cs-course-reviews-part-6/index.html>`_. Also, for reasons to be clarified later, I took MA2214 Combinatorics and Graphs I. On the teaching side, I taught CS1231S and CS2040S as usual.
 
 FYP
 ___
