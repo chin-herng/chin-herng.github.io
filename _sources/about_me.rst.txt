@@ -31,6 +31,7 @@ National University of Singapore (NUS)
 * Academic Year 2022/2023 Semester 1 Dean's List
 * Academic Year 2023/2024 Honour List of Student Tutors
 * Academic Year 2024/2025 Semester 2 Dean's List
+* Academic Yaer 2024/2025 Honour List of Student Tutors
 
 Chong Hwa Independent High School, Kuala Lumpur
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
