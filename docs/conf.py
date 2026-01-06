@@ -7,7 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'Chin Herng'
-copyright = '2025, Chin Herng'
+copyright = '2026, Chin Herng'
 author = 'Chin Herng'
 
 # -- General configuration ---------------------------------------------------
