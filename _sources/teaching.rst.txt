@@ -106,6 +106,14 @@ Effectiveness
     - Course
     - Score
     - Nomination
+  * - AY2025/26 S1
+    - CS2040S Data Structures and Algorithms
+    - 4.8/5.0
+    - 13/24 (54%)
+  * - AY2025/26 S1
+    - CS1231S Discrete Structures
+    - 4.6/5.0
+    - 9/18 (50%)
   * - AY2024/25 S2
     - CS2040S Data Structures and Algorithms
     - 5.0/5.0
