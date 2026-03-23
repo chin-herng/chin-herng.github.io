@@ -121,7 +121,7 @@ CS2040S
 
 CS2040S this semester had more enrollments than expected. This is largely due to the increase of the number of people failing the course in the previous semester. Not that the students became less competent, but rather the teaching team has significantly increased the passing threshold.
 
-Consequently, with only 8 TAs teaching tutorial sessions, the class size increases and so does the responsibility of each TA. I did end up spending more time hosting consultation sessions especially to help struggling students. It is with great honour to find that they all ended up doing pretty well! I am 90% confident that 100% of them is failing this time :)
+Consequently, with only 8 TAs teaching tutorial sessions, the class size increases and so does the responsibility of each TA. I did end up spending more time hosting consultation sessions especially to help struggling students. It is with great honour to find that they all ended up doing pretty well! I am 90% confident that 100% of them is passing this time :)
 
 I cannnot describe in words how fulfulling it is to see students that you know are struggling, slowly locking in and doing all they could to learn. Teaching is a thing I tend to overdo to a large extent, yet every time I look back, I find no regret, for students' achievements and appreciations are the best form of affirmation that I am indeed not wasting my time. This also applies to CS1231S but has been especially prominent in this iteration of CS2040S.
 
