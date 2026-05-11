@@ -1,7 +1,7 @@
 About Me
 ========
 
-I was born (at a very young age) in Malaysia in 2003. I picked up C++ during secondary school, and got very interested in mathematics and coding. Prior to being admitted into NUS, I spend a lot of time taking part in mathematical and informatics olympiads. I was in the Malaysian team in Asia-Pacific Informatics Olympiad (APIO) 2021. As an undergraduate majoring in Computer Science, I developed strong interests towards theoretical computer science and discrete mathematics, and found passion in teaching as a meaningful activity that coincidentally lies within my capabilities.
+I was born (at a very young age) in Malaysia in 2003. I picked up C++ during secondary school, and got very interested in mathematics and coding. Prior to being admitted into NUS, I spent a lot of time taking part in mathematical and informatics olympiads. I was in the Malaysian team in Asia-Pacific Informatics Olympiad (APIO) 2021. As an undergraduate majoring in Computer Science, I developed strong interests towards theoretical computer science, and found passion in teaching as a meaningful activity that coincidentally lies within my capabilities.
 
 |
 
@@ -25,7 +25,7 @@ National University of Singapore (NUS)
 
 *Bachelor of Computing (Hons) in Computer Science*
 
-* 2022 - 2026 (expected)
+* 2022 - 2026
 * Minor in Mathematics
 * GPA: 4.58/5 (First Class Honours)
 * Academic Year 2022/2023 Semester 1 Dean's List
@@ -40,7 +40,6 @@ Chong Hwa Independent High School, Kuala Lumpur
 * Unified Examination Certificate (UEC) with 4A1 and 4A2
 * Represented Malaysia in the Asia-Pacific Informatics Olympiad (APIO) 2021
 * Course Instructor of Computer Society from 2020 to 2021
-* Chairman of Recycling Society from 2019 to 2020
 
 |
 
