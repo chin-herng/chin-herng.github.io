@@ -5,6 +5,7 @@ Blogs
   :hidden:
   :hide-toc:
 
+  nus-cs-course-reviews-part-7/index
   nus-cs-course-reviews-part-6/index
   the-bridge-between-secondary-school-and-university-level-education/index
   on-my-22nd-birthday/index
@@ -27,6 +28,10 @@ My NUSMods comments should lead to here.
 .. raw:: html
 
   <div class="card-grid">
+    <a href="nus-cs-course-reviews-part-7/index.html" class="card">
+      <h3>CS5275</h3>
+      <span class="card-date">Published on May 12, 2025</span>
+    </a>
     <a href="nus-cs-course-reviews-part-6/index.html" class="card">
       <h3>CS5234</h3>
       <span class="card-date">Published on December 15, 2025</span>
