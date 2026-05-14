@@ -1,7 +1,7 @@
 NUS CS Course Reviews Part 7
 ============================
 
-*Published: May 15, 2026*
+*Published: May 14, 2026*
 
 My last semester as an undergraduate has come to an end, and I would say that it ended on a high note, one of the reasons being that I took CS5275.
 
