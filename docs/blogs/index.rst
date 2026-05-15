@@ -15,7 +15,7 @@ My NUSMods comments should lead to here.
   <div class="card-grid">
     <a href="nus-cs-course-reviews-part-7/index.html" class="card">
       <h3>CS5275</h3>
-      <span class="card-date">Published on May 16, 2026</span>
+      <span class="card-date">Published on May 14, 2026</span>
     </a>
     <a href="nus-cs-course-reviews-part-6/index.html" class="card">
       <h3>CS5234</h3>
@@ -53,7 +53,7 @@ I summarise all my major commitments throughout each semester and give some brie
   <div class="card-grid">
     <a href="ay25-26-semester-2-recap/index.html" class="card">
       <h3>AY25/26 Semester 2</h3>
-      <span class="card-date">Published on May 15, 2026</span>
+      <span class="card-date">Published on May 16, 2026</span>
     </a>
     <a href="ay25-26-semester-1-recap/index.html" class="card">
       <h3>AY25/26 Semester 1</h3>
