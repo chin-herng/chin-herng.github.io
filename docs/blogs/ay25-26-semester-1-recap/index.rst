@@ -1,4 +1,4 @@
-AY25-26 Semester 1 Recap
+AY25/26 Semester 1 Recap
 ========================
 
 *Published: December 21, 2025*
