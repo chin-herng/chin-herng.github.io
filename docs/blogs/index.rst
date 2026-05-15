@@ -1,24 +1,9 @@
 Blogs
 =====
 
-.. toctree::
-  :hidden:
-  :hide-toc:
+Most of the contents here should be more subjective than technical. Reach out to me if you wish to let me know what you think. I look forward to academic discussions on debatable topics.
 
-  nus-cs-course-reviews-part-7/index
-  nus-cs-course-reviews-part-6/index
-  the-bridge-between-secondary-school-and-university-level-education/index
-  on-my-22nd-birthday/index
-  recap-on-ay24-25-semester-2/index
-  nus-cs-course-reviews-part-5/index
-  nus-cs-course-reviews-part-3a/index
-  on-learning-and-teaching-mathematics/index
-  my-year-2-summer-internship-experience/index
-  nus-cs-course-reviews-part-3/index
-  nus-cs-course-reviews-part-2/index
-  nus-cs-course-reviews-part-1/index
-
-The contents here should be more subjective than technical. Reach out to me if you wish to let me know what you think. I look forward to academic discussions on debatable topics.
+Not a single word I write is AI-generated. As such, if you find typos, let me know.
 
 Course Reviews
 ______________
@@ -30,7 +15,7 @@ My NUSMods comments should lead to here.
   <div class="card-grid">
     <a href="nus-cs-course-reviews-part-7/index.html" class="card">
       <h3>CS5275</h3>
-      <span class="card-date">Published on May 14, 2025</span>
+      <span class="card-date">Published on May 16, 2026</span>
     </a>
     <a href="nus-cs-course-reviews-part-6/index.html" class="card">
       <h3>CS5234</h3>
@@ -66,6 +51,10 @@ I summarise all my major commitments throughout each semester and give some brie
 .. raw:: html
 
   <div class="card-grid">
+    <a href="ay25-26-semester-2-recap/index.html" class="card">
+      <h3>AY25/26 Semester 2</h3>
+      <span class="card-date">Published on May 15, 2026</span>
+    </a>
     <a href="ay25-26-semester-1-recap/index.html" class="card">
       <h3>AY25/26 Semester 1</h3>
       <span class="card-date">Published on December 21, 2025</span>
