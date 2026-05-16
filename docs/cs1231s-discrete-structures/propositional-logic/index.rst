@@ -1,6 +1,10 @@
 Propositional Logic
 ===================
 
+.. note::
+  
+  The "Question x" dropdowns correspond to the week 3 tutorial questions. For obvious reasons, students are encouraged to attempt the questions before revealing the answers.
+
 While application of logic appears to be intuitive, the study of logic itself can get quite philosophical at times, having been developed from the movement of `analytic philosophy <https://en.wikipedia.org/wiki/Analytic_philosophy>`_.
 
 Statements and Statement Variables
@@ -1384,7 +1388,7 @@ This result along with the previous one tell us that $n$ is even if and only if 
 
 There is in fact a direct proof for the statement above:
 
-.. figure:: contraposition_meme.png
+.. figure:: images/contraposition_meme.png
    :alt: A meme on a proof by contraposition
 
    Source: `https://mathstodon.xyz/@VinceVatter/113873301556475236 <https://mathstodon.xyz/@VinceVatter/113873301556475236>`_

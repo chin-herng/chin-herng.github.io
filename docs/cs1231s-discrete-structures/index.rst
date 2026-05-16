@@ -4,7 +4,20 @@ CS1231S Discrete Structures
 .. toctree::
     :hidden:
 
-    tutorial-1/index
+    propositional-logic/index
+    cardinality/index
+
+.. note::
+    The current set of CS1231S notes is incomplete. The following is a list of missing topics:
+
+    - Predicate Logic
+    - Set Theory
+    - Relations
+    - Functions
+    - Mathematical Induction
+    - Trees
+
+    My notes for Cardinality, Counting, Probability and Introductory Graph Theory assume knowledge of everything up to and including Mathematical Induction.
     
 Below is an overview of the course, followed by some advice for students taking the course.
 
@@ -38,7 +51,7 @@ _____________________
 
 Mathematical symbols and notations are created to facilitate communication of mathematical ideas. For this reason, the language is artifically created and is designed to be unambiguous and effective, without the need for "politeness" considerations. CS1231S aims to teach us most of the conventional symbols and notations, so that we can start to read and write in the language of mathematics.
 
-But let's not forget about intuitions. Suppose we have formed the necessary intuitions and are ready to write a proof. Due to how the language of mathematics is designed, we often find ourselves having to formally write down our ideas is a rather contrived manner. The resulting proof often resembles nothing like what went on in our mind initially. I like to say that the intuitions are "buried within" the ocean of formalisms. Consequently, written mathematics presented to the general public appear to be cryptic and overwhelming.
+But let's not forget about intuitions. Suppose we have formed the necessary intuitions and are ready to write a proof. Due to how the language of mathematics is designed, we often find ourselves having to formally write down our ideas is a rather contrived manner. The resulting proof often resembles nothing like what went on in our mind initially. I like to say that the intuitions are "buried within" the ocean of formalisms. Consequently, written mathematics presented to the general public often appears to be cryptic and overwhelming.
 
 We should therefore also be aware of this phenomenon when we try to read a piece of mathematics (e.g. when digesting the various definitions, theorems and proofs in the course). It is insufficient to only understand what the symbols and notations mean in their literal sense. We should also start to think about what the author was thinking when they wrote down this piece of mathematics. We should aim to understand not just what the symbols are doing, but also what the author is trying to do. Apart from allowing us a deeper understanding in our reading, we also allow room to still understand the author to some extent even if a symbolic error is made in the final proof.
 
@@ -49,6 +62,6 @@ We should therefore also be aware of this phenomenon when we try to read a piece
 Conclusion
 __________
 
-Aligning to the course objectives listed above, it is insufficient to only intuitively understand the mathematical concepts being covered, or to only understand how to read and write mathematical proofs. You need the former to deal with the big picture, and the latter to correctly deal with the finer details. When you need to write down a proof, understand that an intuition must first be formed. When you are reading mathematics, do not stop at the symbolic level, but aim to go further into the author's mind.
+Aligning to the course objectives listed above, it is insufficient to only intuitively understand the mathematical concepts being covered, or to only understand how to read and write mathematical proofs. You need the former to deal with the bigger picture, and the latter to correctly deal with the finer details. When you are asked to write down a proof, understand that an intuition must first be formed before you can even start to write anything down. When you are reading mathematics, do not stop at the symbolic level, but aim to go further into the author's mind.
 
 With all of these out of the way, the course will spend the first two weeks on logic, to make sure we are familiar with the various logical connectives and the laws relating them, as well as working with quantifiers. We will then apply them in whatever further topics we explore.
