@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Propositional Logic" href="tutorial-1/index.html" /><link rel="prev" title="Blogs" href="../blogs/index.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Propositional Logic" href="propositional-logic/index.html" /><link rel="prev" title="Blogs" href="../blogs/index.html" />
 
     <!-- Generated with Sphinx 7.1.2 and Furo 2023.09.10 -->
         <title>CS1231S Discrete Structures - Chin Herng</title>
@@ -166,7 +166,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../teaching.html">Teaching</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../blogs/index.html">Blogs</a></li>
 <li class="toctree-l1 current has-children current-page"><a class="current reference internal" href="#">CS1231S Discrete Structures</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of CS1231S Discrete Structures</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="tutorial-1/index.html">Propositional Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="propositional-logic/index.html">Propositional Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cardinality/index.html">Cardinality</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact</a></li>
@@ -208,6 +209,19 @@
 <h1>CS1231S Discrete Structures<a class="headerlink" href="#cs1231s-discrete-structures" title="Permalink to this heading">#</a></h1>
 <div class="toctree-wrapper compound">
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The current set of CS1231S notes is incomplete. The following is a list of missing topics:</p>
+<ul class="simple">
+<li><p>Predicate Logic</p></li>
+<li><p>Set Theory</p></li>
+<li><p>Relations</p></li>
+<li><p>Functions</p></li>
+<li><p>Mathematical Induction</p></li>
+<li><p>Trees</p></li>
+</ul>
+<p>My notes for Cardinality, Counting, Probability and Introductory Graph Theory assume knowledge of everything up to and including Mathematical Induction.</p>
+</div>
 <p>Below is an overview of the course, followed by some advice for students taking the course.</p>
 <section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h2>
@@ -230,7 +244,7 @@
 <section id="symbols-and-notations">
 <h2>Symbols and Notations<a class="headerlink" href="#symbols-and-notations" title="Permalink to this heading">#</a></h2>
 <p>Mathematical symbols and notations are created to facilitate communication of mathematical ideas. For this reason, the language is artifically created and is designed to be unambiguous and effective, without the need for “politeness” considerations. CS1231S aims to teach us most of the conventional symbols and notations, so that we can start to read and write in the language of mathematics.</p>
-<p>But let’s not forget about intuitions. Suppose we have formed the necessary intuitions and are ready to write a proof. Due to how the language of mathematics is designed, we often find ourselves having to formally write down our ideas is a rather contrived manner. The resulting proof often resembles nothing like what went on in our mind initially. I like to say that the intuitions are “buried within” the ocean of formalisms. Consequently, written mathematics presented to the general public appear to be cryptic and overwhelming.</p>
+<p>But let’s not forget about intuitions. Suppose we have formed the necessary intuitions and are ready to write a proof. Due to how the language of mathematics is designed, we often find ourselves having to formally write down our ideas is a rather contrived manner. The resulting proof often resembles nothing like what went on in our mind initially. I like to say that the intuitions are “buried within” the ocean of formalisms. Consequently, written mathematics presented to the general public often appears to be cryptic and overwhelming.</p>
 <p>We should therefore also be aware of this phenomenon when we try to read a piece of mathematics (e.g. when digesting the various definitions, theorems and proofs in the course). It is insufficient to only understand what the symbols and notations mean in their literal sense. We should also start to think about what the author was thinking when they wrote down this piece of mathematics. We should aim to understand not just what the symbols are doing, but also what the author is trying to do. Apart from allowing us a deeper understanding in our reading, we also allow room to still understand the author to some extent even if a symbolic error is made in the final proof.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -239,7 +253,7 @@
 </section>
 <section id="conclusion">
 <h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading">#</a></h2>
-<p>Aligning to the course objectives listed above, it is insufficient to only intuitively understand the mathematical concepts being covered, or to only understand how to read and write mathematical proofs. You need the former to deal with the big picture, and the latter to correctly deal with the finer details. When you need to write down a proof, understand that an intuition must first be formed. When you are reading mathematics, do not stop at the symbolic level, but aim to go further into the author’s mind.</p>
+<p>Aligning to the course objectives listed above, it is insufficient to only intuitively understand the mathematical concepts being covered, or to only understand how to read and write mathematical proofs. You need the former to deal with the bigger picture, and the latter to correctly deal with the finer details. When you are asked to write down a proof, understand that an intuition must first be formed before you can even start to write anything down. When you are reading mathematics, do not stop at the symbolic level, but aim to go further into the author’s mind.</p>
 <p>With all of these out of the way, the course will spend the first two weeks on logic, to make sure we are familiar with the various logical connectives and the laws relating them, as well as working with quantifiers. We will then apply them in whatever further topics we explore.</p>
 </section>
 </section>
@@ -249,7 +263,7 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="tutorial-1/index.html">
+          <a class="next-page" href="propositional-logic/index.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>

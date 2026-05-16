@@ -1,0 +1,454 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Contact" href="../../contact.html" /><link rel="prev" title="Propositional Logic" href="../propositional-logic/index.html" />
+
+    <!-- Generated with Sphinx 7.1.2 and Furo 2023.09.10 -->
+        <title>Cardinality - Chin Herng</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=36a5483c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/card-grid.css?v=9aabcc79" />
+    <link rel="stylesheet" type="text/css" href="../../_static/center-table.css?v=ac081ad8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/contact-list.css?v=86a06382" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/solid.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">Chin Herng</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+  
+  
+  <span class="sidebar-brand-text">Chin Herng</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../about_me.html">About Me</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../teaching.html">Teaching</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../blogs/index.html">Blogs</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">CS1231S Discrete Structures</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of CS1231S Discrete Structures</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../propositional-logic/index.html">Propositional Logic</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Cardinality</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="cardinality">
+<h1>Cardinality<a class="headerlink" href="#cardinality" title="Permalink to this heading">#</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The “Exercise” dropdowns roughly corresponds to week 10 tutorial questions. No solution is provided, reason being a mix of me being lazy and the answers being available online anyways.</p>
+</div>
+<p>Being an essential part of set theory, cardinality studies the sizes of sets. For finite sets, this notion is intuitive: the cardinality of a finite set <span class="math notranslate nohighlight">\(A\)</span> is the number of elements in <span class="math notranslate nohighlight">\(A\)</span>. Let us try to define “number of elements” in a more precise language.</p>
+<div class="admonition-definition-cardinality-of-a-finite-set admonition">
+<p class="admonition-title">Definition: Cardinality of a Finite Set</p>
+<p>The cardinality of a finite set <span class="math notranslate nohighlight">\(A\)</span> is the unique integer <span class="math notranslate nohighlight">\(n\)</span> such that there exists a bijection <span class="math notranslate nohighlight">\(f : \{1, 2, \cdots , n\}\rightarrow A\)</span>.</p>
+</div>
+<p>This formal definition makes sense if we think about <span class="math notranslate nohighlight">\(f\)</span> as a “counting function”. When we manually count the elements of <span class="math notranslate nohighlight">\(A\)</span>, we point to some element and say “this is element <span class="math notranslate nohighlight">\(1\)</span>”, then we point to a second element and say “this is element <span class="math notranslate nohighlight">\(2\)</span>”, and so on. It does not matter which element is assigned to which number, for we know that if <span class="math notranslate nohighlight">\(A\)</span> has <span class="math notranslate nohighlight">\(n\)</span> elements, we will eventually stop at the number <span class="math notranslate nohighlight">\(n\)</span>. Similarly, starting from <span class="math notranslate nohighlight">\(1\)</span>, the function <span class="math notranslate nohighlight">\(f\)</span> associates every number to a unique element of <span class="math notranslate nohighlight">\(A\)</span> (injective because of the uniqueness), in a way that every element of <span class="math notranslate nohighlight">\(A\)</span> is being associated a number (surjective). There is exactly one possible <span class="math notranslate nohighlight">\(n\)</span> that the function will stop at, and that is intuitively the number of elements of <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<section id="countability-and-countably-infinity">
+<h2>Countability and Countably Infinity<a class="headerlink" href="#countability-and-countably-infinity" title="Permalink to this heading">#</a></h2>
+<p>Mathematicians used to think that the notion of cardinality does not get more interesting than that. For infinite sets, they simply declare their cardinality to be undefined (using the symbol <span class="math notranslate nohighlight">\(\infty\)</span>) and call it a day. This is until Georg Cantor discovered that there are different types of <span class="math notranslate nohighlight">\(\infty\)</span>. More precisely, there is a piece of intuition which, when formalized, allows us to compare infinite sets and say which ones are “larger” than which other ones. Let us see how.</p>
+<div class="admonition-definition-same-cardinality admonition">
+<p class="admonition-title">Definition: Same Cardinality</p>
+<p>Two sets <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are said to have the same cardinality, denoted <span class="math notranslate nohighlight">\(| A | = | B | \)</span>, if and only if there exists a bijection <span class="math notranslate nohighlight">\(f : A\rightarrow B\)</span>. Note that “same cardinality” is an equivalence relation (prove it!).</p>
+</div>
+<p>This makes sense for finite sets. If two finite sets <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> have the same number of elements, it must be possible to transform every element in <span class="math notranslate nohighlight">\(A\)</span> to a unique element in <span class="math notranslate nohighlight">\(B\)</span>, in a way that every element in <span class="math notranslate nohighlight">\(B\)</span> has a unique preimage in <span class="math notranslate nohighlight">\(A\)</span>. For example, when <span class="math notranslate nohighlight">\(A = \{a, b, c, d, e\}\)</span> and <span class="math notranslate nohighlight">\(B = \{v, w, x, y, z\}\)</span>, the function <span class="math notranslate nohighlight">\(f : A\rightarrow B\)</span> where <span class="math notranslate nohighlight">\(f(a) = v\)</span>, <span class="math notranslate nohighlight">\(f(b) = w\)</span>, <span class="math notranslate nohighlight">\(f(c) = x\)</span>, <span class="math notranslate nohighlight">\(f(d) = y\)</span> and <span class="math notranslate nohighlight">\(f(e) = z\)</span> is a bijection between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>. Such a bijection exists if and only if <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> have the same number of elements, in this case <span class="math notranslate nohighlight">\(5\)</span>.</p>
+<p>So, the thing Cantor did is to extend this notion of “same-cardinalityness” to even the infinite sets. If <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are infinite, and there is a bijection between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>, we also say that <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> have the same cardinality, i.e. <span class="math notranslate nohighlight">\(| A | = | B | \)</span>. Let’s see our first example. The most natural infinite set is, well, the set of natural numbers <span class="math notranslate nohighlight">\(\mathbb{N}\)</span>. What other sets have the same cardinality with <span class="math notranslate nohighlight">\(\mathbb{N}\)</span>?</p>
+<p>Observe that <span class="math notranslate nohighlight">\(| \mathbb{Z}^+ | = | \mathbb{N} | \)</span>, because there is a bijection between <span class="math notranslate nohighlight">\(\mathbb{Z}^+\)</span> and <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> (note that since we are dealing with bijections, it actually does not matter which one is the domain, and which one is the codomain). For example, the function <span class="math notranslate nohighlight">\(f : \mathbb{Z}^+\rightarrow\mathbb{N}\)</span> such that <span class="math notranslate nohighlight">\(f(n) = n - 1\)</span> is one such bijection. This function maps <span class="math notranslate nohighlight">\(1\)</span> to <span class="math notranslate nohighlight">\(0\)</span>, <span class="math notranslate nohighlight">\(2\)</span> to <span class="math notranslate nohighlight">\(1\)</span>, <span class="math notranslate nohighlight">\(3\)</span> to <span class="math notranslate nohighlight">\(2\)</span> and so on, essentially shifting every element of <span class="math notranslate nohighlight">\(\mathbb{Z}^+\)</span> by one.</p>
+<p>Recall that a bijection <span class="math notranslate nohighlight">\(f : \{1, 2, \cdots , n\}\rightarrow A\)</span> can be seen as a “counting function” for <span class="math notranslate nohighlight">\(A\)</span>. We can now extend this notion to bijections <span class="math notranslate nohighlight">\(f : \mathbb{Z}^+\rightarrow A\)</span>. If such a bijection exists, i.e. <span class="math notranslate nohighlight">\(| A | = | \mathbb{Z}^+| \)</span>, then intuitively, we can “count” the elements of <span class="math notranslate nohighlight">\(A\)</span> (but we will not finish counting). For example, since <span class="math notranslate nohighlight">\(| \mathbb{Z}^+ | = | \mathbb{N} | \)</span>, it makes sense that we can “count” the elements of <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> by pointing to the element <span class="math notranslate nohighlight">\(0\)</span> and shouting <span class="math notranslate nohighlight">\(1\)</span>, then pointing to the element <span class="math notranslate nohighlight">\(1\)</span> and shouting <span class="math notranslate nohighlight">\(2\)</span>, and so on.</p>
+<div class="admonition-definition-countable-sets admonition">
+<p class="admonition-title">Definition: Countable Sets</p>
+<p>We define a set <span class="math notranslate nohighlight">\(A\)</span> to be countable if and only if either <span class="math notranslate nohighlight">\(A\)</span> is finite, or <span class="math notranslate nohighlight">\(| A | = | \mathbb{Z}^+| \)</span>. If the latter is true, we also say that <span class="math notranslate nohighlight">\(A\)</span> is countably infinite. If <span class="math notranslate nohighlight">\(A\)</span> is not countable, then <span class="math notranslate nohighlight">\(A\)</span> is said to be uncountable.</p>
+</div>
+<p>In other words, by definition, every finite set is countable. Moreover, every infinite set with the same cardinality as <span class="math notranslate nohighlight">\(\mathbb{Z}^+\)</span> is countable.</p>
+<p>To avoid using the phrase “cardinality of <span class="math notranslate nohighlight">\(\mathbb{Z}^+\)</span>” repetitively, we will henceforth use the symbol <span class="math notranslate nohighlight">\(\aleph_0\)</span> to denote <span class="math notranslate nohighlight">\(|\mathbb{Z}^+|\)</span>. So, all countably infinite sets have cardinality <span class="math notranslate nohighlight">\(\aleph_0\)</span>. Note that even though <span class="math notranslate nohighlight">\(\aleph_0\)</span> denotes a cardinality, it is not any positve integer. In fact, we say that <span class="math notranslate nohighlight">\(\aleph_0\)</span> is an example of a transfinite cardinal number, i.e. it describes a cardinality value beyond the finite numbers. It is even the smallest transfinite cardinal number, i.e. if a set has cardinality “smaller than” <span class="math notranslate nohighlight">\(\aleph_0\)</span>, then it has to be finite. The proof of this will be delayed to the last page.</p>
+<p>According to the definition above, to show that a set <span class="math notranslate nohighlight">\(A\)</span> is countably infinite, we have to construct a bijection from <span class="math notranslate nohighlight">\(\mathbb{Z}^+\)</span> to <span class="math notranslate nohighlight">\(A\)</span>. However, as mentioned before, “same cardinality” is an equivalence relation. So, by symmetry, it also suffices to construct a bijection from <span class="math notranslate nohighlight">\(A\)</span> to <span class="math notranslate nohighlight">\(\mathbb{Z}^+\)</span>. Furthermore, by transitivity, we can actually avoid working with <span class="math notranslate nohighlight">\(\mathbb{Z}^+\)</span> altogether: if it is known that <span class="math notranslate nohighlight">\(B\)</span> is countably infinite, then the existence of a bijection between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> also shows that <span class="math notranslate nohighlight">\(A\)</span> is countably infinite.</p>
+</section>
+<section id="sequence-view">
+<h2>Sequence View<a class="headerlink" href="#sequence-view" title="Permalink to this heading">#</a></h2>
+<p>Countably infinite sets are interesting because in the intuitive sense, they are exactly the infinite sets that can be counted, otherwise known as enumerated, one-by-one, in some order, indefinitely. This brings us to an equivalent formulation of countably infinite sets in the language of infinite sequences. Using this formulation over the bijection view has the advantage of simplifying notations.</p>
+<div class="admonition-theorem-sequence-view-of-countably-infinite-sets admonition">
+<p class="admonition-title">Theorem: Sequence View of Countably Infinite Sets</p>
+<p>A set <span class="math notranslate nohighlight">\(A\)</span> is countably infinite if and only if there exists an infinite sequence <span class="math notranslate nohighlight">\(a_1, a_2, \cdots\)</span> in which every <span class="math notranslate nohighlight">\(a_i\)</span> is an element of <span class="math notranslate nohighlight">\(A\)</span>, and every element of <span class="math notranslate nohighlight">\(A\)</span> appears exactly once.</p>
+</div>
+<p>In one direction, suppose there is an infinite sequence <span class="math notranslate nohighlight">\(a_1, a_2, \cdots\)</span> in which every <span class="math notranslate nohighlight">\(a_i\in A\)</span> and every element of <span class="math notranslate nohighlight">\(A\)</span> appears exactly once. Then, the function <span class="math notranslate nohighlight">\(f : \mathbb{Z}^+\rightarrow A\)</span> such that <span class="math notranslate nohighlight">\(f(n) = a_n\)</span> is a bijection. We are simply mapping every index, or subscript, to the corresponding entry in the sequence. This is an injection because no two indices have the same element, and this is a surjection because every element appears in the sequence.</p>
+<p>Conversely, suppose there is a bijection <span class="math notranslate nohighlight">\(f : \mathbb{Z}^+\rightarrow A\)</span>. Then, the sequence <span class="math notranslate nohighlight">\(f(1), f(2), \cdots\)</span> is a sequence in which every entry is an element of <span class="math notranslate nohighlight">\(A\)</span>, and every element of <span class="math notranslate nohighlight">\(A\)</span> appears exactly once.</p>
+<p>The moral of the story here is that infinite sequences are conceptually the same as functions with domain <span class="math notranslate nohighlight">\(\mathbb{Z}^+\)</span>, written in different notations. The indices/subscripts of the entries in sequences correspond to the inputs to the functions, and vice versa. When the function is injective, its corresponding sequence has no duplicated entry. When the function is surjective, every element in its codomain appears in its corresponding sequence.</p>
+<p>With the infinite sequence view, we can think about countably infinity differently. In particular, when we want to show that a set is countably infinite, instead of thinking in terms of a problem of constructing bijections, it might be more natural to formulate the problem as “can we list out the elements of the set in a sequence?”. Here is one example.</p>
+<div class="admonition-theorem-mathbb-z-times-mathbb-z-is-countably-infinite admonition">
+<p class="admonition-title">Theorem: <span class="math notranslate nohighlight">\(\mathbb{Z}^+\times\mathbb{Z}^+\)</span> is Countably Infinite</p>
+<p>Exactly what the title says :)</p>
+</div>
+<p>We shall list out the elements of <span class="math notranslate nohighlight">\(\mathbb{Z}^+\times\mathbb{Z}^+\)</span> in the sequence <span class="math notranslate nohighlight">\((1, 1), (1, 2), (2, 1), (1, 3), (2, 2), (3, 1), \cdots\)</span> as described by the figure below:</p>
+<figure class="align-default">
+<img alt="../../_images/cartesian.png" src="../../_images/cartesian.png" style="width: 300px;" />
+</figure>
+<p>We now have a sequence such that every entry is in <span class="math notranslate nohighlight">\(\mathbb{Z}^+\times\mathbb{Z}^+\)</span>, and every pair in <span class="math notranslate nohighlight">\(\mathbb{Z}^+\times\mathbb{Z}^+\)</span> appears exactly once, so we have shown that <span class="math notranslate nohighlight">\(\mathbb{Z}^+\times\mathbb{Z}^+\)</span> is countably infinite. In the function view, we have constructed the bijection <span class="math notranslate nohighlight">\(f : \mathbb{Z}^+\rightarrow\mathbb{Z}^+\times\mathbb{Z}^+\)</span> such that <span class="math notranslate nohighlight">\(f(1) = (1, 1)\)</span>, <span class="math notranslate nohighlight">\(f(2) = (1, 2)\)</span>, <span class="math notranslate nohighlight">\(f(3) = (2, 1)\)</span> and so on. It is also possible to specify <span class="math notranslate nohighlight">\(f\)</span> as a singe-line formula, but for our purposes it suffices to know that this can be done without actually doing it.</p>
+<p>It is usually easier to show that a set is infinite than to show that it is countable. Hence, to argue that a set is countably infinite, most of the time we really only need to focus on the latter. For this reason, the following result is often helpful.</p>
+<div class="admonition-theorem-surjection-implies-countability admonition">
+<p class="admonition-title">Theorem: Surjection Implies Countability</p>
+<p>If there exists a sequence <span class="math notranslate nohighlight">\(a_1, a_2, \cdots\)</span> in which every element of <span class="math notranslate nohighlight">\(A\)</span> appears, then <span class="math notranslate nohighlight">\(A\)</span> is countable.</p>
+</div>
+<p>Crucially, we no longer require that every element of <span class="math notranslate nohighlight">\(A\)</span> to appear exactly once. As long as we have a sequence in which every element of <span class="math notranslate nohighlight">\(A\)</span> appears, we can already conclude that <span class="math notranslate nohighlight">\(A\)</span> is countable. This is intuitive from the function view: having such a sequence essentially gives us a surjection from <span class="math notranslate nohighlight">\(\mathbb{Z}^+\)</span> to <span class="math notranslate nohighlight">\(A\)</span>. Every element in <span class="math notranslate nohighlight">\(A\)</span> is being mapped to by some element in <span class="math notranslate nohighlight">\(\mathbb{Z}^+\)</span>. Now, <span class="math notranslate nohighlight">\(\mathbb{Z}^+\)</span> need not be injective, so there could be more elements in <span class="math notranslate nohighlight">\(\mathbb{Z}^+\)</span> than there are in <span class="math notranslate nohighlight">\(A\)</span>. Loosely speaking, one has <span class="math notranslate nohighlight">\(|A|\leq|\mathbb{Z}^+|\)</span>, so <span class="math notranslate nohighlight">\(A\)</span> is either countably infinite or finite. In both cases, <span class="math notranslate nohighlight">\(A\)</span> is countable.</p>
+<p>So, if we want to use the sequence argument to argue that a given set <span class="math notranslate nohighlight">\(A\)</span> is countable, we only need to give a sequence in which every element of <span class="math notranslate nohighlight">\(A\)</span> appears. This is a simplification mainly by allowing us to not worry about duplicate entries in the sequence. In the function view, it suffices to find a surjection from <span class="math notranslate nohighlight">\(\mathbb{Z}^+\)</span> (or any known countably infinite set) to <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Exercise<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Show that <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> is countably infinite.</p>
+</div>
+</details><p>Now we are in a good position to analyze <span class="math notranslate nohighlight">\(A\cup B\)</span>, given countably infinite <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>. In fact, we claim that <span class="math notranslate nohighlight">\(A\cup B\)</span> will also be countably infinite. The infinity is clear, and the countability can be demonstrated by showing a sequence in which every element of <span class="math notranslate nohighlight">\(A\cup B\)</span> appears.</p>
+<div class="admonition-theorem-union-of-countably-infinite-sets-is-countably-infinite admonition">
+<p class="admonition-title">Theorem: Union of Countably Infinite Sets is Countably Infinite</p>
+<p>If <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are countably infinite, then <span class="math notranslate nohighlight">\(A\cup B\)</span> is countably infinite.</p>
+</div>
+<p>If <span class="math notranslate nohighlight">\(A\)</span> is countably infinite, then there exists a sequence <span class="math notranslate nohighlight">\(a_1, a_2, \cdots\)</span> in which every element of <span class="math notranslate nohighlight">\(A\)</span> appears. Similarly, there exists a sequence <span class="math notranslate nohighlight">\(b_1, b_2, \cdots\)</span> in which every element of <span class="math notranslate nohighlight">\(B\)</span> appears. Then, the sequence given by <span class="math notranslate nohighlight">\(a_1, b_1, a_2, b_2, \cdots\)</span> is a sequence in which every element of <span class="math notranslate nohighlight">\(A\cup B\)</span> appears. Note that it is necessary to intertwine the two sequences since both are infinite.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Exercise<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<ol class="arabic simple">
+<li><p class="sd-card-text">Show that if <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are countable, then <span class="math notranslate nohighlight">\(A\cup B\)</span> is countable.</p></li>
+<li><p class="sd-card-text">Show that if <span class="math notranslate nohighlight">\(A_1, A_2, \cdots, A_n\)</span> are countable, then <span class="math notranslate nohighlight">\(\bigcup_{i = 1}^n A_i\)</span> is countable.</p></li>
+<li><p class="sd-card-text">Show that if <span class="math notranslate nohighlight">\(A_1, A_2, \cdots\)</span> are countable, then <span class="math notranslate nohighlight">\(\bigcup_{i = 1}^\infty A_i\)</span> is countable.</p></li>
+<li><p class="sd-card-text">Show that if <span class="math notranslate nohighlight">\(A_1, A_2, \cdots, A_n\)</span> are finite, then <span class="math notranslate nohighlight">\(\bigcup_{i = 1}^n A_i\)</span> is finite.</p></li>
+<li><p class="sd-card-text">Show that there exist finite sets <span class="math notranslate nohighlight">\(A_1, A_2, \cdots\)</span> such that <span class="math notranslate nohighlight">\(\bigcup_{i = 1}^\infty A_i\)</span> is infinite.</p></li>
+</ol>
+</div>
+</details><p>Moreover, we have the following intuitive theorem:</p>
+<div class="admonition-theorem-every-subset-of-a-countable-set-is-countable admonition">
+<p class="admonition-title">Theorem: Every subset of a countable set is countable.</p>
+<p>Exactly what the title says :)</p>
+</div>
+<p>This is intuitive because a subset of a set must be no larger than the set itself. To prove this more rigorously, let <span class="math notranslate nohighlight">\(S\)</span> be a countable set and let <span class="math notranslate nohighlight">\(A\subseteq S\)</span>. Since <span class="math notranslate nohighlight">\(S\)</span> is countable, there is a sequence <span class="math notranslate nohighlight">\(s_0, s_1, \cdots\)</span> such that every element of <span class="math notranslate nohighlight">\(S\)</span> appears. But then, since <span class="math notranslate nohighlight">\(A\subseteq S\)</span>, that sequence is also one such that every element of <span class="math notranslate nohighlight">\(A\)</span> appears, so <span class="math notranslate nohighlight">\(A\)</span> is countable.</p>
+</section>
+<section id="uncountable-sets">
+<h2>Uncountable Sets<a class="headerlink" href="#uncountable-sets" title="Permalink to this heading">#</a></h2>
+<p>So far, we have extended the concept of cardinality beyond finite sets, and denoted that infinite sets with the same cardinality with <span class="math notranslate nohighlight">\(\mathbb{Z}^+\)</span> have cardinality <span class="math notranslate nohighlight">\(\aleph_0\)</span>. These are the countably infinite sets. Now, not all infinite sets are countable. A priori, this is not an obvious fact, and the discovery of an uncountable set involved a clever argument given by Cantor, known as Cantor’s diagonalization argument. So in fact, there are infinite sets <span class="math notranslate nohighlight">\(A\)</span> which, no matter how hard we try, we can never find a bijection between <span class="math notranslate nohighlight">\(\mathbb{Z}^+\)</span> and <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p>Using Cantor’s diagonalization argument, we will show that</p>
+<div class="admonition-theorem-there-is-an-uncountable-set admonition">
+<p class="admonition-title">Theorem: There is an uncountable set.</p>
+<p>The set <span class="math notranslate nohighlight">\((0, 1) = \{x\in\mathbb{R} : 0 &lt; x &lt; 1\}\)</span> is uncountable.</p>
+</div>
+<p>By way of contradiction, suppose <span class="math notranslate nohighlight">\((0, 1)\)</span> is countably infinite, so by definition we know that there exists an infinite sequence <span class="math notranslate nohighlight">\(x_1, x_2, \cdots\)</span> such that <span class="math notranslate nohighlight">\(x_i\in (0, 1)\)</span> and every number in <span class="math notranslate nohighlight">\((0, 1)\)</span> appears exactly once.</p>
+<p>Let the decimal representation of <span class="math notranslate nohighlight">\(x_i\)</span> be the (infinite) string <span class="math notranslate nohighlight">\(0.a_{i, 1}a_{i, 2}\cdots\)</span>. For example, if <span class="math notranslate nohighlight">\(x_1 = \frac{1}{2}\)</span>, then the decimal representation of <span class="math notranslate nohighlight">\(x_1\)</span> is the infinite string <span class="math notranslate nohighlight">\(0.500\cdots\)</span>, so <span class="math notranslate nohighlight">\(a_{1, 1} = 5\)</span>, <span class="math notranslate nohighlight">\(a_{1, 2} = 0\)</span>, <span class="math notranslate nohighlight">\(a_{1, 3} = 0\)</span> and so on. Note that <span class="math notranslate nohighlight">\(0.499\cdots\)</span> is also a decimal representation of <span class="math notranslate nohighlight">\(x_1\)</span>, By declaring all decimal representations with infinitely repeating <span class="math notranslate nohighlight">\(9\)</span>s invalid, we ensure that decimal representations are always unique.</p>
+<p>Now, we will construct a problematic number <span class="math notranslate nohighlight">\(x^*\)</span> whose decimal representation is <span class="math notranslate nohighlight">\(0.b_1b_2\cdots\)</span>, where we define <span class="math notranslate nohighlight">\(b_i = 1\)</span> if <span class="math notranslate nohighlight">\(a_{i, i} = 0\)</span> and <span class="math notranslate nohighlight">\(b_i = 0\)</span> otherwise. In the example above, the digits <span class="math notranslate nohighlight">\(a_{i, i}\)</span> for every <span class="math notranslate nohighlight">\(i\)</span> is highlighted in red and they dictate the digits of <span class="math notranslate nohighlight">\(x^*\)</span>.</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{c|cc}
+    x_1 &amp; 0.\textcolor{red}{3}141\dots \\
+    x_2 &amp; 0.5\textcolor{red}{9}26\dots \\
+    x_3 &amp; 0.53\textcolor{red}{0}8\dots \\
+    x_4 &amp; 0.979\textcolor{red}{3}\dots \\
+    \vdots &amp; \vdots \\
+    \hline
+    x^* &amp; 0.0010\dots
+\end{array}\end{split}\]</div>
+</div>
+<p>Note that for every <span class="math notranslate nohighlight">\(i\)</span>, since <span class="math notranslate nohighlight">\(b_i\neq a_{i, i}\)</span>, one has <span class="math notranslate nohighlight">\(x_i\neq x^*\)</span>. This means that <span class="math notranslate nohighlight">\(x^*\)</span> does not appear in the sequence <span class="math notranslate nohighlight">\(x_1, x_2, \cdots\)</span>. However, clearly <span class="math notranslate nohighlight">\(x^*\in (0, 1)\)</span>, so <span class="math notranslate nohighlight">\(x^*\)</span> must appear in the sequence <span class="math notranslate nohighlight">\(x_1, x_2, \cdots\)</span>. We have arrived at a contradiction.</p>
+<p>Yes, this proof is very disturbing and weird. Georg Cantor later suffered depression and mental health issues, partially because no one believed that his diagonalization argument is valid. Today, we know that it is valid, and demonstrates a concrete infinite set that is not countable, i.e. uncountable.</p>
+<p>Since then, mathematicians have been very creative in adopting diagonalization as a framework to prove impossibility results (in this case, impossibility of enumerating elements of <span class="math notranslate nohighlight">\((0, 1)\)</span>). Many other sets have also been discovered whose uncountability may be proven similarly by diagonalization.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Exercise<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Show that the power set of any infinite set is uncountable.</p>
+</div>
+</details><p>Also, now that we know a set that is uncountable, there is a second way to show uncountability:</p>
+<div class="admonition-theorem-supersets-of-uncountable-sets-are-uncountable admonition">
+<p class="admonition-title">Theorem: Supersets of Uncountable Sets are Uncountable</p>
+<p>Exactly what the title says :)</p>
+</div>
+<p>This is a contraposition to the fact that subsets of countable sets are countable. Again, this is intuitive because if a set is already uncountable, any set that contains it as a subset must be no smaller, and hence also uncountable.</p>
+<p>So, as a corollary, the set of real numbers <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> must be uncountable, since it already contains an uncountable subset <span class="math notranslate nohighlight">\((0, 1)\)</span>.</p>
+<p>In summary, finite sets have finite cardinalities. Sets with the same cardinality with <span class="math notranslate nohighlight">\(\mathbb{Z}^+\)</span> are known as countably infinite sets and their cardinality is denoted <span class="math notranslate nohighlight">\(\aleph_0\)</span>. Uncountable sets are intuitively larger than countably infinite sets. Now, is there any cardinality that is larger than all the finite ones (i.e. transfinite), but smaller than <span class="math notranslate nohighlight">\(\aleph_0\)</span>? The answer is no.</p>
+<div class="admonition-theorem-the-transfinite-cardinal-number-aleph-0-is-the-smallest-infinity admonition">
+<p class="admonition-title">Theorem: The transfinite cardinal number <span class="math notranslate nohighlight">\(\aleph_0\)</span> is the “Smallest Infinity”</p>
+<p>Every infinite set has a countably infinite subset.</p>
+</div>
+<p>The intuition is that if <span class="math notranslate nohighlight">\(S\)</span> is an infinite set, then <span class="math notranslate nohighlight">\(S\)</span> has an infinite supply of elements, allowing us to construct an infinite sequence by repeatedly listing down a previously-unlisted element of <span class="math notranslate nohighlight">\(S\)</span>. We can then let <span class="math notranslate nohighlight">\(A\subseteq S\)</span> be the set of elements that appears (exactly once) in such an infinite sequence. If <span class="math notranslate nohighlight">\(S\)</span> is countably infinite, then in fact <span class="math notranslate nohighlight">\(A = S\)</span>. If <span class="math notranslate nohighlight">\(S\)</span> is uncountable, then our listing will always miss out on some (in fact, uncountably many) of its elements. In the function view, this is equivalent as constructing an injection from <span class="math notranslate nohighlight">\(\mathbb{Z}^+\)</span> to <span class="math notranslate nohighlight">\(S\)</span>. The range of this injection, namely <span class="math notranslate nohighlight">\(A\)</span>, is exactly a countably infinite subset of <span class="math notranslate nohighlight">\(S\)</span>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Exercise<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Show that if <span class="math notranslate nohighlight">\(X\)</span> is infinite and <span class="math notranslate nohighlight">\(Y\)</span> is finite, then <span class="math notranslate nohighlight">\(| X\cup Y | = | X | \)</span>.</p>
+</div>
+</details></section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
+<p>Beyond the finite sets, the smallest transfinite cardinal number is <span class="math notranslate nohighlight">\(\aleph_0\)</span>. This is the cardinality of <span class="math notranslate nohighlight">\(\mathbb{Z}^+\)</span> as well as a bunch of other sets, known collectively as the countably infinite sets. In the function view, there are bijections between these sets and <span class="math notranslate nohighlight">\(\mathbb{Z}^+\)</span>. In the sequence view, a set <span class="math notranslate nohighlight">\(A\)</span> is countably infinite if and only if there exists an infinite sequence <span class="math notranslate nohighlight">\(a_1, a_2, \cdots\)</span> in which every <span class="math notranslate nohighlight">\(a_i\)</span> is an element of <span class="math notranslate nohighlight">\(A\)</span>, and every element of <span class="math notranslate nohighlight">\(A\)</span> appears exactly once. Beyond countably infinite sets are the uncountable sets.</p>
+<p>In terms of techniques, to show that a set <span class="math notranslate nohighlight">\(A\)</span> is countable, it suffices to find a sequence in which every element of <span class="math notranslate nohighlight">\(A\)</span> appears. In the function view, it suffices to find a surjection from a known countably infinite set to <span class="math notranslate nohighlight">\(A\)</span>. Usually this is done alongside showing that the set is infinite, which is relatively simple.</p>
+<p>To show that a set <span class="math notranslate nohighlight">\(A\)</span> is uncountable, we either use the technique of diagonalization, or show that <span class="math notranslate nohighlight">\(A\)</span> is a superset of some known uncountable set.</p>
+<p>There are various pragmatic results we know regarding the relationships between countability, countably infinity, and uncountability. There are also various sets of numbers known to be countably infinite, such as <span class="math notranslate nohighlight">\(\mathbb{Z}^+\)</span>, <span class="math notranslate nohighlight">\(\mathbb{N}\)</span>, <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span>, <span class="math notranslate nohighlight">\(\mathbb{Z}^+\times\mathbb{Z}^+\)</span>, and various sets known to be uncountable, such as <span class="math notranslate nohighlight">\((0, 1)\)</span> and <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.</p>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="../../contact.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Contact</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="../propositional-logic/index.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Propositional Logic</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2026, Chin Herng
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              <a class="muted-link fa-solid fa-envelope fa-2x" href="mailto:chinherng@u.nus.edu" aria-label="Email"></a>
+              <a class="muted-link fa-brands fa-solid fa-linkedin fa-2x" href="https://linkedin.com/in/chong-chin-herng" aria-label="LinkedIn"></a>
+              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/chin-herng" aria-label="GitHub"></a>
+              <a class="muted-link fa-brands fa-solid fa-instagram fa-2x" href="https://instagram.com/chongahzong" aria-label="Instagram"></a>
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Cardinality</a><ul>
+<li><a class="reference internal" href="#countability-and-countably-infinity">Countability and Countably Infinity</a></li>
+<li><a class="reference internal" href="#sequence-view">Sequence View</a></li>
+<li><a class="reference internal" href="#uncountable-sets">Uncountable Sets</a></li>
+<li><a class="reference internal" href="#summary">Summary</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=b3ba4146"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/scripts/furo.js?v=32e29ea5"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </body>
+</html>
