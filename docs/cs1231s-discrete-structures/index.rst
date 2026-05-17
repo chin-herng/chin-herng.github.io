@@ -6,6 +6,7 @@ CS1231S Discrete Structures
 
     propositional-logic/index
     cardinality/index
+    combinatorics/index
 
 .. note::
     The current set of CS1231S notes is incomplete. The following is a list of missing topics:
@@ -17,7 +18,7 @@ CS1231S Discrete Structures
     - Mathematical Induction
     - Trees
 
-    My notes for Cardinality, Counting, Probability and Introductory Graph Theory assume knowledge of everything up to and including Mathematical Induction.
+    My notes for Cardinality, Combinatorics, Probability and Graph Theory assume knowledge of everything up to and including Mathematical Induction.
     
 Below is an overview of the course, followed by some advice for students taking the course.
 
