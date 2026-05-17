@@ -1,0 +1,496 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Contact" href="../../contact.html" /><link rel="prev" title="Cardinality" href="../cardinality/index.html" />
+
+    <!-- Generated with Sphinx 7.1.2 and Furo 2023.09.10 -->
+        <title>Combinatorics - Chin Herng</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=36a5483c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/card-grid.css?v=9aabcc79" />
+    <link rel="stylesheet" type="text/css" href="../../_static/center-table.css?v=ac081ad8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/contact-list.css?v=86a06382" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/solid.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">Chin Herng</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+  
+  
+  <span class="sidebar-brand-text">Chin Herng</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../about_me.html">About Me</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../teaching.html">Teaching</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../blogs/index.html">Blogs</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">CS1231S Discrete Structures</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of CS1231S Discrete Structures</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../propositional-logic/index.html">Propositional Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cardinality/index.html">Cardinality</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Combinatorics</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="combinatorics">
+<h1>Combinatorics<a class="headerlink" href="#combinatorics" title="Permalink to this heading">#</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This page provides minimal examples and does not provide any exercise, though a quick online search will find 10 billion examples and exercises on this topic.</p>
+</div>
+<p>Roughly speaking, combinatorics is the study of efficient ways to find out the cardinality of finite sets (a.k.a. counting). We begin by stating two basic principles of counting which is intuitively true and we will not prove as it is not the main focus of the subject.</p>
+<section id="addition-principle">
+<h2>Addition Principle<a class="headerlink" href="#addition-principle" title="Permalink to this heading">#</a></h2>
+<p>Intuitively, if the objects we are counting can be grouped into two types that are disjoint from one another, then our desired count is exactly the sum of the number of objects of each type.</p>
+<p>To formulate this idea in set-theoretic language, say we are trying to determine <span class="math notranslate nohighlight">\(| S | \)</span>. If we can in fact write <span class="math notranslate nohighlight">\(S = A\sqcup B\)</span> (where <span class="math notranslate nohighlight">\(\sqcup\)</span> denotes a disjoint union), then the addition principle allows us to assert the equality <span class="math notranslate nohighlight">\(| S | = | A | + | B | \)</span>.</p>
+<p>Crucially, note that even though we only stated the addition principle for two steps (or two sets), by an inductive argument the principle can be generalized to any finite number of steps (or sets).</p>
+<figure class="align-default" id="id1">
+<img alt="Illustrate of the addition principle." src="../../_images/ap.png" style="width: 300px;" />
+<figcaption>
+<p><span class="caption-text">Illustration of the addition principle, taken from Principles and Techniques in Combinatorics by Chen Chuan-Chong and Koh Khee Meng.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>In the figure above, say the objects we are counting are the ways one can reach from point P to point Q. We note that these ways can be grouped into three types, i.e. the means of transportations. It then follows by the addition principle that there are <span class="math notranslate nohighlight">\(2 + 3 + 2 = 7\)</span> ways.</p>
+</section>
+<section id="multiplication-principle">
+<h2>Multiplication Principle<a class="headerlink" href="#multiplication-principle" title="Permalink to this heading">#</a></h2>
+<p>Intuitively, if the objects we are counting can be constructed in two steps, in which every possible combination of choices we make in the two steps yields a different object, then our desired count is exactly the number of ways the first step can be performed, multiplied by the number of ways the second step can be performed.</p>
+<p>To formulate this idea in set-theoretic language, say we are trying to determine <span class="math notranslate nohighlight">\(| S | \)</span>. If we can in fact write <span class="math notranslate nohighlight">\(S = A\times B\)</span>, then the multiplication principle allows us to assert the equality <span class="math notranslate nohighlight">\(| S | = | A | \times | B | \)</span>.</p>
+<p>Just like addition principle, multiplication principle generalizes to any finite number of sets.</p>
+<figure class="align-default" id="id2">
+<img alt="Illustrate of the multiplication principle." src="../../_images/mp.png" />
+<figcaption>
+<p><span class="caption-text">Illustration of the multiplication principle, taken from Principles and Techniques in Combinatorics by Chen Chuan-Chong and Koh Khee Meng.</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>In the figure above, we are counting the ways one can reach from point A to point D. We note that every such way can be constructed in three steps, i.e. by first specifying which road to take to reach B, followed by C, followed by D. This gives us a total of <span class="math notranslate nohighlight">\(2\times 5\times 3 = 30\)</span> ways.</p>
+<p>Another interesting example to consider is the number of subsets, i.e. the cardinality of the power set, of an <span class="math notranslate nohighlight">\(n\)</span>-element set <span class="math notranslate nohighlight">\(S\)</span>. We first fix an ordering of the elements of <span class="math notranslate nohighlight">\(S\)</span>. Now, every subset of <span class="math notranslate nohighlight">\(S\)</span> can be constructed in <span class="math notranslate nohighlight">\(n\)</span> steps. In the <span class="math notranslate nohighlight">\(i\)</span>-th step, we decide whether to select the <span class="math notranslate nohighlight">\(i\)</span>-th element of <span class="math notranslate nohighlight">\(S\)</span>. With <span class="math notranslate nohighlight">\(2\)</span> choices each step, this gives us a total of <span class="math notranslate nohighlight">\(2^n\)</span> subsets of <span class="math notranslate nohighlight">\(S\)</span>.</p>
+</section>
+<section id="permutation">
+<h2>Permutation<a class="headerlink" href="#permutation" title="Permalink to this heading">#</a></h2>
+<p>In this section we investigate the problem of counting the number of <span class="math notranslate nohighlight">\(r\)</span>-permutations of a set <span class="math notranslate nohighlight">\(S\)</span>, defined as a length-<span class="math notranslate nohighlight">\(r\)</span> sequence (or equivalently an <span class="math notranslate nohighlight">\(r\)</span>-tuple) <span class="math notranslate nohighlight">\((a_1, a_2, \cdots, a_r)\)</span> whose entries are elements of <span class="math notranslate nohighlight">\(S\)</span> and every element of <span class="math notranslate nohighlight">\(S\)</span> appears at most once. For example, the sequences <span class="math notranslate nohighlight">\((c, a, d)\)</span> and <span class="math notranslate nohighlight">\((a, c, d)\)</span> are two different <span class="math notranslate nohighlight">\(3\)</span>-permutations of the set <span class="math notranslate nohighlight">\(\{a, b, c, d, e\}\)</span>, whereas the sequences <span class="math notranslate nohighlight">\((a, d, a)\)</span> and <span class="math notranslate nohighlight">\((b, e)\)</span> are not.</p>
+<p>One very basic observation is that the number of <span class="math notranslate nohighlight">\(r\)</span>-permutations of <span class="math notranslate nohighlight">\(S\)</span> depends solely on <span class="math notranslate nohighlight">\(| S | \)</span> and not on the specific elements of <span class="math notranslate nohighlight">\(S\)</span>.</p>
+<p>To count the number of <span class="math notranslate nohighlight">\(r\)</span>-permutations of an <span class="math notranslate nohighlight">\(n\)</span>-element set in general, note that every <span class="math notranslate nohighlight">\(r\)</span>-permutation can be constructed in <span class="math notranslate nohighlight">\(r\)</span> steps, where in the <span class="math notranslate nohighlight">\(i\)</span>-th step we decide the <span class="math notranslate nohighlight">\(i\)</span>-th entry in the sequence. Now, there are <span class="math notranslate nohighlight">\(n\)</span> ways to perform the first step, i.e. decide the first entry, following which there are <span class="math notranslate nohighlight">\(n - 1\)</span> ways to perform the second step, as the element decided as the first entry can no longer be selected again. Similarly, the third step can be performed in <span class="math notranslate nohighlight">\(n - 2\)</span> ways. Completing the pattern, we can say by the multiplication principle that there are</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[n(n - 1)(n - 2)\cdots (n - r + 1)\]</div>
+</div>
+<p>possible <span class="math notranslate nohighlight">\(r\)</span>-permutations of an <span class="math notranslate nohighlight">\(n\)</span>-element set. We denote this value as <span class="math notranslate nohighlight">\(P^n_r\)</span>. Using the factorial notation, we can say that</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[P^n_r = \frac{n!}{(n - r)!}\]</div>
+</div>
+<p>For example, the number of <span class="math notranslate nohighlight">\(3\)</span>-permutations of a <span class="math notranslate nohighlight">\(5\)</span>-element set is exactly <span class="math notranslate nohighlight">\(P^5_3 = 5\times 4\times 3 = 60\)</span>. The number of (<span class="math notranslate nohighlight">\(3\)</span>-)permutations of a <span class="math notranslate nohighlight">\(3\)</span>-element set <span class="math notranslate nohighlight">\(\{a, b, c\}\)</span> is <span class="math notranslate nohighlight">\(3! = 6\)</span>. For the sake of completeness, we can list out all <span class="math notranslate nohighlight">\(6\)</span> of these permutations: <span class="math notranslate nohighlight">\((a, b, c), (a, c, b), (b, a, c), (b, c, a), (c, a, b), (c, b, a)\)</span>.</p>
+<section id="circular-permutation">
+<h3>Circular Permutation<a class="headerlink" href="#circular-permutation" title="Permalink to this heading">#</a></h3>
+<p>An interesting variant of the problem is to consider circular permutations. Defining circular permutations precisely can be a bit tricky, but intuitively a circular <span class="math notranslate nohighlight">\(r\)</span>-permutation of an <span class="math notranslate nohighlight">\(n\)</span>-element set <span class="math notranslate nohighlight">\(S\)</span> is an arrangement of <span class="math notranslate nohighlight">\(r\)</span> elements of <span class="math notranslate nohighlight">\(S\)</span> around a circle, and we consider two circular <span class="math notranslate nohighlight">\(r\)</span>-permutations to be equal if they are identical up to rotational symmetry.</p>
+<figure class="align-default" id="id3">
+<img alt="The three circular $3$-permutations above are equal. Figure taken from Principles and Techniques in Combinatorics by Chen Chuan-Chong and Koh Khee Meng." src="../../_images/circular.png" />
+<figcaption>
+<p><span class="caption-text">The three circular <span class="math notranslate nohighlight">\(3\)</span>-permutations above are equal. Figure taken from Principles and Techniques in Combinatorics by Chen Chuan-Chong and Koh Khee Meng.</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>What the figure above also hints towards is a way we can count the number of circular <span class="math notranslate nohighlight">\(r\)</span>-permutations of an <span class="math notranslate nohighlight">\(n\)</span>-element set. We will denote this desired count as <span class="math notranslate nohighlight">\(Q^n_r\)</span>. Now, observe that there is a second way to count the number of <span class="math notranslate nohighlight">\(r\)</span>-permutations of an <span class="math notranslate nohighlight">\(n\)</span>-element set in general: Every <span class="math notranslate nohighlight">\(r\)</span>-permutation can be constructed in <span class="math notranslate nohighlight">\(2\)</span> steps. In the first step, we decide a circular <span class="math notranslate nohighlight">\(r\)</span>-permutation. In the second step, we essentially rotate the said circular <span class="math notranslate nohighlight">\(r\)</span>-permutation.</p>
+<p>After performing the above two steps, we can read off the elements from 12am in clockwise order to obtain an (linear) <span class="math notranslate nohighlight">\(r\)</span>-permutation of <span class="math notranslate nohighlight">\(S\)</span>. There are <span class="math notranslate nohighlight">\(Q^n_r\)</span> ways to perform the first step, and <span class="math notranslate nohighlight">\(r\)</span> ways to perform the second (we can of course rotate by an arbitrary degree, but only exactly <span class="math notranslate nohighlight">\(r\)</span> linear permutations can possibly be generated). It follows by the multiplication principle that</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[P^n_r = Q^n_r\times r\iff Q^n_r = \frac{P^n_r}{r}\]</div>
+</div>
+<p>of course assuming that <span class="math notranslate nohighlight">\(r &gt; 0\)</span>. We can also interpret the equation <span class="math notranslate nohighlight">\(Q^n_r = \frac{P^n_r}{r}\)</span> as a manifestation of a “division principle”. Instead of counting the number of circular <span class="math notranslate nohighlight">\(r\)</span>-permutations directly, we start by considering the number of (linear) <span class="math notranslate nohighlight">\(r\)</span>-permutations. Every circular <span class="math notranslate nohighlight">\(r\)</span>-permutation is now being counted exactly <span class="math notranslate nohighlight">\(r\)</span> times, corresponding to the <span class="math notranslate nohighlight">\(r\)</span> ways it can be rotated to produce a different linear permutation. It follows that we can obtain our desired count just by dividing by <span class="math notranslate nohighlight">\(r\)</span>.</p>
+<p>As a special case, the number of circular (<span class="math notranslate nohighlight">\(n\)</span>-)permutations of an <span class="math notranslate nohighlight">\(n\)</span>-element set is precisely</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[Q^n_n = \frac{P^n_n}{n} = \frac{n!}{n} = (n - 1)!\]</div>
+</div>
+<p>It is important to note that as per our definition above, we do not declare two circular <span class="math notranslate nohighlight">\(r\)</span>-permutations to be equal if they are identical up to reflectional symmetry, although reflectional symmetries are sometimes relevant (and actually complicates the counting) in certain settings. For example, it makes sense to consider reflectional symmetries when arranging beads around a bracelet, since a turned-over bracelet is still a bracelet. It does not make sense to consider reflectional symmetries when arranging people around a table, since under most settings, turning over tables and people are considered rude.</p>
+<figure class="align-default" id="id4">
+<img alt="The two circular $6$-permutations above are identical up to reflectional symmetry, but we will consider them to be not equal." src="../../_images/reflectional.jpg" />
+<figcaption>
+<p><span class="caption-text">The two circular <span class="math notranslate nohighlight">\(6\)</span>-permutations above are identical up to reflectional symmetry, but we will consider them to be not equal. Figure taken from <a class="reference external" href="https://math.stackexchange.com/a/2395407">this Mathematics Stack Exchange answer</a>.</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="combination">
+<h2>Combination<a class="headerlink" href="#combination" title="Permalink to this heading">#</a></h2>
+<p>A related problem to counting permutations is to count combinations. An <span class="math notranslate nohighlight">\(r\)</span>-combination of a set <span class="math notranslate nohighlight">\(S\)</span> is a subset of <span class="math notranslate nohighlight">\(S\)</span> of cardinality <span class="math notranslate nohighlight">\(r\)</span>. For example, the subset <span class="math notranslate nohighlight">\(\{a, c, d\}\)</span> is a <span class="math notranslate nohighlight">\(3\)</span>-combination of the set <span class="math notranslate nohighlight">\(\{a, b, c, d, e\}\)</span> whereas the subset <span class="math notranslate nohighlight">\(\{c\}\)</span> is not.</p>
+<p>Note that compared to permutations, the only difference here is that combinations do not concern the ordering of the selected elements, so <span class="math notranslate nohighlight">\(\{a, c, d\}\)</span> and <span class="math notranslate nohighlight">\(\{a, d, c\}\)</span> are the same <span class="math notranslate nohighlight">\(3\)</span>-combinations, hence they should only be counted as one.</p>
+<p>Let <span class="math notranslate nohighlight">\(\binom{n}{r}\)</span> denote the number of <span class="math notranslate nohighlight">\(r\)</span>-combinations of an <span class="math notranslate nohighlight">\(n\)</span>-element set. We observe now that there is a second way to count the number of <span class="math notranslate nohighlight">\(r\)</span>-permutations of an <span class="math notranslate nohighlight">\(n\)</span>-element set in general: Every <span class="math notranslate nohighlight">\(r\)</span>-permutation can be constructed in <span class="math notranslate nohighlight">\(2\)</span> steps. In the first step, we decide an <span class="math notranslate nohighlight">\(r\)</span>-combination. In the second step, we decide a permutation of the said <span class="math notranslate nohighlight">\(r\)</span>-combination. There are <span class="math notranslate nohighlight">\(\binom{n}{r}\)</span> ways to perform the first step, and <span class="math notranslate nohighlight">\(r!\)</span> ways to perform the second. It follows by the multiplication principle that there are</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\binom{n}{r}r!\]</div>
+</div>
+<p>possible <span class="math notranslate nohighlight">\(r\)</span>-permutations of an <span class="math notranslate nohighlight">\(n\)</span>-element set. We can therefore conclude that <span class="math notranslate nohighlight">\(P^n_r = \binom{n}{r}r!\)</span>, and so</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\binom{n}{r} = \frac{P^n_r}{r!} = \frac{n!}{(n - r)!r!}\]</div>
+</div>
+<p>We can similarly interpret the equation <span class="math notranslate nohighlight">\(\binom{n}{r} = \frac{P^n_r}{r!}\)</span> as a manifestation of “division principle”, instead of counting the number of <span class="math notranslate nohighlight">\(r\)</span>-combinations directly, we start by considering the number of <span class="math notranslate nohighlight">\(r\)</span>-permutations. Every <span class="math notranslate nohighlight">\(r\)</span>-combination is now being counted exactly <span class="math notranslate nohighlight">\(r!\)</span> times, corresponding to the <span class="math notranslate nohighlight">\(r!\)</span> ways it can be permuted. It follows that we can obtain our desired count just by dividing by <span class="math notranslate nohighlight">\(r!\)</span>.</p>
+<p>For example, the number of <span class="math notranslate nohighlight">\(2\)</span>-combinations of the set <span class="math notranslate nohighlight">\(\{a, b, c, d\}\)</span> is exactly <span class="math notranslate nohighlight">\(\binom{4}{2} = 6\)</span>. For the sake of completeness, we can list out all <span class="math notranslate nohighlight">\(6\)</span> of these <span class="math notranslate nohighlight">\(2\)</span>-combinations: <span class="math notranslate nohighlight">\(\{a, b\}\)</span>, <span class="math notranslate nohighlight">\(\{a, c\}\)</span>, <span class="math notranslate nohighlight">\(\{a, d\}\)</span>, <span class="math notranslate nohighlight">\(\{b, c\}\)</span>, <span class="math notranslate nohighlight">\(\{b, d\}\)</span>, <span class="math notranslate nohighlight">\(\{c, d\}\)</span>.</p>
+<p>A quick observation is that in general we have <span class="math notranslate nohighlight">\(\binom{n}{r} = \binom{n}{n - r}\)</span>. This is intuitive because from a set of <span class="math notranslate nohighlight">\(n\)</span> elements, selecting <span class="math notranslate nohighlight">\(r\)</span> elements is equivalent to selecting <span class="math notranslate nohighlight">\(n - r\)</span> elements to discard. Algebraically, we see that there is a symmetry in the expression we have derived for <span class="math notranslate nohighlight">\(\binom{n}{r}\)</span>.</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\binom{n}{n - r} = \frac{n!}{(n - (n - r))!(n - r)!} = \frac{n!}{r!(n - r)!} = \binom{n}{r}\]</div>
+</div>
+<p>Also, recall that there are <span class="math notranslate nohighlight">\(2^n\)</span> subsets of an <span class="math notranslate nohighlight">\(n\)</span>-element set. We can count these subsets in a different way using the addition principle, just by grouping the subsets into <span class="math notranslate nohighlight">\(n\)</span> disjoint types based on the cardinalities of these subsets. This allows us to conclude that</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\binom{n}{0} + \binom{n}{1} + \cdots + \binom{n}{n} = 2^n\]</div>
+</div>
+<section id="binomial-theorem">
+<h3>Binomial Theorem<a class="headerlink" href="#binomial-theorem" title="Permalink to this heading">#</a></h3>
+<p>There is a surprising connection between the field of combinatorics and algebra via the notion of generating functions. We will not cover generating functions in this course, but we will cover a very simple and special case of it via introducing the binomial theorem.</p>
+<p>To motivate the binomial theorem, recall the following two expansions we have seen in our good old pre-university years (though some schools only covered the first).</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\begin{split}(x + y)^2 &amp;= x^2 + 2xy + y^2 \\
+(x + y)^3 &amp;= x^3 + 3x^2y + 3xy^2 + y^3\end{split}\]</div>
+</div>
+<p>Towards eliminating any attempt at rote memorization, let us briefly recall how the second expansion arises. First, we write <span class="math notranslate nohighlight">\((x + y)^3 = (x + y)(x + y)(x + y)\)</span>. We now see that the coefficient of <span class="math notranslate nohighlight">\(x^3\)</span> is <span class="math notranslate nohighlight">\(1\)</span> because we can only select <span class="math notranslate nohighlight">\(x\)</span> from every factor to obtain the term <span class="math notranslate nohighlight">\(x^3\)</span>. To obtain the term <span class="math notranslate nohighlight">\(x^2y\)</span>, we ought to select <span class="math notranslate nohighlight">\(x\)</span> from two factors and <span class="math notranslate nohighlight">\(y\)</span> from one. From the set of <span class="math notranslate nohighlight">\(3\)</span> factors, there are <span class="math notranslate nohighlight">\(\binom{3}{1} = 3\)</span> ways to select one factor from which we will select <span class="math notranslate nohighlight">\(y\)</span>, therefore the coefficient of <span class="math notranslate nohighlight">\(x^2y\)</span> is <span class="math notranslate nohighlight">\(3\)</span>. Similarly, there are <span class="math notranslate nohighlight">\(\binom{3}{2} = 3\)</span> ways to select two factors from which we will select <span class="math notranslate nohighlight">\(y\)</span> and obtain the term <span class="math notranslate nohighlight">\(xy^2\)</span>.</p>
+<p>It is then reasonable for us to conjecture that</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\begin{split}(x + y)^4 &amp;= \binom{4}{0}x^4 + \binom{4}{1}x^3y + \binom{4}{2}x^2y^2 + \binom{4}{3}x^3y + \binom{4}{4}y^4 \\
+&amp;= x^4 + 4x^3y + 6x^2y^2 + 4xy^3 + y^4\end{split}\]</div>
+</div>
+<p>and we would be right, as can be verified by brute-force. The more ambitious readers would have already conjectured that</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[(x + y)^n = \sum_{r = 0}^n \binom{n}{r}x^{n - r}y^r\]</div>
+</div>
+<p>and they would also be right, as can be proven by induction on <span class="math notranslate nohighlight">\(n\)</span>. We call this the binomial theorem, true for any real numbers <span class="math notranslate nohighlight">\(x, y\)</span> and nonnegative integers <span class="math notranslate nohighlight">\(n\)</span> (after defining <span class="math notranslate nohighlight">\(0^0 := 1\)</span>).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The binomial theorem can in fact be generalized to handle even complex exponents <span class="math notranslate nohighlight">\(n\)</span> under a suitable generalization of <span class="math notranslate nohighlight">\(\binom{n}{r}\)</span>, in which case the finite sum becomes an infinite series.</p>
+</div>
+</section>
+</section>
+<section id="inclusion-exclusion-principle">
+<h2>Inclusion-Exclusion Principle<a class="headerlink" href="#inclusion-exclusion-principle" title="Permalink to this heading">#</a></h2>
+<p>Inclusion-exclusion principle is a generalization of addition principle, in the sense that it can be helpful for finding the cardinality of <span class="math notranslate nohighlight">\(S = A\cup B\)</span> even when <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are not necessarily disjoint. Just like the binomial theorem, the inclusion-exclusion principle can be motivated just by reminiscing our good old pre-university years, in particular the day when our teacher wrote down the following on the board (again, some schools only covered the first formula).</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\begin{split}| A\cup B | &amp;= | A | + | B | - | A\cap B | \\
+| A\cup B\cup C | &amp;= | A | + | B | + | C | - | A\cap B | - | A\cap C | - | B\cap C | + | A\cap B\cap C |\end{split}\]</div>
+</div>
+<p>If you had a good teacher, the following diagrams would most likely also be drawn to illustrate why these formulae are true.</p>
+<figure class="align-default" id="id5">
+<img alt="The Venn diagram for two sets." src="../../_images/venn_2.png" style="width: 300px;" />
+<figcaption>
+<p><span class="caption-text">The Venn diagram for two sets. Figure taken from <a class="reference external" href="https://www.scientificamerican.com/article/venn-diagrams-history-and-popularity-outside-of-math-explained/">Scientific American</a>.</span><a class="headerlink" href="#id5" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Instead of counting the elements in <span class="math notranslate nohighlight">\(A\cup B\)</span> directly, we start by considering the sum of <span class="math notranslate nohighlight">\(| A | \)</span> and <span class="math notranslate nohighlight">\(| B | \)</span>. Every element of <span class="math notranslate nohighlight">\(A\cap B\)</span> is now being counted exactly twice, one from <span class="math notranslate nohighlight">\(| A | \)</span> and one from <span class="math notranslate nohighlight">\(| B | \)</span>. It follows that we can obtain our desired count just by subtracting one copy of <span class="math notranslate nohighlight">\(| A\cap B | \)</span>. Note that if <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are disjoint, we recover the addition principle.</p>
+<figure class="align-default" id="id6">
+<img alt="The Venn diagram for three sets." src="../../_images/venn_3.png" style="width: 300px;" />
+<figcaption>
+<p><span class="caption-text">The Venn diagram for three sets. Figure taken from <a class="reference external" href="https://www.scientificamerican.com/article/venn-diagrams-history-and-popularity-outside-of-math-explained/">Scientific American</a>.</span><a class="headerlink" href="#id6" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>In the three-set case, we start by considering the sum <span class="math notranslate nohighlight">\(| A | + | B | + | C | \)</span>. At this point, if an element lies in exactly one set, say <span class="math notranslate nohighlight">\(A\)</span>, then it will be counted exactly once via adding up <span class="math notranslate nohighlight">\(| A | \)</span>. If an element lies in exactly two sets, say <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> but not <span class="math notranslate nohighlight">\(C\)</span>, then it will be counted exactly twice, one from <span class="math notranslate nohighlight">\(| A | \)</span> and one from <span class="math notranslate nohighlight">\(| B | \)</span>. If an element lies in all three sets (i.e. <span class="math notranslate nohighlight">\(A\cap B\cap C\)</span>), then it will be counted exactly thrice, one from <span class="math notranslate nohighlight">\(| A | \)</span>, one from <span class="math notranslate nohighlight">\(| B | \)</span> and one from <span class="math notranslate nohighlight">\(| C | \)</span>.</p>
+<p>Now, we subtract <span class="math notranslate nohighlight">\(| A\cap B | + | A\cap C | + | B\cap C | \)</span>. For an element that lies in exactly one set, its count is unchanged. For an element that lies in <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> but not <span class="math notranslate nohighlight">\(C\)</span>, its count will be subtracted by one via subtracting <span class="math notranslate nohighlight">\(| A\cap B | \)</span>. For an element that lies in <span class="math notranslate nohighlight">\(A\cap B\cap C\)</span>, its count will be subtracted by three. Hence, at this point, all elements in <span class="math notranslate nohighlight">\(A\cap B\cap C\)</span> are being counted exactly zero times, while the remaining elements are being counted exactly once. It therefore suffices to add a copy of <span class="math notranslate nohighlight">\(|A\cap B\cap C | \)</span>.</p>
+<p>It is then reasonable for us to conjecture that</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\begin{split}| A \cup B \cup C \cup D | &amp;= | A | + | B | + | C |  + | D | \\
+&amp;- | A \cap B | - | A \cap C | - | A \cap D | - | B \cap C | - | B \cap D | - | C \cap D | \\
+&amp;+ | A \cap B \cap C | + | A \cap B \cap D | + | A \cap C \cap D |  + | B \cap C \cap D | \\
+&amp;- | A \cap B \cap C \cap D |\end{split}\]</div>
+</div>
+<p>and we would be right, as can be verified by brute-force. The more ambitious readers would have already conjectured that… wait for it… drum roll please…</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\left|\bigcup_{i = 1}^n A_i\right| = \sum_{\emptyset\neq J\subseteq\{1,\ldots ,n\}} (-1)^{|J| + 1}\left|\bigcap_{j\in J} A_j\right|\]</div>
+</div>
+<p>and they would also be right, as can be proven by induction on <span class="math notranslate nohighlight">\(n\)</span>. We call this the inclusion-exclusion principle, true for any collection of <span class="math notranslate nohighlight">\(n\)</span> sets <span class="math notranslate nohighlight">\(A_1, A_2, \cdots, A_n\)</span>.</p>
+</section>
+<section id="pigeonhole-principle">
+<h2>Pigeonhole Principle<a class="headerlink" href="#pigeonhole-principle" title="Permalink to this heading">#</a></h2>
+<p>The pigeonhole principle is rather easy to recall from its name: If there are more pigeons than there are pigeonholes, then two pigeons must enter the same pigeonhole. The mathematical formulation of pigeonhole principle is fundamentally a statement about functions.</p>
+<p>If we think of the set of pigeons as the domain <span class="math notranslate nohighlight">\(X\)</span>, and the set of pigeonholes as the codomain <span class="math notranslate nohighlight">\(Y\)</span>, then the pigeons entering the pigeonholes can be thought of as a function <span class="math notranslate nohighlight">\(f : X\rightarrow Y\)</span>. Indeed, we are enforcing that no pigeon enters two different pigeonholes and every pigeon must enter a pigeonhole. The pigeonhole principle then asserts that if <span class="math notranslate nohighlight">\(| X | &gt; | Y | \)</span>, then every function <span class="math notranslate nohighlight">\(f : X\rightarrow Y\)</span> must not be injective, i.e. there must exists two elements <span class="math notranslate nohighlight">\(a, b\in X\)</span> such that <span class="math notranslate nohighlight">\(f(a) = f(b)\)</span>. The contrapositive is sometimes known as the injection principle: If there is an injection from <span class="math notranslate nohighlight">\(X\)</span> to <span class="math notranslate nohighlight">\(Y\)</span>, then <span class="math notranslate nohighlight">\(| X | \leq | Y | \)</span>.</p>
+<p>More generally, we can consider a quantified version of pigeonhole principle. As a motivating example, if there are <span class="math notranslate nohighlight">\(10\)</span> pigeons and <span class="math notranslate nohighlight">\(3\)</span> pigeonholes, necessarily some pigeonhole must have at least two pigeons, but a stronger statement that we can get is that in fact some pigeonhole must have at least <span class="math notranslate nohighlight">\(4\)</span> pigeons, for if not, then every pigeonhole has at most <span class="math notranslate nohighlight">\(3\)</span> pigeons and hence there must be at most <span class="math notranslate nohighlight">\(3\times 3 = 9\)</span> pigeons in total, which is a contradiction.</p>
+<p>So, if there are <span class="math notranslate nohighlight">\(m\)</span> pigeons and <span class="math notranslate nohighlight">\(n\)</span> pigeonholes, then some pigeonhole must have at least <span class="math notranslate nohighlight">\(\left\lceil\frac{m}{n}\right\rceil\)</span> pigeons. Otherwise, every pigeonhole has at most <span class="math notranslate nohighlight">\(\left\lceil\frac{m}{n}\right\rceil - 1\)</span> pigeons. Using the fact that <span class="math notranslate nohighlight">\(\left\lceil\frac{m}{n}\right\rceil &lt; \frac{m}{n} + 1\)</span>, we can conclude that there are less than <span class="math notranslate nohighlight">\(n\cdot\frac{m}{n} = m\)</span> pigeons in total, which is a contradiction.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Even more generally, if there are <span class="math notranslate nohighlight">\(m\)</span> pigeons, <span class="math notranslate nohighlight">\(n\)</span> pigeonholes, and nonnegative integers <span class="math notranslate nohighlight">\(k_1, k_2, \cdots, k_n\)</span> such that</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[k_1 + k_2 + \cdots + k_n &lt; m + n\]</div>
+</div>
+<p>then the first pigeonhole must have at least <span class="math notranslate nohighlight">\(k_1\)</span> pigeons, or the second pigeonhole must have at least <span class="math notranslate nohighlight">\(k_2\)</span> pigeons, or <span class="math notranslate nohighlight">\(\cdots\)</span>, or the <span class="math notranslate nohighlight">\(n\)</span>-th pigeonhole must have at least <span class="math notranslate nohighlight">\(k_n\)</span> pigeons. If not, then for every <span class="math notranslate nohighlight">\(i\)</span>, the <span class="math notranslate nohighlight">\(i\)</span>-th pigeonhole must have at most <span class="math notranslate nohighlight">\(k_i - 1\)</span> pigeons, allowing us to conclde that there are at most</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[(k_1 - 1) + (k_2 - 1) + \cdots + (k_n - 1) &lt; m + n - n = m\]</div>
+</div>
+<p>pigeons, which is a contradiction.</p>
+</div>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="../../contact.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Contact</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="../cardinality/index.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Cardinality</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2026, Chin Herng
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              <a class="muted-link fa-solid fa-envelope fa-2x" href="mailto:chinherng@u.nus.edu" aria-label="Email"></a>
+              <a class="muted-link fa-brands fa-solid fa-linkedin fa-2x" href="https://linkedin.com/in/chong-chin-herng" aria-label="LinkedIn"></a>
+              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/chin-herng" aria-label="GitHub"></a>
+              <a class="muted-link fa-brands fa-solid fa-instagram fa-2x" href="https://instagram.com/chongahzong" aria-label="Instagram"></a>
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Combinatorics</a><ul>
+<li><a class="reference internal" href="#addition-principle">Addition Principle</a></li>
+<li><a class="reference internal" href="#multiplication-principle">Multiplication Principle</a></li>
+<li><a class="reference internal" href="#permutation">Permutation</a><ul>
+<li><a class="reference internal" href="#circular-permutation">Circular Permutation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#combination">Combination</a><ul>
+<li><a class="reference internal" href="#binomial-theorem">Binomial Theorem</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#inclusion-exclusion-principle">Inclusion-Exclusion Principle</a></li>
+<li><a class="reference internal" href="#pigeonhole-principle">Pigeonhole Principle</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=b3ba4146"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/scripts/furo.js?v=32e29ea5"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </body>
+</html>

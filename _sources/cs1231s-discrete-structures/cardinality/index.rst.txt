@@ -76,7 +76,7 @@ It is usually easier to show that a set is infinite than to show that it is coun
 
 Crucially, we no longer require that every element of $A$ to appear exactly once. As long as we have a sequence in which every element of $A$ appears, we can already conclude that $A$ is countable. This is intuitive from the function view: having such a sequence essentially gives us a surjection from $\mathbb{Z}^+$ to $A$. Every element in $A$ is being mapped to by some element in $\mathbb{Z}^+$. Now, $\mathbb{Z}^+$ need not be injective, so there could be more elements in $\mathbb{Z}^+$ than there are in $A$. Loosely speaking, one has $|A|\leq|\mathbb{Z}^+|$, so $A$ is either countably infinite or finite. In both cases, $A$ is countable.
 
-So, if we want to use the sequence argument to argue that a given set $A$ is countable, we only need to give a sequence in which every element of $A$ appears. This is a simplification mainly by allowing us to not worry about duplicate entries in the sequence. In the function view, it suffices to find a surjection from $\mathbb{Z}^+$ (or any known countably infinite set) to $A$.
+So, if we want to use the sequence argument to argue that a given set $A$ is countable, we only need to give a sequence in which every element of $A$ appears. This is a simplification mainly by allowing us to not worry about duplicate entries in the sequence. In the function view, it suffices to find a surjection from $\mathbb{Z}^+$ (or any known countable set) to $A$.
 
 .. dropdown:: Exercise
 
@@ -169,9 +169,9 @@ The intuition is that if $S$ is an infinite set, then $S$ has an infinite supply
 Summary
 _______
 
-Beyond the finite sets, the smallest transfinite cardinal number is $\aleph_0$. This is the cardinality of $\mathbb{Z}^+$ as well as a bunch of other sets, known collectively as the countably infinite sets. In the function view, there are bijections between these sets and $\mathbb{Z}^+$. In the sequence view, a set $A$ is countably infinite if and only if there exists an infinite sequence $a_1, a_2, \cdots$ in which every $a_i$ is an element of $A$, and every element of $A$ appears exactly once. Beyond countably infinite sets are the uncountable sets.
+Beyond the finite sets, the smallest transfinite cardinal number is $\aleph_0$. This is the cardinality of $\mathbb{Z}^+$ as well as a bunch of other sets, known collectively as the countably infinite sets. In the function view, there exists bijections between these sets and $\mathbb{Z}^+$. In the sequence view, a set $A$ is countably infinite if and only if there exists an infinite sequence $a_1, a_2, \cdots$ in which every $a_i$ is an element of $A$, and every element of $A$ appears exactly once. Beyond countably infinite sets are the uncountable sets.
 
-In terms of techniques, to show that a set $A$ is countable, it suffices to find a sequence in which every element of $A$ appears. In the function view, it suffices to find a surjection from a known countably infinite set to $A$. Usually this is done alongside showing that the set is infinite, which is relatively simple.
+In terms of techniques, to show that a set $A$ is countable, it suffices to find a sequence in which every element of $A$ appears. In the function view, it suffices to find a surjection from $\mathbb{Z}^+$ (or any known countable set) to $A$. This is usually done alongside showing that the set is infinite, a task that is typically relatively simple.
 
 To show that a set $A$ is uncountable, we either use the technique of diagonalization, or show that $A$ is a superset of some known uncountable set.
 

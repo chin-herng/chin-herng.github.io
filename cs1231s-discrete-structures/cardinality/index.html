@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Contact" href="../../contact.html" /><link rel="prev" title="Propositional Logic" href="../propositional-logic/index.html" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Combinatorics" href="../combinatorics/index.html" /><link rel="prev" title="Propositional Logic" href="../propositional-logic/index.html" />
 
     <!-- Generated with Sphinx 7.1.2 and Furo 2023.09.10 -->
         <title>Cardinality - Chin Herng</title>
@@ -168,6 +168,7 @@
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">CS1231S Discrete Structures</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of CS1231S Discrete Structures</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../propositional-logic/index.html">Propositional Logic</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Cardinality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../combinatorics/index.html">Combinatorics</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact</a></li>
@@ -262,7 +263,7 @@
 <p>If there exists a sequence <span class="math notranslate nohighlight">\(a_1, a_2, \cdots\)</span> in which every element of <span class="math notranslate nohighlight">\(A\)</span> appears, then <span class="math notranslate nohighlight">\(A\)</span> is countable.</p>
 </div>
 <p>Crucially, we no longer require that every element of <span class="math notranslate nohighlight">\(A\)</span> to appear exactly once. As long as we have a sequence in which every element of <span class="math notranslate nohighlight">\(A\)</span> appears, we can already conclude that <span class="math notranslate nohighlight">\(A\)</span> is countable. This is intuitive from the function view: having such a sequence essentially gives us a surjection from <span class="math notranslate nohighlight">\(\mathbb{Z}^+\)</span> to <span class="math notranslate nohighlight">\(A\)</span>. Every element in <span class="math notranslate nohighlight">\(A\)</span> is being mapped to by some element in <span class="math notranslate nohighlight">\(\mathbb{Z}^+\)</span>. Now, <span class="math notranslate nohighlight">\(\mathbb{Z}^+\)</span> need not be injective, so there could be more elements in <span class="math notranslate nohighlight">\(\mathbb{Z}^+\)</span> than there are in <span class="math notranslate nohighlight">\(A\)</span>. Loosely speaking, one has <span class="math notranslate nohighlight">\(|A|\leq|\mathbb{Z}^+|\)</span>, so <span class="math notranslate nohighlight">\(A\)</span> is either countably infinite or finite. In both cases, <span class="math notranslate nohighlight">\(A\)</span> is countable.</p>
-<p>So, if we want to use the sequence argument to argue that a given set <span class="math notranslate nohighlight">\(A\)</span> is countable, we only need to give a sequence in which every element of <span class="math notranslate nohighlight">\(A\)</span> appears. This is a simplification mainly by allowing us to not worry about duplicate entries in the sequence. In the function view, it suffices to find a surjection from <span class="math notranslate nohighlight">\(\mathbb{Z}^+\)</span> (or any known countably infinite set) to <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p>So, if we want to use the sequence argument to argue that a given set <span class="math notranslate nohighlight">\(A\)</span> is countable, we only need to give a sequence in which every element of <span class="math notranslate nohighlight">\(A\)</span> appears. This is a simplification mainly by allowing us to not worry about duplicate entries in the sequence. In the function view, it suffices to find a surjection from <span class="math notranslate nohighlight">\(\mathbb{Z}^+\)</span> (or any known countable set) to <span class="math notranslate nohighlight">\(A\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Exercise<div class="sd-summary-down docutils">
@@ -360,8 +361,8 @@ Exercise<div class="sd-summary-down docutils">
 </details></section>
 <section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
-<p>Beyond the finite sets, the smallest transfinite cardinal number is <span class="math notranslate nohighlight">\(\aleph_0\)</span>. This is the cardinality of <span class="math notranslate nohighlight">\(\mathbb{Z}^+\)</span> as well as a bunch of other sets, known collectively as the countably infinite sets. In the function view, there are bijections between these sets and <span class="math notranslate nohighlight">\(\mathbb{Z}^+\)</span>. In the sequence view, a set <span class="math notranslate nohighlight">\(A\)</span> is countably infinite if and only if there exists an infinite sequence <span class="math notranslate nohighlight">\(a_1, a_2, \cdots\)</span> in which every <span class="math notranslate nohighlight">\(a_i\)</span> is an element of <span class="math notranslate nohighlight">\(A\)</span>, and every element of <span class="math notranslate nohighlight">\(A\)</span> appears exactly once. Beyond countably infinite sets are the uncountable sets.</p>
-<p>In terms of techniques, to show that a set <span class="math notranslate nohighlight">\(A\)</span> is countable, it suffices to find a sequence in which every element of <span class="math notranslate nohighlight">\(A\)</span> appears. In the function view, it suffices to find a surjection from a known countably infinite set to <span class="math notranslate nohighlight">\(A\)</span>. Usually this is done alongside showing that the set is infinite, which is relatively simple.</p>
+<p>Beyond the finite sets, the smallest transfinite cardinal number is <span class="math notranslate nohighlight">\(\aleph_0\)</span>. This is the cardinality of <span class="math notranslate nohighlight">\(\mathbb{Z}^+\)</span> as well as a bunch of other sets, known collectively as the countably infinite sets. In the function view, there exists bijections between these sets and <span class="math notranslate nohighlight">\(\mathbb{Z}^+\)</span>. In the sequence view, a set <span class="math notranslate nohighlight">\(A\)</span> is countably infinite if and only if there exists an infinite sequence <span class="math notranslate nohighlight">\(a_1, a_2, \cdots\)</span> in which every <span class="math notranslate nohighlight">\(a_i\)</span> is an element of <span class="math notranslate nohighlight">\(A\)</span>, and every element of <span class="math notranslate nohighlight">\(A\)</span> appears exactly once. Beyond countably infinite sets are the uncountable sets.</p>
+<p>In terms of techniques, to show that a set <span class="math notranslate nohighlight">\(A\)</span> is countable, it suffices to find a sequence in which every element of <span class="math notranslate nohighlight">\(A\)</span> appears. In the function view, it suffices to find a surjection from <span class="math notranslate nohighlight">\(\mathbb{Z}^+\)</span> (or any known countable set) to <span class="math notranslate nohighlight">\(A\)</span>. This is usually done alongside showing that the set is infinite, a task that is typically relatively simple.</p>
 <p>To show that a set <span class="math notranslate nohighlight">\(A\)</span> is uncountable, we either use the technique of diagonalization, or show that <span class="math notranslate nohighlight">\(A\)</span> is a superset of some known uncountable set.</p>
 <p>There are various pragmatic results we know regarding the relationships between countability, countably infinity, and uncountability. There are also various sets of numbers known to be countably infinite, such as <span class="math notranslate nohighlight">\(\mathbb{Z}^+\)</span>, <span class="math notranslate nohighlight">\(\mathbb{N}\)</span>, <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span>, <span class="math notranslate nohighlight">\(\mathbb{Z}^+\times\mathbb{Z}^+\)</span>, and various sets known to be uncountable, such as <span class="math notranslate nohighlight">\((0, 1)\)</span> and <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.</p>
 </section>
@@ -372,12 +373,12 @@ Exercise<div class="sd-summary-down docutils">
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../../contact.html">
+          <a class="next-page" href="../combinatorics/index.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Contact</div>
+                <div class="title">Combinatorics</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
