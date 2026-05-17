@@ -226,7 +226,7 @@ _____________________
 
 The analogy of pigeons entering pigeonholes turns out to be capturing a wide range of counting problems. Adhering to common conventions, let us from now on replace pigeons with balls and pigeonholes with bins. A distribution problem is a counting problem involving balls entering bins. The balls can be identical or distinct, and the bins can be identical or distinct. Moreover, we may optionally enforce that no bin is empty (i.e. every bin has at least one ball) or no bin has more than one ball (i.e. every bin has at most one ball).
 
-For example, if there are $r$ distinct balls, which we will denote $b_1, b_2, \cdots, b_r$, to be distributed into $n$ distinct bins, which we will denote $B_1, B_2, \cdots, B_n$, such that no bin has more than one ball, then observe that we can view every distribution as an $r$-permutation $(b_{i_1}, b_{i_2}, \cdots, b_{i_r})$ of the set of $n$ bins, where for every $j$, ball $j$ enters bin $i_j$. It follows that there are $P^n_r$ possible distributions.
+For example, if there are $r$ distinct balls, which we will denote $b_1, b_2, \cdots, b_r$, to be distributed into $n$ distinct bins, which we will denote $B_1, B_2, \cdots, B_n$, such that no bin has more than one ball, then observe that we can view every distribution as an $r$-permutation $(B_{i_1}, B_{i_2}, \cdots, B_{i_r})$ of the set of $n$ bins, where for every $j$, ball $j$ enters bin $B_{i_j}$. It follows that there are $P^n_r$ possible distributions.
 
 However, the situation is different if the $r$ balls are now identical (while the $n$ bins are still distinct, and we still enforce that no bin has more than one ball). For example, the distribution in which $b_1$ enters $B_1$ and $b_2$ enters $B_2$ is no longer distinguishable from that in which $b_1$ enters $B_2$ and $b_2$ enters $B_1$. More formally, it no longer makes sense to give numberings to the balls.
 
@@ -255,6 +255,8 @@ We can hence conclude that our desired count is exactly
 
 .. math::
     \binom{r + n - 1}{r} = \binom{r + n - 1}{n - 1}
+
+In particular, when $r = 7$ and $n = 3$, there are $\binom{7 + 3 - 1}{3 - 1} = 36$ possible distributions.
 
 Now, if we enforce that no bin is empty, the problem becomes finding the number of positive integer solutions to the equation
 
@@ -335,6 +337,6 @@ In the table above, the function $S(r, n)$ is known as the Stirling numbers of t
 The function $p(r, n)$ is the number of distributions of $r$ identical objects into $n$ identical bins such that no bin is empty. Equivalently, it is the number of ways to express the positive integer $r$ as the sum of $n$ positive integers such that the addends are in non-decreasing order. Unfortunately, unlike $S(r, n)$, no closed-form for $p(r, n)$ is known.
 
 .. note::
-    The partition function $p(r) := \sum_{k = 0}^r p(r, k)$ is defined as the number of ways to express the positive integer $r$ as the sum of any number of positive integers such that the addends are in non-decreasing order. The partition function is featured in the biographical drama film "The Man Who Knew Infinity" about the Indian mathematician Srinivasa Ramanujan.
+    The partition function $p(r) := \sum_{k = 0}^r p(r, k)$ is defined as the number of ways to express the positive integer $r$ as the sum of any number of positive integers such that the addends are in non-decreasing order. The function is featured in the biographical drama film "The Man Who Knew Infinity" about the Indian mathematician Srinivasa Ramanujan.
 
-As illustrated in the beginning of this section, distribution problems capture permutations and combinations ($P^r_n$ and $\binom{n}{r}$) as special cases. There are limitations on this classification, e.g. it does not capture circular permutations, nor does it consider what happens when ordering matters within each bin, e.g. when every "bin" is now a row of balls, or a circular table that can seat people. Nonetheless, even in the twelvefold way, there are already naturally-occurring counting problems for which we do not yet know how to tackle efficiently. It is all too easy to enter into deep mathematics on a discussion of seemingly simple counting problems.
+The twelvefold way is powerful enough to capture permutations and combinations ($P^n_r$ and $\binom{n}{r}$) as special cases, though there certainly are limitations to this classification, e.g. it does not capture circular permutations, nor does it consider what happens when ordering matters within each bin, e.g. when every "bin" is now a row of balls, or a circular table that can seat people. Nonetheless, even in the twelvefold way, there are already naturally-occurring counting problems for which we do not yet know how to tackle efficiently. It is all too easy to enter into deep mathematics on a discussion of seemingly simple counting problems.
