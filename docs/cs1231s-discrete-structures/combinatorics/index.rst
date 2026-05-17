@@ -148,7 +148,8 @@ and we would be right, as can be verified by brute-force. The more ambitious rea
 
 and they would also be right, as can be proven by induction on $n$. We call this the binomial theorem, true for any real numbers $x, y$ and nonnegative integers $n$ (after defining $0^0 := 1$).
 
-.. note:: The binomial theorem can in fact be generalized to handle even complex exponents $n$ under a suitable generalization of $\binom{n}{r}$, in which case the finite sum becomes an infinite series.
+.. note::
+    The binomial theorem can in fact be generalized to handle even complex exponents $n$ under a suitable generalization of $\binom{n}{r}$, in which case the finite sum becomes an infinite series.
 
 Inclusion-Exclusion Principle
 _____________________________
@@ -219,3 +220,121 @@ So, if there are $m$ pigeons and $n$ pigeonholes, then some pigeonhole must have
         (k_1 - 1) + (k_2 - 1) + \cdots + (k_n - 1) < m + n - n = m
 
     pigeons, which is a contradiction.
+
+Distribution Problems
+_____________________
+
+The analogy of pigeons entering pigeonholes turns out to be capturing a wide range of counting problems. Adhering to common conventions, let us from now on replace pigeons with balls and pigeonholes with bins. A distribution problem is a counting problem involving balls entering bins. The balls can be identical or distinct, and the bins can be identical or distinct. Moreover, we may optionally enforce that no bin is empty (i.e. every bin has at least one ball) or no bin has more than one ball (i.e. every bin has at most one ball).
+
+For example, if there are $r$ distinct balls, which we will denote $b_1, b_2, \cdots, b_r$, to be distributed into $n$ distinct bins, which we will denote $B_1, B_2, \cdots, B_n$, such that no bin has more than one ball, then observe that we can view every distribution as an $r$-permutation $(b_{i_1}, b_{i_2}, \cdots, b_{i_r})$ of the set of $n$ bins, where for every $j$, ball $j$ enters bin $i_j$. It follows that there are $P^n_r$ possible distributions.
+
+However, the situation is different if the $r$ balls are now identical (while the $n$ bins are still distinct, and we still enforce that no bin has more than one ball). For example, the distribution in which $b_1$ enters $B_1$ and $b_2$ enters $B_2$ is no longer distinguishable from that in which $b_1$ enters $B_2$ and $b_2$ enters $B_1$. More formally, it no longer makes sense to give numberings to the balls.
+
+Instead, we can now view every distribution as an $r$-combination $B'$ of the set of $n$ bins, where every bin in $B'$ has one ball whereas every bin not in $B'$ has no ball. There are now only $\binom{n}{r}$ possible distributions.
+
+Stars and Bars
+^^^^^^^^^^^^^^
+
+Consider now that we drop the constraint of no bin having more than one ball (there are still $r$ identical balls and $n$ distinct bins). The resulting number of distributions can be obtained via the method of stars and bars.
+
+Without the need to distinguish between the balls, finding the number of distributions is the same as finding the number of nonnegative integer solutions to the equation
+
+.. math::
+    x_1 + x_2 + \cdots + x_n = r
+
+where $x_i$ is interpreted as the number of balls entering bin $B_i$. To do so, we imagine a row of objects consisting of $r$ stars and $n - 1$ bars. For example, let $r = 7$ and $n = 3$, so that we are considering the equation $x_1 + x_2 + x_3 = 7$. Here is one permutation of the corresponding $r + n - 1 = 9$ objects.
+
+.. math::
+    ★ ★ ★ ★ | ★ | ★ ★
+
+From this permutation, we can read off a nonnegative integer solution as follows. First, we add two more bars to the extreme left and the extreme right. This results in a total $n + 1$ bars, and hence $n$ pairs of adjacent bars. The value of $x_i$ is then the number of stars in between the $i$-th pair of adjacent bars from the left. The example permutation above thus reads $(x_1, x_2, x_3) = (4, 1, 2)$, i.e. $4 + 1 + 2 = 7$. Clearly, this correspondence between solutions and permutations is bijective.
+
+It follows that in general, our desired count is precisely the number of permutations of $r + n - 1$ objects consisting of $r$ (identical) stars and $n - 1$ (identical) bars. This is in turn equivalent to selecting $r$ positions among $r + n - 1$ positions to place the stars. In the example permutation above, we have selected the positions $1, 2, 3, 4, 5, 7, 9, 10$ (1-indexed).
+
+We can hence conclude that our desired count is exactly
+
+.. math::
+    \binom{r + n - 1}{r} = \binom{r + n - 1}{n - 1}
+
+Now, if we enforce that no bin is empty, the problem becomes finding the number of positive integer solutions to the equation
+
+.. math::
+    x_1 + x_2 + \cdots + x_n = r
+
+We can similarly tackle the problem using the method of stars and bars: Imagine a row of $r$ stars
+
+.. math::
+    ★ ★ ★ ★ ★ ★ ★
+
+Observe that since no bin is empty, every positive integer solution corresponds to a choice of $n - 1$ gaps out of the $r - 1$ gaps created by the $r$ stars. It follows that our desired count is $\binom{r - 1}{n - 1}$.
+
+Perhaps a more generalizable approach, however, is to let $y_i := x_i - 1$ for every $i$. Now, take our equation and subtract both sides by $n$:
+
+.. math::
+    (x_1  - 1) + (x_2 - 1) + \cdots + (x_n - 1) &= r - n \\
+    \implies y_1 + y_2 + \cdots + y_n &= r - n
+
+Since we were looking for positive integer solutions, we have $x_i\geq 1$ for every $i$, which implies $y_i\geq 0$ for every $i$. The problem now reduces to finding the number of nonnegative integer solutions to the resulting equation, which we already know how to tackle. Our desired count is precisely
+
+.. math::
+    \binom{r - n + n - 1}{n - 1} = \binom{r - 1}{n - 1}
+
+The above approach is more generalizable in the sense that it is applicable whenever we want to find the number of integer solutions to the equation
+
+.. math::
+    x_1 + x_2 + \cdots + x_n = r
+
+subject to the constraints $x_1\geq c_1, x_2\geq c_2, \cdots, x_n\geq c_n$ for any constants $c_1, c_2, \cdots, c_n$. Setting all these constants to $0$ and $1$ recovers the two problems described above.
+
+Gian-Carlo Rota's Twelvefold Way
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To state the distribution problems more formally, there is a set $X$ of balls and a set $Y$ of bins. A distribution problem is counting the number of equivalence classes in the set of functions from $X$ to $Y$, with respect to some equivalence relation defined below.
+
+- When the balls and bins are distinct, every function forms its own equivalence class.
+- When the balls are identical and the bins are distinct, two functions are equivalent if and only if they are identical up to reordering of the elements in $X$.
+- When the balls are distinct and the bins are identical, two functions are equivalent if and only if they are identical up to reordering of the elements in $Y$.
+- When the balls and bins are identical, two functions are equivalent if and only if they are identical up to reordering of the elements in $X$ and/or $Y$.
+
+Moreover, we may optionally enforce that the functions from $X$ to $Y$ must be injective (every bin has at most one ball) or surjective (every bin has at least one ball).
+
+With $4$ choices for the equivalence relation and $3$ choices for whether we are considering any function, injections only or surjections only, we have (by the multiplicative principle) a total of $12$ distribution problems. This idea of classification is credited to Italian mathematician Gian-Carlo Rota. Table below summarizes the solution to each of them, where $r$ denotes the number of balls and $n$ denotes the number of bins.
+
+.. container:: center-table
+
+  .. list-table::
+    :widths: 19 27 27 27
+    :header-rows: 1
+
+    * -
+      - No restriction
+      - Injections
+      - Surjections
+    * - Distinct Balls, Distinct Bins
+      - $n^r$
+      - $P^n_r$
+      - $n!\cdot S(r, n)$
+    * - Identical Balls, Distinct Bins
+      - $\binom{r + n - 1}{n - 1}$
+      - $\binom{n}{r}$
+      - $\binom{r - 1}{n - 1}$
+    * - Distinct Balls, Identical Bins
+      - $\sum_{k = 0}^n S(r, k)$
+      - $\begin{cases} 1 & 0\leq r\leq n \\ 0 & \text{otherwise}\end{cases}$
+      - $S(r, n)$
+    * - Identical Balls, Identical Bins
+      - $\sum_{k = 0}^n p(r, k)$
+      - $\begin{cases} 1 & 0\leq r\leq n \\ 0 & \text{otherwise}\end{cases}$
+      - $p(r, n)$
+
+In the table above, the function $S(r, n)$ is known as the Stirling numbers of the second kind, defined as the number of distributions of $r$ distinct objects into $n$ identical bins such that no bin is empty. There is a closed form for $S(r, n)$ in the form of a summation which can be derived via the inclusion-exclusion principle. We encourage readers to derive it themselves.
+
+.. note::
+    The Bell number $B_r := \sum_{k = 0}^r S(r, k)$ is defined as the number of ways to distribute $r$ distinct balls into any number of identical bins such that no bin is empty. Equivalently, this is the number of possible partitions of an $r$-element set.
+
+The function $p(r, n)$ is the number of distributions of $r$ identical objects into $n$ identical bins such that no bin is empty. Equivalently, it is the number of ways to express the positive integer $r$ as the sum of $n$ positive integers such that the addends are in non-decreasing order. Unfortunately, unlike $S(r, n)$, no closed-form for $p(r, n)$ is known.
+
+.. note::
+    The partition function $p(r) := \sum_{k = 0}^r p(r, k)$ is defined as the number of ways to express the positive integer $r$ as the sum of any number of positive integers such that the addends are in non-decreasing order. The partition function is featured in the biographical drama film "The Man Who Knew Infinity" about the Indian mathematician Srinivasa Ramanujan.
+
+As illustrated in the beginning of this section, distribution problems capture permutations and combinations ($P^r_n$ and $\binom{n}{r}$) as special cases. There are limitations on this classification, e.g. it does not capture circular permutations, nor does it consider what happens when ordering matters within each bin, e.g. when every "bin" is now a row of balls, or a circular table that can seat people. Nonetheless, even in the twelvefold way, there are already naturally-occurring counting problems for which we do not yet know how to tackle efficiently. It is all too easy to enter into deep mathematics on a discussion of seemingly simple counting problems.
