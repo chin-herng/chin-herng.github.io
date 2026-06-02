@@ -13,7 +13,7 @@ Intuitively, if the objects we are counting can be grouped into two types that a
 
 To formulate this idea in set-theoretic language, say we are trying to determine $| S | $. If we can in fact write $S = A\sqcup B$ (where $\sqcup$ denotes a disjoint union), then the addition principle allows us to assert the equality $| S | = | A | + | B | $.
 
-Crucially, note that even though we only stated the addition principle for two steps (or two sets), by an inductive argument the principle can be generalized to any finite number of steps (or sets).
+Crucially, note that even though we only stated the addition principle for two types (or two sets), by an inductive argument the principle can be generalized to any finite number of types (or sets).
 
 .. figure:: images/ap.png
    :width: 300
