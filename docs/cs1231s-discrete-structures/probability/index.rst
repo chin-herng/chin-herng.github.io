@@ -1,6 +1,9 @@
 Probability Theory
 ==================
 
+.. note::
+    So, I was initially thinking that it wouldn't be too big of a leap to extend the CS1231S probability theory syllabus to also cover concentration bounds, turns out I was quite wrong and the page has become quite long. I have marked with asterisks (*) the sections/subsections that are out of the scope of CS1231S as of AY25/26 S1.
+
 Probability theory is intuitively the theory of uncertainty, though interpretation of probability is in fact `subject to philosphical debates <https://en.wikipedia.org/wiki/Probability_interpretations>`_. With a number of exceptions, applications of probability theory in computer science are predominantly under the discrete context. As such, throughout our discussion we shall focus on discrete probability theory.
 
 Sample Space and Probability
@@ -22,8 +25,8 @@ It is common to abuse notation and denote for an event $E$ its probability $\Pr[
 
 In general, when probabilities are uniform, i.e. for every outcome $s$ we have $\Pr[s] = \frac{1}{| \Omega | }$, then it follows that $\Pr[E] = \frac{| E | }{| \Omega | }$, so computing $\Pr[E]$ essentially reduces to two counting problems. Otherwise, we remark that it is possible to re-define the sample space to make them uniform. For example, on an unfair die in which $\Pr[1] = \frac{1}{2}$ whereas every other outcome has equal probabilities, i.e. we have probability assignemnts $\Pr[2] = \Pr[3] = \Pr[4] = \Pr[5] = \Pr[6] = \frac{1}{10}$, we can re-define the sample space to instead be $\{1_1, 1_2, 1_3, 1_4, 1_5, 2, 3, 4, 5, 6\}$ (so there are $5$ duplicates of $1$) and assign every outcome a probability of $\frac{1}{10}$.
 
-Law of Total Probability
-^^^^^^^^^^^^^^^^^^^^^^^^
+(*) Law of Total Probability
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For any events $A$ and $B$, we have
 
@@ -43,8 +46,8 @@ More generally, for any partition $\{S_1, S_2, \cdots, S_k\}$ of the sample spac
 
 This is known as the law of total probability.
 
-Union Bound
-^^^^^^^^^^^
+(*) Union Bound
+^^^^^^^^^^^^^^^
 
 Similar to the inclusion-exclusion principle, for any events $A$ and $B$ we have
 
@@ -151,8 +154,8 @@ Now, let $C = \{(1, 1), (1, 2), (1, 3), (3, 4), (3, 5), (3, 6)\}$. Note that $A$
 
     In general, for any events $A, B, C$ with $\Pr[A]\Pr[B\cap C] > 0$, if $\Pr[A\mid B\cap C] = \Pr[A\mid C]$, we say that $A$ and $B$ are conditionally independent given $C$. In other words, conditioned on $C$, the occurrence of $B$ does not affect $\Pr[A\mid C]$.
 
-Mutual Independence
-^^^^^^^^^^^^^^^^^^^
+(*) Mutual Independence
+^^^^^^^^^^^^^^^^^^^^^^^
 
 The definition of independence can be generalized to more than two events. A finite set of events, which we will denote as $\mathcal{E} = \{A_1, A_2, \cdots, A_n\}$, is mutually independent if and only if for every $i$ and every $A_i\notin S\subseteq\mathcal{E}$ we have $\Pr\left[\bigcap_{A\in S} A\right] > 0$, and moreover
 
@@ -205,8 +208,8 @@ We will henceforth denote $R_X := \{x\in\mathbb{R} : X(s) = x\text{ for some }s\
 
 The distribution of a random variable is a function $\mu : \mathbb{R}\rightarrow [0, 1]$ that assigns for every real number $x$ the probability $\Pr[X = x]$. We write $X\sim\mu$ and say that $X$ follows the distribution $\mu$. In our example, the distribution of $X$ maps $3$ as well as $-1$ to $\frac{1}{2}$, and everything else to $0$.
 
-Indicator Random Variables
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+(*) Indicator Random Variable
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Random variables are, in some sense, a generalization of events, via the notion of indicator random variables. These are specific types of random variables that is ubiquitous in the context of theoretical computer science. For any event $A$, the indicator random variable of $A$ is defined as follows.
 
@@ -220,8 +223,8 @@ In many use cases, a complicated random variable is written as a sum of indicato
 
 One trivial observation is that for any events $A$ and $B$, we have $\mathbf 1_A\mathbf 1_B = \mathbf 1_{A\cap B}$.
 
-Independence
-^^^^^^^^^^^^
+(*) Independence
+^^^^^^^^^^^^^^^^
 
 The notion of independence between events extends naturally for random variables as generalizations.
 
@@ -300,8 +303,8 @@ Recall that in our example of flipping two coins, we had $X(\text{H}) = 3$ as we
 .. math::
     \mathbb{E}[X_1 + X_2] = \mathbb{E}[X_1] + \mathbb{E}[X_2] = 1 + 1 = 2
 
-Conditional Expectation
-^^^^^^^^^^^^^^^^^^^^^^^
+(*) Conditional Expectation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Similar to conditional probabilities, we can define a notion of conditional expectation. Let $X$ be a random variable and $A$ be an event with $\Pr[A] > 0$. The conditional expectation of $X$ given $A$, which we will denote as $\mathbb{E}[X\mid A]$, is defined as follows.
 
@@ -347,8 +350,8 @@ where $X$ is any random variable, and $\{S_1, S_2, \cdots, S_k\}$ is any partiti
 
     This is known as the law of total expectation and I agree that it is notationally very confusing.
 
-Variance
-________
+(*) Variance
+____________
 
 Intuitively, the expectation of a random variable $X$ is the mean of $X$, i.e. the value that it takes on average. On the other hand, the variance of $X$ measures the dispersion, i.e. how spread out are the values of $X$ in its distribution. More precisely, the variance of a random variable $X$ is defined as follows.
 
@@ -432,8 +435,8 @@ and so unlike expectation, in general there is no "linearity of variance" unless
 
 and in particular if $X_1, X_2, \cdots, X_n$ are pairwise independent, then $\mathrm{Var}\left(\sum_{i = 1}^n X_i\right) = \sum_{i = 1}^n\mathrm{Var}(X_i)$.
 
-Concentration Bounds
-____________________
+(*) Concentration Bounds
+________________________
 
 A very major application of probability theory in theoretical computer science is on establishing concentration bounds. Intuitively, a random variable is concentrated around its mean if it is very unlikely that it deviates too much from its mean. Say we need to design an algorithm that estimates some property of the input data (e.g. the input data is the binary string, and we want to estimate the number of $1$s in the string). If we can show that our algorithm output $\hat{X}$ satisfies $\mathbb{E}[\hat{X}] = X$ where $X$ is the true value, then establishing a concentration bound on $\hat{X}$ provides a theoretical guarantee that our algorithm produces a good estimate with high probability.
 

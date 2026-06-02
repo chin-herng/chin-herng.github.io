@@ -291,6 +291,9 @@ subject to the constraints $x_1\geq c_1, x_2\geq c_2, \cdots, x_n\geq c_n$ for a
 Gian-Carlo Rota's Twelvefold Way
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. note::
+    This subsection is out of the scope of CS1231S as of AY25/26 S1.
+
 To state the distribution problems more formally, there is a set $X$ of balls and a set $Y$ of bins. A distribution problem is counting the number of equivalence classes in the set of functions from $X$ to $Y$, with respect to some equivalence relation defined below.
 
 - When the balls and bins are distinct, every function forms its own equivalence class.
