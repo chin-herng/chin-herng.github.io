@@ -108,7 +108,7 @@ possible $r$-permutations of an $n$-element set. We can therefore conclude that 
 .. math::
     \binom{n}{r} = \frac{P^n_r}{r!} = \frac{n!}{(n - r)!r!}
 
-We can similarly interpret the equation $\binom{n}{r} = \frac{P^n_r}{r!}$ as a manifestation of "division principle", instead of counting the number of $r$-combinations directly, we start by considering the number of $r$-permutations. Every $r$-combination is now being counted exactly $r!$ times, corresponding to the $r!$ ways it can be permuted. It follows that we can obtain our desired count just by dividing by $r!$.
+We can similarly interpret the equation $\binom{n}{r} = \frac{P^n_r}{r!}$ as a manifestation of a "division principle". Instead of counting the number of $r$-combinations directly, we start by considering the number of $r$-permutations. Every $r$-combination is now being counted exactly $r!$ times, corresponding to the $r!$ ways it can be permuted. It follows that we can obtain our desired count just by dividing by $r!$.
 
 For example, the number of $2$-combinations of the set $\{a, b, c, d\}$ is exactly $\binom{4}{2} = 6$. For the sake of completeness, we can list out all $6$ of these $2$-combinations: $\{a, b\}$, $\{a, c\}$, $\{a, d\}$, $\{b, c\}$, $\{b, d\}$, $\{c, d\}$.
 
