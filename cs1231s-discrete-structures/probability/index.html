@@ -1,0 +1,858 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Contact" href="../../contact.html" /><link rel="prev" title="Combinatorics" href="../combinatorics/index.html" />
+
+    <!-- Generated with Sphinx 7.1.2 and Furo 2023.09.10 -->
+        <title>Probability Theory - Chin Herng</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=36a5483c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/card-grid.css?v=9aabcc79" />
+    <link rel="stylesheet" type="text/css" href="../../_static/center-table.css?v=ac081ad8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/contact-list.css?v=86a06382" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/solid.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">Chin Herng</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+  
+  
+  <span class="sidebar-brand-text">Chin Herng</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../about_me.html">About Me</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../teaching.html">Teaching</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../blogs/index.html">Blogs</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">CS1231S Discrete Structures</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of CS1231S Discrete Structures</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../propositional-logic/index.html">Propositional Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cardinality/index.html">Cardinality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../combinatorics/index.html">Combinatorics</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Probability Theory</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="probability-theory">
+<h1>Probability Theory<a class="headerlink" href="#probability-theory" title="Permalink to this heading">#</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>So, I was initially thinking that it wouldn’t be too big of a leap to extend the CS1231S probability theory syllabus to also cover concentration bounds, turns out I was quite wrong and the page has become quite long. I have marked with asterisks (*) the sections/subsections that are out of the scope of CS1231S as of AY25/26 S1.</p>
+</div>
+<p>Probability theory is intuitively the theory of uncertainty, though interpretation of probability is in fact <a class="reference external" href="https://en.wikipedia.org/wiki/Probability_interpretations">subject to philosphical debates</a>. With a number of exceptions, applications of probability theory in computer science are predominantly under the discrete context. As such, throughout our discussion we shall focus on discrete probability theory.</p>
+<section id="sample-space-and-probability">
+<h2>Sample Space and Probability<a class="headerlink" href="#sample-space-and-probability" title="Permalink to this heading">#</a></h2>
+<p>Based on a specific random process, such as rolling a six-sided fair die, we can define a set <span class="math notranslate nohighlight">\(\Omega\)</span>, known as the sample space, consisting of every possible outcome of the random process. In our example, it is natural to define the sample space as <span class="math notranslate nohighlight">\(\{1, 2, 3, 4, 5, 6\}\)</span>, where each outcome indicates the number of dots on the upward-facing side of the (supposedly cube-shaped) die. It is imperative that there is one and only one outcome in <span class="math notranslate nohighlight">\(\Omega\)</span> in every trial of the random process. We will henceforth assume for simplicity that the sample space is always finite.</p>
+<p>Once a sample space <span class="math notranslate nohighlight">\(\Omega\)</span> has been established, we can define a function <span class="math notranslate nohighlight">\(\Pr : \Omega\rightarrow [0, 1]\)</span> which intuitively associates every outcome <span class="math notranslate nohighlight">\(s\)</span> with a real number between <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(1\)</span>, known as the probability of <span class="math notranslate nohighlight">\(s\)</span>, and denoted <span class="math notranslate nohighlight">\(\Pr[s]\)</span>. We furthermore enforce that <span class="math notranslate nohighlight">\(\Pr\)</span> must satisfy <span class="math notranslate nohighlight">\(\sum_{s\in\Omega}\Pr[s] = 1\)</span>. Roughly speaking, the value <span class="math notranslate nohighlight">\(\Pr[s]\)</span> indicates a quantitative chance for <span class="math notranslate nohighlight">\(s\)</span> to be the outcome of one trial of the random process in question. A probability of <span class="math notranslate nohighlight">\(0\)</span> indicates that the outcome is impossible, whereas a probability of <span class="math notranslate nohighlight">\(1\)</span> indicates that the outcome is certain. In general, higher probability indicates higher chance. Continuing our example, it is natural to assign a probability of exactly <span class="math notranslate nohighlight">\(\frac{1}{6}\)</span> to each of the <span class="math notranslate nohighlight">\(6\)</span> outcomes.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is important to note that the choice of sample space and probability assignment are essentially arbitrary, largely depending on what we are interested in studying regarding the random process. The sample space for our example could have also been <span class="math notranslate nohighlight">\(\{\text{even}, \text{odd}\}\)</span> where each outcome indicates the parity of the number of dots on the upward-facing side of the die. It then follows that <span class="math notranslate nohighlight">\(\Pr[\text{even}] = \Pr[\text{odd}] = \frac{1}{2}\)</span>.</p>
+</div>
+</section>
+<section id="event">
+<h2>Event<a class="headerlink" href="#event" title="Permalink to this heading">#</a></h2>
+<p>An event is a subset of the sample space. In our fair die-rolling example with <span class="math notranslate nohighlight">\(\Omega = \{1, 2, 3, 4, 5, 6\}\)</span>, we can define the event <span class="math notranslate nohighlight">\(\text{Small}\subseteq\Omega\)</span> as the set <span class="math notranslate nohighlight">\(\{1, 2, 3\}\)</span>, to be interpreted as the event in which the outcome of a roll is small. In general, an event is a collection of outcomes with a common property.</p>
+<p>It is common to abuse notation and denote for an event <span class="math notranslate nohighlight">\(E\)</span> its probability <span class="math notranslate nohighlight">\(\Pr[E] := \sum_{s\in E} \Pr[s]\)</span>. We can then say that the probability that the outcome of a roll is small is <span class="math notranslate nohighlight">\(\Pr[\text{Small}] = \frac{1}{2}\)</span>. The complement of the event, i.e. the event <span class="math notranslate nohighlight">\(\overline{\text{Small}} := \Omega\setminus\text{Small}\)</span>, is the event that the outcome of a roll is large, and has probability <span class="math notranslate nohighlight">\(1 - \frac{1}{2} = \frac{1}{2}\)</span>.</p>
+<p>In general, when probabilities are uniform, i.e. for every outcome <span class="math notranslate nohighlight">\(s\)</span> we have <span class="math notranslate nohighlight">\(\Pr[s] = \frac{1}{| \Omega | }\)</span>, then it follows that <span class="math notranslate nohighlight">\(\Pr[E] = \frac{| E | }{| \Omega | }\)</span>, so computing <span class="math notranslate nohighlight">\(\Pr[E]\)</span> essentially reduces to two counting problems. Otherwise, we remark that it is possible to re-define the sample space to make them uniform. For example, on an unfair die in which <span class="math notranslate nohighlight">\(\Pr[1] = \frac{1}{2}\)</span> whereas every other outcome has equal probabilities, i.e. we have probability assignemnts <span class="math notranslate nohighlight">\(\Pr[2] = \Pr[3] = \Pr[4] = \Pr[5] = \Pr[6] = \frac{1}{10}\)</span>, we can re-define the sample space to instead be <span class="math notranslate nohighlight">\(\{1_1, 1_2, 1_3, 1_4, 1_5, 2, 3, 4, 5, 6\}\)</span> (so there are <span class="math notranslate nohighlight">\(5\)</span> duplicates of <span class="math notranslate nohighlight">\(1\)</span>) and assign every outcome a probability of <span class="math notranslate nohighlight">\(\frac{1}{10}\)</span>.</p>
+<section id="law-of-total-probability">
+<h3>(*) Law of Total Probability<a class="headerlink" href="#law-of-total-probability" title="Permalink to this heading">#</a></h3>
+<p>For any events <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>, we have</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\Pr[A] = \Pr[A\cap B] + \Pr[A\cap\overline{B}]\]</div>
+</div>
+<p>just by writing the sum <span class="math notranslate nohighlight">\(\sum_{s\in A} \Pr[s] = \sum_{s\in A\cap B}\Pr[s] + \sum_{s\in A\setminus B}\Pr[s]\)</span>. In our die-rolling example, we can say that</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\begin{split}\Pr[\text{Small}] &amp;= \Pr[\text{Small}\cap\{1, 4\}] + \Pr[\text{Small}\cap\{2, 3, 5, 6\}] \\
+&amp;= \frac{1}{6} + \frac{2}{6} = \frac{1}{2}\end{split}\]</div>
+</div>
+<p>More generally, for any partition <span class="math notranslate nohighlight">\(\{S_1, S_2, \cdots, S_k\}\)</span> of the sample space, we have</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\Pr[A] = \sum_{i = 1}^k \Pr[A\cap S_i]\]</div>
+</div>
+<p>This is known as the law of total probability.</p>
+</section>
+<section id="union-bound">
+<h3>(*) Union Bound<a class="headerlink" href="#union-bound" title="Permalink to this heading">#</a></h3>
+<p>Similar to the inclusion-exclusion principle, for any events <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> we have</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\Pr[A\cup B] = \Pr[A] + \Pr[B] - \Pr[A\cap B]\]</div>
+</div>
+<p>In our die-rolling example, note that <span class="math notranslate nohighlight">\(\Pr[\{1, 2, 3, 4\}] = \frac{2}{3}\)</span>, and indeed</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\begin{split}\Pr[\{1, 2, 3, 4\}] &amp;= \Pr[\text{Small}\cup\{1, 4\}] = \Pr[\text{Small}] + \Pr[\{1, 4\}] - \Pr[\text{Small}\cap\{1, 4\}] \\
+&amp;= \frac{1}{2} + \frac{1}{3} - \frac{1}{6} = \frac{2}{3}\end{split}\]</div>
+</div>
+<p>When <span class="math notranslate nohighlight">\(\Pr[A\cap B] = 0\)</span>, the events <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are said to be mutually exclusive. Intuitively, this means that the two events cannot both occur, as no probable outcome lies within their intersection. In our example, the events <span class="math notranslate nohighlight">\(\text{Small}\)</span> and <span class="math notranslate nohighlight">\(\overline{\text{Small}}\)</span> are mutually exclusive, i.e. no outcome of a roll is small and large at the same time.</p>
+<p>Since <span class="math notranslate nohighlight">\(\Pr[A\cap B]\geq 0\)</span>, we have <span class="math notranslate nohighlight">\(\Pr[A\cup B]\leq\Pr[A] + \Pr[B]\)</span>. Similarly, note that for any events <span class="math notranslate nohighlight">\(A, B\)</span> and <span class="math notranslate nohighlight">\(C\)</span>, we have</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\Pr[A\cup B\cup C] = \Pr[(A\cup B)\cup C]\leq\Pr[A\cup B] + \Pr[C]\leq\Pr[A] + \Pr[B] + \Pr[C]\]</div>
+</div>
+<p>In fact, we can show by induction that for any events <span class="math notranslate nohighlight">\(A_1, A_2, \cdots, A_n\)</span>, we have</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\Pr\left[\bigcup_{i = 1}^n A_i\right]\leq\sum_{i = 1}^n \Pr[A_i]\]</div>
+</div>
+<p>This is what we call the union bound. In its applications in theoretical computer science, the events <span class="math notranslate nohighlight">\(A_i\)</span> are usually bad events which we intuitively think are extremely unlikely, yet we are successful if and only if we avoid all these bad events, i.e. the success probability is <span class="math notranslate nohighlight">\(\Pr\left[\bigcap_{i = 1}^n \overline{A_i}\right]\)</span>. It follows by the De Morgan’s law that the error probability is precisely <span class="math notranslate nohighlight">\(\Pr\left[\bigcup_{i = 1}^n A_i\right]\)</span>. Now, if every bad event is extremely unlikely, we can proceed to apply the union bound to bound this error probability by <span class="math notranslate nohighlight">\(\sum_{i = 1}^n \Pr[A_i]\)</span>, and hence argue intuitively that the error probability is small.</p>
+<p>Note that since we already know that probabilities are at most <span class="math notranslate nohighlight">\(1\)</span>, for this technique to be of any use, the sum <span class="math notranslate nohighlight">\(\sum_{i = 1}^n \Pr[A_i]\)</span> has to be strictly less than <span class="math notranslate nohighlight">\(1\)</span>, and the union bound is really only relevant when the probabilities of the bad events are extremely small.</p>
+</section>
+</section>
+<section id="conditional-probability">
+<h2>Conditional Probability<a class="headerlink" href="#conditional-probability" title="Permalink to this heading">#</a></h2>
+<p>For any events <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> where <span class="math notranslate nohighlight">\(\Pr[B] &gt; 0\)</span>, the conditional probability of <span class="math notranslate nohighlight">\(A\)</span> given <span class="math notranslate nohighlight">\(B\)</span>, which we will denote as <span class="math notranslate nohighlight">\(\Pr[A\mid B]\)</span>, is defined as follows.</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\Pr[A\mid B] := \frac{\Pr[A\cap B]}{\Pr[B]}\]</div>
+</div>
+<p>In other words, this is the value of <span class="math notranslate nohighlight">\(\Pr[A]\)</span> when the sample space is re-defined to be <span class="math notranslate nohighlight">\(B\)</span> instead of the original <span class="math notranslate nohighlight">\(\Omega\)</span>. Intuitively, we are conditioning on the fact that <span class="math notranslate nohighlight">\(B\)</span> occurs, and we want to find out what is the “new” probability of <span class="math notranslate nohighlight">\(A\)</span> based on this condition. When <span class="math notranslate nohighlight">\(\Pr[B] = 0\)</span>, it makes sense that <span class="math notranslate nohighlight">\(\Pr[A\mid B]\)</span> is undefined, since <span class="math notranslate nohighlight">\(B\)</span> cannot occur in the first place.</p>
+<p>In our die-rolling example, we have <span class="math notranslate nohighlight">\(\Pr[\{1, 2\}] = \frac{1}{3}\)</span>, but <span class="math notranslate nohighlight">\(\Pr[\{1, 2\}\mid\text{Small}] = \frac{2}{3}\)</span>. Indeed, if we already know that the outcome of a roll is small, there is a higher chance that the outcome is either <span class="math notranslate nohighlight">\(1\)</span> or <span class="math notranslate nohighlight">\(2\)</span> relative to if we didn’t have that information. Moreover, we have <span class="math notranslate nohighlight">\(\Pr[\{1, 2\}\mid\overline{\text{Small}}] = 0\)</span> since knowing that the outcome is large, it cannot possibly be <span class="math notranslate nohighlight">\(1\)</span> nor <span class="math notranslate nohighlight">\(2\)</span>.</p>
+<p>Assuming <span class="math notranslate nohighlight">\(\Pr[B] &gt; 0\)</span>, it follows that <span class="math notranslate nohighlight">\(\Pr[A\cap B] = \Pr[B]\Pr[A\mid B]\)</span>. Intuitively, for <span class="math notranslate nohighlight">\(A\cap B\)</span> to occur, we need <span class="math notranslate nohighlight">\(B\)</span> to occur, and we also need <span class="math notranslate nohighlight">\(A\)</span> to occur conditioned on the fact that <span class="math notranslate nohighlight">\(B\)</span> occurs.</p>
+<p>Using the notion of conditional probability, the law of total probability can be rewritten as</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\Pr[A] = \sum_{i = 1}^k\Pr[A\cap S_i] = \sum_{i = 1}^k \Pr[S_i]\Pr[A\mid S_i]\]</div>
+</div>
+<p>where <span class="math notranslate nohighlight">\(A\)</span> is any event and <span class="math notranslate nohighlight">\(\{S_1, S_2, \cdots, S_k\}\)</span> is any partition of the sample space such that all components are probable events, i.e. <span class="math notranslate nohighlight">\(\prod_{i = 1}^k\Pr[S_i] &gt; 0\)</span>.</p>
+<section id="bayes-theorem">
+<h3>Bayes’ Theorem<a class="headerlink" href="#bayes-theorem" title="Permalink to this heading">#</a></h3>
+<p>If we also assume that <span class="math notranslate nohighlight">\(\Pr[A] &gt; 0\)</span>, then we can similarly say that <span class="math notranslate nohighlight">\(\Pr[A\cap B] = \Pr[A]\Pr[B\mid A]\)</span>. Substituting this back to the definition of <span class="math notranslate nohighlight">\(\Pr[A\mid B]\)</span> gives</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\Pr[A\mid B] = \frac{\Pr[A]\Pr[B\mid A]}{\Pr[B]}\]</div>
+</div>
+<p>This result is known as Bayes’ theorem, true for any events <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> with <span class="math notranslate nohighlight">\(\Pr[A]\Pr[B] &gt; 0\)</span>, and a useful theorem overall by relating <span class="math notranslate nohighlight">\(\Pr[A\mid B]\)</span> with <span class="math notranslate nohighlight">\(\Pr[B\mid A]\)</span>.</p>
+<p>Recall in our example that <span class="math notranslate nohighlight">\(\Pr[\{1, 2\}\mid\text{Small}] = \frac{2}{3}\)</span>. It is intuitive that <span class="math notranslate nohighlight">\(\Pr[\text{Small}\mid\{1, 2\}] = 1\)</span>, since knowing that the outcome of a roll is <span class="math notranslate nohighlight">\(\{1, 2\}\)</span>, it cannot possibly be large. Indeed, by Bayes’ theorem,</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\Pr[\text{Small}\mid\{1, 2\}] = \frac{\Pr[\text{Small}]\Pr[\{1, 2\}\mid\text{Small}]}{\Pr[\{1, 2\}]} = \frac{\frac{1}{2}\cdot\frac{2}{3}}{\frac{1}{3}} = 1\]</div>
+</div>
+</section>
+</section>
+<section id="independence">
+<h2>Independence<a class="headerlink" href="#independence" title="Permalink to this heading">#</a></h2>
+<p>Two events <span class="math notranslate nohighlight">\(A, B\)</span> with <span class="math notranslate nohighlight">\(\Pr[A]\Pr[B] &gt; 0\)</span> are independent if and only if <span class="math notranslate nohighlight">\(\Pr[A\mid B] = \Pr[A]\)</span>. Note that by Bayes’ theorem, this also implies <span class="math notranslate nohighlight">\(\Pr[B\mid A] = \Pr[B]\)</span>. Intuitively, this means that the occurrence of <span class="math notranslate nohighlight">\(B\)</span> does not affect the probability of <span class="math notranslate nohighlight">\(A\)</span> occurring, and vice versa. As a result, we have</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\Pr[A\cap B] = \Pr[A]\Pr[B\mid A] = \Pr[A]\Pr[B]\]</div>
+</div>
+<p>For example, consider the random process of rolling two dice. It is then natural to define the sample space as <span class="math notranslate nohighlight">\(\Omega := \{1, 2, 3, 4, 5, 6\}^2\)</span> with every outcome having probability <span class="math notranslate nohighlight">\(\frac{1}{36}\)</span>. Let <span class="math notranslate nohighlight">\(A\)</span> be the event that the first roll yields <span class="math notranslate nohighlight">\(3\)</span>, i.e.</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[A := \{(s_1, s_2)\in\Omega : a = 3\}\]</div>
+</div>
+<p>Similarly, let <span class="math notranslate nohighlight">\(B\)</span> be the event that the second roll yields <span class="math notranslate nohighlight">\(1\)</span>. It is then intuitive that <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are independent since the outcome of one roll should not affect the other. Indeed, among all the <span class="math notranslate nohighlight">\(36\)</span> outcomes in <span class="math notranslate nohighlight">\(\Omega\)</span>, exactly <span class="math notranslate nohighlight">\(6\)</span> of them has the first roll yielding <span class="math notranslate nohighlight">\(3\)</span>, so <span class="math notranslate nohighlight">\(\Pr[A] = \frac{1}{6}\)</span>. Similarly, we can also say that <span class="math notranslate nohighlight">\(\Pr[B] = \frac{1}{6}\)</span>. Moreover, the event <span class="math notranslate nohighlight">\(A\cap B\)</span> is precisely the singleton <span class="math notranslate nohighlight">\(\{(3, 1)\}\)</span>. This tells us that</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\Pr[A\mid B] = \frac{\Pr[A\cap B]}{\Pr[B]} = \frac{\frac{1}{36}}{\frac{1}{6}} = \frac{1}{6} = \Pr[A]\]</div>
+</div>
+<p>Now, let <span class="math notranslate nohighlight">\(C = \{(1, 1), (1, 2), (1, 3), (3, 4), (3, 5), (3, 6)\}\)</span>. Note that <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(C\)</span> are not independent. Intuitively, the event <span class="math notranslate nohighlight">\(C\)</span> communicates that the first roll is either <span class="math notranslate nohighlight">\(1\)</span> or <span class="math notranslate nohighlight">\(3\)</span>, and so it increases the chances of the occurrence of <span class="math notranslate nohighlight">\(A\)</span>, i.e. <span class="math notranslate nohighlight">\(\Pr[A\mid C] = \frac{3}{6}\neq\frac{1}{6} = \Pr[A]\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We have <span class="math notranslate nohighlight">\(\Pr[B\mid C] = \frac{1}{6} = \Pr[B]\)</span>, so <span class="math notranslate nohighlight">\(B\)</span> and <span class="math notranslate nohighlight">\(C\)</span> are independent. The example above also provides a counterexample showing that independence is not transitive in general.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Moreover, the same example above also illustrates that the independence between two events can be broken by conditioning on a third event, i.e. it is possible that</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\begin{split}\Pr[A\mid B] &amp;= \Pr[A] \\
+\Pr[A\mid B\cap C] &amp;\neq\Pr[A\mid C]\end{split}\]</div>
+</div>
+<p>Indeed, knowing that the second roll yields <span class="math notranslate nohighlight">\(1\)</span>, and also <span class="math notranslate nohighlight">\(C\)</span> has occurred, it is no longer possible for <span class="math notranslate nohighlight">\(A\)</span> to occur, as the outcome is already deterministically <span class="math notranslate nohighlight">\((1, 1)\)</span>. In other words, we have <span class="math notranslate nohighlight">\(\Pr[A\mid B\cap C] = 0\neq\frac{3}{6} = \Pr[A\mid C]\)</span>.</p>
+<p>On the other hand, two events can become independent upon conditioning on a third event, i.e. it is also possible that</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\begin{split}\Pr[A\mid B] &amp;\neq\Pr[A] \\
+\Pr[A\mid B\cap C] &amp;= \Pr[A\mid C]\end{split}\]</div>
+</div>
+<p>The simplest example would arise when <span class="math notranslate nohighlight">\(C = B\)</span>, or more generally when <span class="math notranslate nohighlight">\(C\subseteq B\)</span>. Intuitively, the occurrence of <span class="math notranslate nohighlight">\(C\)</span> already implies the occurrence of <span class="math notranslate nohighlight">\(B\)</span>, so upon conditioning on <span class="math notranslate nohighlight">\(C\)</span>, the occurrence of <span class="math notranslate nohighlight">\(B\)</span> no longer contributes new information that can possibly change <span class="math notranslate nohighlight">\(\Pr[A\mid C]\)</span>.</p>
+<p>In general, for any events <span class="math notranslate nohighlight">\(A, B, C\)</span> with <span class="math notranslate nohighlight">\(\Pr[A]\Pr[B\cap C] &gt; 0\)</span>, if <span class="math notranslate nohighlight">\(\Pr[A\mid B\cap C] = \Pr[A\mid C]\)</span>, we say that <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are conditionally independent given <span class="math notranslate nohighlight">\(C\)</span>. In other words, conditioned on <span class="math notranslate nohighlight">\(C\)</span>, the occurrence of <span class="math notranslate nohighlight">\(B\)</span> does not affect <span class="math notranslate nohighlight">\(\Pr[A\mid C]\)</span>.</p>
+</div>
+<section id="mutual-independence">
+<h3>(*) Mutual Independence<a class="headerlink" href="#mutual-independence" title="Permalink to this heading">#</a></h3>
+<p>The definition of independence can be generalized to more than two events. A finite set of events, which we will denote as <span class="math notranslate nohighlight">\(\mathcal{E} = \{A_1, A_2, \cdots, A_n\}\)</span>, is mutually independent if and only if for every <span class="math notranslate nohighlight">\(i\)</span> and every <span class="math notranslate nohighlight">\(A_i\notin S\subseteq\mathcal{E}\)</span> we have <span class="math notranslate nohighlight">\(\Pr\left[\bigcap_{A\in S} A\right] &gt; 0\)</span>, and moreover</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\Pr\left[A_i\mid\bigcap_{A\in S} A\right] = \Pr[A_i]\]</div>
+</div>
+<p>Intuitively, for every <span class="math notranslate nohighlight">\(i\)</span>, knowing the occurrence of any collection of events other than <span class="math notranslate nohighlight">\(A_i\)</span> does not affect the probability of <span class="math notranslate nohighlight">\(A_i\)</span>. As a corollary, we have</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\Pr\left[\bigcap_{i = 1}^n A_i\right] = \prod_{i = 1}^n\Pr[A_i]\]</div>
+</div>
+<p>To prove the above rigorously, one uses induction, which we will illustrate using a three-set example. Let the events <span class="math notranslate nohighlight">\(A, B, C\)</span> be mutually independent, then</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\begin{split}\Pr[A\cap B\cap C] &amp;= \Pr[B\cap C]\Pr[A\mid B\cap C] = \Pr[B\cap C]\Pr[A] \\
+&amp;= \Pr[C]\Pr[B\mid C]\Pr[A] = \Pr[C]\Pr[B]\Pr[A]\end{split}\]</div>
+</div>
+<p>Note that when <span class="math notranslate nohighlight">\(n = 2\)</span>, we recover the definition of independence between two events.</p>
+<p>It is important to realize that mutual independence implies, but is not equivalent to, pairwise independece, i.e. for every <span class="math notranslate nohighlight">\(i\neq j\)</span> we have <span class="math notranslate nohighlight">\(A_i\)</span> and <span class="math notranslate nohighlight">\(A_j\)</span> are independent. The implication is rather clear: For every <span class="math notranslate nohighlight">\(i\neq j\)</span>, we set <span class="math notranslate nohighlight">\(S := \{A_j\}\)</span> in the definition of mutual independence to get <span class="math notranslate nohighlight">\(\Pr[A_i\mid A_j] = \Pr[A_i]\)</span>.</p>
+<p>To see why mutual independence and pairwise independence are not equivalent, consider again our example of rolling two dice, i.e. <span class="math notranslate nohighlight">\(\Omega := \{1, 2, 3, 4, 5, 6\}^2\)</span> with every outcome having probability <span class="math notranslate nohighlight">\(\frac{1}{36}\)</span>, and the events <span class="math notranslate nohighlight">\(A, B\)</span> are defined as follows.</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\begin{split}A &amp;:= \{(s_1, s_2)\in\Omega : s_1 = 3\} \\
+B &amp;:= \{(s_1, s_2)\in\Omega : s_2 = 1\} \\\end{split}\]</div>
+</div>
+<p>Recall that <span class="math notranslate nohighlight">\(\Pr[A] = \Pr[B] = \frac{1}{6}\)</span> and the two events are independent. Now, define</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[C := \{(s_1, s_2)\in\Omega : s_1 = s_2\}\]</div>
+</div>
+<p>to be the event that the two rolls yield the same outcome. The events <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(C\)</span> are independent because only one out of the <span class="math notranslate nohighlight">\(6\)</span> outcomes in <span class="math notranslate nohighlight">\(C\)</span> has the first roll yielding <span class="math notranslate nohighlight">\(3\)</span>, i.e. <span class="math notranslate nohighlight">\(\Pr[A\mid C] = \frac{1}{6} = \Pr[A]\)</span>. For similar reasons, the events <span class="math notranslate nohighlight">\(B\)</span> and <span class="math notranslate nohighlight">\(C\)</span> are independent.</p>
+<p>However, the events <span class="math notranslate nohighlight">\(A, B, C\)</span> are not mutually independent, since the occurrence of <span class="math notranslate nohighlight">\(C\)</span> is deterministic given the occurrence of <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>. In particular, we have</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\Pr[C\mid A\cap B] = 0\neq\frac{1}{6} = \Pr[C]\]</div>
+</div>
+</section>
+</section>
+<section id="random-variable">
+<h2>Random Variable<a class="headerlink" href="#random-variable" title="Permalink to this heading">#</a></h2>
+<p>A random variable is a function <span class="math notranslate nohighlight">\(X : \Omega\rightarrow\mathbb{R}\)</span> that intuitively associates every outcome (which, mind you, is not necessarily a number) with a real number. For example, consider flipping a fair coin and receiving a payoff based on the flip outcome, e.g. we get <span class="math notranslate nohighlight">\($ 3\)</span> for a head and <span class="math notranslate nohighlight">\(-$ 1\)</span> for a tail. It is natural to define the sample space as <span class="math notranslate nohighlight">\(\Omega := \{\text{H}, \text{T}\}\)</span>, where <span class="math notranslate nohighlight">\(\text{H}\)</span> denotes a head and <span class="math notranslate nohighlight">\(\text{T}\)</span> denotes a tail, with probability assignment <span class="math notranslate nohighlight">\(\Pr[\text{H}] = \Pr[\text{T}] = \frac{1}{2}\)</span>. We can then formulate this payoff mathematically as a random variable <span class="math notranslate nohighlight">\(X\)</span> with <span class="math notranslate nohighlight">\(X(\text{H}) = 3\)</span> and <span class="math notranslate nohighlight">\(X(\text{T}) = -1\)</span>.</p>
+<p>We will often abuse notation and denote the event <span class="math notranslate nohighlight">\(\{s\in\Omega : X(s) = x\}\)</span> as just <span class="math notranslate nohighlight">\(X = x\)</span>. This is the event that the random variable has observed value <span class="math notranslate nohighlight">\(x\)</span>. Similar notation applies to when we have inequalities rather than an equality. Continuing our example, we have <span class="math notranslate nohighlight">\(\Pr[X = 3] = \Pr[\text{H}] = \frac{1}{2}\)</span>.</p>
+<p>We can combine random variables to form further random variables. For example, for any random variables <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span>, the random variable <span class="math notranslate nohighlight">\(Z := X + Y\)</span> is defined such that <span class="math notranslate nohighlight">\(Z(s) = X(s) + Y(s)\)</span>. Similarly, the random variable <span class="math notranslate nohighlight">\(Z := XY\)</span> is defined such that <span class="math notranslate nohighlight">\(Z(s) = X(s)Y(s)\)</span>, and for any real number <span class="math notranslate nohighlight">\(a\)</span> the random variable <span class="math notranslate nohighlight">\(Z := aX\)</span> is defined such that <span class="math notranslate nohighlight">\(Z(s) = aX(s)\)</span>.</p>
+<p>We will henceforth denote <span class="math notranslate nohighlight">\(R_X := \{x\in\mathbb{R} : X(s) = x\text{ for some }s\in\Omega\}\)</span> as the range of the random variable <span class="math notranslate nohighlight">\(X : \Omega\rightarrow\mathbb{R}\)</span>. In our example, we have <span class="math notranslate nohighlight">\(R_X = \{3, -1\}\)</span>.</p>
+<p>The distribution of a random variable is a function <span class="math notranslate nohighlight">\(\mu : \mathbb{R}\rightarrow [0, 1]\)</span> that assigns for every real number <span class="math notranslate nohighlight">\(x\)</span> the probability <span class="math notranslate nohighlight">\(\Pr[X = x]\)</span>. We write <span class="math notranslate nohighlight">\(X\sim\mu\)</span> and say that <span class="math notranslate nohighlight">\(X\)</span> follows the distribution <span class="math notranslate nohighlight">\(\mu\)</span>. In our example, the distribution of <span class="math notranslate nohighlight">\(X\)</span> maps <span class="math notranslate nohighlight">\(3\)</span> as well as <span class="math notranslate nohighlight">\(-1\)</span> to <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span>, and everything else to <span class="math notranslate nohighlight">\(0\)</span>.</p>
+<section id="indicator-random-variable">
+<h3>(*) Indicator Random Variable<a class="headerlink" href="#indicator-random-variable" title="Permalink to this heading">#</a></h3>
+<p>Random variables are, in some sense, a generalization of events, via the notion of indicator random variables. These are specific types of random variables that is ubiquitous in the context of theoretical computer science. For any event <span class="math notranslate nohighlight">\(A\)</span>, the indicator random variable of <span class="math notranslate nohighlight">\(A\)</span> is defined as follows.</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf 1_A(s) = \begin{cases}
+    1 &amp; s\in A \\
+    0 &amp; \text{otherwise}
+\end{cases}\end{split}\]</div>
+</div>
+<p>In many use cases, a complicated random variable is written as a sum of indicator random variables that are way simpler in nature. For example, consider a random distribution of <span class="math notranslate nohighlight">\(n\)</span> distinct balls into <span class="math notranslate nohighlight">\(n\)</span> distinct bins. Let <span class="math notranslate nohighlight">\(X\)</span> be the number of balls in bin <span class="math notranslate nohighlight">\(1\)</span>. We can then express <span class="math notranslate nohighlight">\(X = \sum_{i = 1}^n X_i\)</span> where <span class="math notranslate nohighlight">\(X_i\)</span> indicates whether ball <span class="math notranslate nohighlight">\(i\)</span> enters bin <span class="math notranslate nohighlight">\(1\)</span>, that is to say that <span class="math notranslate nohighlight">\(X_i = \mathbf 1_{A_i}\)</span> where <span class="math notranslate nohighlight">\(A_i\)</span> is the event that ball <span class="math notranslate nohighlight">\(i\)</span> enters bin <span class="math notranslate nohighlight">\(1\)</span>.</p>
+<p>One trivial observation is that for any events <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>, we have <span class="math notranslate nohighlight">\(\mathbf 1_A\mathbf 1_B = \mathbf 1_{A\cap B}\)</span>.</p>
+</section>
+<section id="id1">
+<h3>(*) Independence<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<p>The notion of independence between events extends naturally for random variables as generalizations.</p>
+<p>Two random variables <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> are said to be independent if and only if for every <span class="math notranslate nohighlight">\(x\in R_X\)</span> and <span class="math notranslate nohighlight">\(y\in R_Y\)</span> with <span class="math notranslate nohighlight">\(\Pr[X = x]\Pr[Y = y] &gt; 0\)</span>, the events <span class="math notranslate nohighlight">\(X = x\)</span> and <span class="math notranslate nohighlight">\(Y = y\)</span> are independent, i.e.</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\Pr[X = x\mid Y = y] = \Pr[X = x]\]</div>
+</div>
+<p>Intuitively, observing <span class="math notranslate nohighlight">\(Y\)</span> does not affect the distribution of <span class="math notranslate nohighlight">\(X\)</span>. Similar to independence between events, by Bayes’ theorem, this also implies <span class="math notranslate nohighlight">\(\Pr[Y = y\mid X = x] = \Pr[Y = y]\)</span>. As a result, we have</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\Pr[X = x\cap Y = y] = \Pr[X = x]\Pr[Y = y\mid X = x] = \Pr[X = x]\Pr[Y = y]\]</div>
+</div>
+<p>Note that for any events <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>, setting <span class="math notranslate nohighlight">\(X = \mathbf 1_A\)</span> and <span class="math notranslate nohighlight">\(Y = \mathbf 1_B\)</span> recovers the definition of independence between events.</p>
+<p>Recall that in our coin-flipping example, we let <span class="math notranslate nohighlight">\(X\)</span> be the payoff for the flip and we had <span class="math notranslate nohighlight">\(X(\text{H}) = 3\)</span> as well as <span class="math notranslate nohighlight">\(X(\text{T}) = -1\)</span>. The function <span class="math notranslate nohighlight">\(X\)</span> has domain <span class="math notranslate nohighlight">\(\Omega\)</span>. Suppose now that there are two flips, so that the sample space becomes <span class="math notranslate nohighlight">\(\Omega' := \Omega\times\Omega = \{(\text{H}, \text{H}), (\text{H}, \text{T}), (\text{T}, \text{H}), (\text{T}, \text{T})\}\)</span> where every outcome has probability <span class="math notranslate nohighlight">\(\frac{1}{4}\)</span>. Now, let <span class="math notranslate nohighlight">\(X_1, X_2 : \Omega'\rightarrow\mathbb{R}\)</span> be random variables such that</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\begin{split}X_1(s_1, s_2) = X(s_1) \\
+X_2(s_1, s_2) = X(s_2)\end{split}\]</div>
+</div>
+<p>For example, if the observed flip outcome is <span class="math notranslate nohighlight">\((\text{T}, \text{H})\)</span>, then <span class="math notranslate nohighlight">\(X_1\)</span> takes the value <span class="math notranslate nohighlight">\(X_1(\text{T}, \text{H}) = X(\text{T}) = -1\)</span>, whereas <span class="math notranslate nohighlight">\(X_2\)</span> takes the value <span class="math notranslate nohighlight">\(3\)</span>. In other words, the random variable <span class="math notranslate nohighlight">\(X_1\)</span> denotes the payoff for the first flip, whereas <span class="math notranslate nohighlight">\(X_2\)</span> denotes the payoff for the second flip. The random variables <span class="math notranslate nohighlight">\(X_1\)</span> and <span class="math notranslate nohighlight">\(X_2\)</span> are intuitively independent, since the outcome of one flip should not affect the other.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Similarly, for any random variables <span class="math notranslate nohighlight">\(X, Y, Z\)</span>, we say that <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> are conditionally independent given <span class="math notranslate nohighlight">\(Z\)</span> if and only if for every <span class="math notranslate nohighlight">\(x\in R_X, y\in R_Y\)</span> and <span class="math notranslate nohighlight">\(z\in R_Z\)</span> with <span class="math notranslate nohighlight">\(\Pr[X = x]\Pr[Y = y\cap Z = z] &gt; 0\)</span>, the events <span class="math notranslate nohighlight">\(X = x\)</span> and <span class="math notranslate nohighlight">\(Y = y\)</span> are conditionally independent given <span class="math notranslate nohighlight">\(Z = z\)</span>, i.e.</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\Pr[X = x\mid Y = y\cap Z = z] = \Pr[X = x\mid Z = z]\]</div>
+</div>
+<p>In other words, given <span class="math notranslate nohighlight">\(Z\)</span>, observing <span class="math notranslate nohighlight">\(Y\)</span> does not affect the distribution of <span class="math notranslate nohighlight">\(X\)</span>.</p>
+</div>
+<p>Readers are now encouraged to write down the definition for random variables <span class="math notranslate nohighlight">\(X_1, X_2, \cdots, X_n\)</span> being mutually independent.</p>
+</section>
+</section>
+<section id="expectation">
+<h2>Expectation<a class="headerlink" href="#expectation" title="Permalink to this heading">#</a></h2>
+<p>The expectation <span class="math notranslate nohighlight">\(\mathbb{E}[X]\)</span> of a random variable <span class="math notranslate nohighlight">\(X\)</span> is defined as follows.</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\mathbb{E}[X] := \sum_{x\in R_X} x\cdot\Pr[X = x]\]</div>
+</div>
+<p>In other words, this is the mean of every possible value <span class="math notranslate nohighlight">\(X\)</span> can take, weighted according to the probability of <span class="math notranslate nohighlight">\(X\)</span> actually taking the value.</p>
+<p>In our coin-flipping example with <span class="math notranslate nohighlight">\(X(\text{H}) = 3\)</span> and <span class="math notranslate nohighlight">\(X(\text{T}) = -1\)</span>, it follows that the expectation of <span class="math notranslate nohighlight">\(X\)</span>, i.e. the expected payoff of the flip, is <span class="math notranslate nohighlight">\(\mathbb{E}[X] = \frac{1}{2}\cdot 3 + \frac{1}{2}\cdot (-1) = 1\)</span>.</p>
+<p>The following definition of expectation is equivalent and sometimes useful. Instead of summing across every possible value <span class="math notranslate nohighlight">\(X\)</span> can take, we sum across every outcome in the sample space.</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\mathbb{E}[X] := \sum_{s\in\Omega} X(s)\cdot\Pr[s]\]</div>
+</div>
+<p>If indicator random variables correspond to events, then expectations correspond to probabilities, as for any indicator random variable <span class="math notranslate nohighlight">\(\mathbf 1_A\)</span> we have</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\mathbb{E}[\mathbf 1_A] = 1\cdot\Pr[\mathbf 1_A = 1] + 0\cdot\Pr[\mathbf 1_A = 0] = \Pr[A]\]</div>
+</div>
+<section id="linearity-of-expectation">
+<h3>Linearity of Expectation<a class="headerlink" href="#linearity-of-expectation" title="Permalink to this heading">#</a></h3>
+<p>For any random variables <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span>, we can plug <span class="math notranslate nohighlight">\(X + Y\)</span> into the alternative definition of expectation and get</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbb{E}[X + Y] &amp;= \sum_{s\in\Omega} (X + Y)(s)\cdot\Pr[s] \\
+&amp;= \sum_{s\in\Omega} (X(s) + Y(s))\cdot\Pr[s] \\
+&amp;= \sum_{s\in\Omega} X(s)\cdot\Pr[s] + \sum_{s\in\Omega} Y(s)\cdot\Pr[s] \\
+&amp;= \mathbb{E}[X] + \mathbb{E}[Y]\end{split}\]</div>
+</div>
+<p>More generally, for any real numbers <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>, plugging <span class="math notranslate nohighlight">\(aX + bY\)</span> into the definition gives</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\mathbb{E}[aX + bY] = a\mathbb{E}[X] + b\mathbb{E}[Y]\]</div>
+</div>
+<p>a result known as the linearity of expectation.</p>
+<p>Recall that in our example of flipping two coins, we had <span class="math notranslate nohighlight">\(X(\text{H}) = 3\)</span> as well as <span class="math notranslate nohighlight">\(X(\text{T}) = -1\)</span>, and furthermore there are two random variables <span class="math notranslate nohighlight">\(X_1\)</span> and <span class="math notranslate nohighlight">\(X_2\)</span> denoting the payoff for the first and second flip respectively. Note that <span class="math notranslate nohighlight">\(X\)</span> has exactly the same distribution as <span class="math notranslate nohighlight">\(X_1\)</span> and <span class="math notranslate nohighlight">\(X_2\)</span> (i.e. they are all observed as <span class="math notranslate nohighlight">\(3\)</span> with probability <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span> and <span class="math notranslate nohighlight">\(-1\)</span> otherwise), so we can say that <span class="math notranslate nohighlight">\(\mathbb{E}[X] = \mathbb{E}[X_1] = \mathbb{E}[X_2] = 1\)</span>. It therefore follows that the expected total payoff for both flips is</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\mathbb{E}[X_1 + X_2] = \mathbb{E}[X_1] + \mathbb{E}[X_2] = 1 + 1 = 2\]</div>
+</div>
+</section>
+<section id="conditional-expectation">
+<h3>(*) Conditional Expectation<a class="headerlink" href="#conditional-expectation" title="Permalink to this heading">#</a></h3>
+<p>Similar to conditional probabilities, we can define a notion of conditional expectation. Let <span class="math notranslate nohighlight">\(X\)</span> be a random variable and <span class="math notranslate nohighlight">\(A\)</span> be an event with <span class="math notranslate nohighlight">\(\Pr[A] &gt; 0\)</span>. The conditional expectation of <span class="math notranslate nohighlight">\(X\)</span> given <span class="math notranslate nohighlight">\(A\)</span>, which we will denote as <span class="math notranslate nohighlight">\(\mathbb{E}[X\mid A]\)</span>, is defined as follows.</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\mathbb{E}[X\mid A] := \sum_{x\in R_X} x\cdot\Pr[X = x\mid A]\]</div>
+</div>
+<p>In other words, this is the value of <span class="math notranslate nohighlight">\(\mathbb{E}[X]\)</span> when the sample space is re-defined to be <span class="math notranslate nohighlight">\(A\)</span> instead of the original <span class="math notranslate nohighlight">\(\Omega\)</span>. Intuitively, we are conditioning on the fact that <span class="math notranslate nohighlight">\(A\)</span> occurs, and we want to find out what is the “new” expectation of <span class="math notranslate nohighlight">\(X\)</span> based on this condition. When <span class="math notranslate nohighlight">\(\Pr[A] = 0\)</span>, it makes sense that <span class="math notranslate nohighlight">\(\mathbb{E}[X\mid A]\)</span> is undefined, since <span class="math notranslate nohighlight">\(A\)</span> cannot occur in the first place.</p>
+<p>In our example, despite knowing that <span class="math notranslate nohighlight">\(\mathbb{E}[X_1 + X_2] = 2\)</span>, if it turns out that the first flip is a tail, i.e. we have observed that <span class="math notranslate nohighlight">\(X_1 = -1\)</span>, the expected total payoff should intuitively be reduced. Indeed, conditioned on <span class="math notranslate nohighlight">\(X_1 = -1\)</span>, since <span class="math notranslate nohighlight">\(X_2\)</span> is either <span class="math notranslate nohighlight">\(3\)</span> or <span class="math notranslate nohighlight">\(-1\)</span>, the sum <span class="math notranslate nohighlight">\(X_1 + X_2\)</span> is either <span class="math notranslate nohighlight">\(-1 + 3\)</span> or <span class="math notranslate nohighlight">\(-1 - 1\)</span>. Therefore, we have</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;\mathbb{E}[X_1 + X_2\mid X_1 = -1] \\
+&amp;= (-1 + 3)\cdot\Pr[X_1 + X_2 = -1 + 3\mid X_1 = -1] + (-1 - 1)\cdot\Pr[X_1 + X_2 = -1 - 1\mid X_1 = -1] \\
+&amp;= 2\cdot\Pr[X_2 = 3] - 2\cdot\Pr[X_2 = -1] \\
+&amp;= 2\cdot\frac{1}{2} - 2\cdot\frac{1}{2} = 0\end{split}\]</div>
+</div>
+<p>Observe that when <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> are independent random variables, for every <span class="math notranslate nohighlight">\(y\in Y\)</span>, we have</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\mathbb{E}[X\mid Y = y] = \sum_{x\in R_X} x\cdot\Pr[X = x\mid Y = y] = \sum_{x\in R_X} x\cdot\Pr[X = x] = \mathbb{E}[X]\]</div>
+</div>
+<p>This is intuitive because observing <span class="math notranslate nohighlight">\(Y\)</span> does not affect the distribution of <span class="math notranslate nohighlight">\(X\)</span>, and hence in particular the expectation of <span class="math notranslate nohighlight">\(X\)</span> should remain unchanged.</p>
+<p>With the notion of conditional expectation at hand, the law of total probability now implies</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbb{E}[X] = \sum_{x\in R_X}x\cdot\Pr[X = x] &amp;= \sum_{x\in R_X}x\cdot\sum_{i = 1}^k\Pr[S_i]\Pr[X = x\mid S_i] \\
+&amp;= \sum_{i = 1}^k\Pr[S_i]\sum_{x\in R_X} x\cdot\Pr[X = x\mid S_i] \\
+&amp;= \sum_{i = 1}^k\Pr[S_i]\cdot\mathbb{E}[X\mid S_i]\end{split}\]</div>
+</div>
+<p>where <span class="math notranslate nohighlight">\(X\)</span> is any random variable, and <span class="math notranslate nohighlight">\(\{S_1, S_2, \cdots, S_k\}\)</span> is any partition of the sample space such that all components are probable events.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Let <span class="math notranslate nohighlight">\(Y\)</span> be a random variable and partition the sample space <span class="math notranslate nohighlight">\(\Omega\)</span> based on the value of <span class="math notranslate nohighlight">\(Y\)</span>. This gives us</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\mathbb{E}[X] = \sum_{y\in R_Y}\Pr[Y = y]\cdot\mathbb{E}[X\mid Y = y] = \sum_{s\in\Omega}\Pr[s]\cdot\mathbb{E}[X\mid Y = Y(s)]\]</div>
+</div>
+<p>Now, denote <span class="math notranslate nohighlight">\(\mathbb{E}[X\mid Y]\)</span> as the random variable mapping each outcome <span class="math notranslate nohighlight">\(s\)</span> to <span class="math notranslate nohighlight">\(\mathbb{E}[X\mid Y = Y(s)]\)</span>. It follows that</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\mathbb{E}[X] = \mathbb{E}[\mathbb{E}[X\mid Y]]\]</div>
+</div>
+<p>This is known as the law of total expectation and I agree that it is notationally very confusing.</p>
+</div>
+</section>
+</section>
+<section id="variance">
+<h2>(*) Variance<a class="headerlink" href="#variance" title="Permalink to this heading">#</a></h2>
+<p>Intuitively, the expectation of a random variable <span class="math notranslate nohighlight">\(X\)</span> is the mean of <span class="math notranslate nohighlight">\(X\)</span>, i.e. the value that it takes on average. On the other hand, the variance of <span class="math notranslate nohighlight">\(X\)</span> measures the dispersion, i.e. how spread out are the values of <span class="math notranslate nohighlight">\(X\)</span> in its distribution. More precisely, the variance of a random variable <span class="math notranslate nohighlight">\(X\)</span> is defined as follows.</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\mathrm{Var}(X) := \mathbb{E}[(X - \mathbb{E}[X])^2]\]</div>
+</div>
+<p>In other words, the variance of <span class="math notranslate nohighlight">\(X\)</span> is the expected squared distance from <span class="math notranslate nohighlight">\(X\)</span> to its expectation. Therefore, the higher the variance of a random variable, the higher the dispersion of <span class="math notranslate nohighlight">\(X\)</span> around its mean.</p>
+<p>The motivation to consider the squared distance <span class="math notranslate nohighlight">\((X - \mathbb{E}[X])^2\)</span> instead of <span class="math notranslate nohighlight">\(| X - \mathbb{E}[X] | \)</span> is essentially for the sake of mathematical tractability. We have a lot of algebraic tools that deals with squares of binomials, whereas it is less convenient to deal with absolute values. Indeed, denoting <span class="math notranslate nohighlight">\(\mu := \mathbb{E}[X]\)</span>, using the binomial theorem and the linearity of expectation, we have</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathrm{Var}(X) &amp;= \mathbb{E}[X^2 - 2X\mu + \mu^2] \\
+&amp;= \mathbb{E}[X^2] - \mathbb{E}[2X\mu] + \mathbb{E}[\mu^2] \\
+&amp;= \mathbb{E}[X^2] - 2\mu\mathbb{E}[X] + \mu^2 \\
+&amp;= \mathbb{E}[X^2] - 2\mathbb{E}[X]^2 + \mathbb{E}[X]^2 \\
+&amp;= \mathbb{E}[X^2] - \mathbb{E}[X]^2\end{split}\]</div>
+</div>
+<p>giving us an alternative definition for <span class="math notranslate nohighlight">\(\mathrm{Var}(X)\)</span>. Some people memorize this formula as “the mean of squares minus the square of the mean”.</p>
+<p>For example, consider a random distribution of one ball into <span class="math notranslate nohighlight">\(n\)</span> distinct bins with uniform probability, i.e. for every <span class="math notranslate nohighlight">\(i\)</span> we have <span class="math notranslate nohighlight">\(\Pr[\text{the ball enters bin }i] = \frac{1}{n}\)</span>. Let <span class="math notranslate nohighlight">\(X\)</span> be indicating whether the ball enters bin <span class="math notranslate nohighlight">\(1\)</span>. It follows that <span class="math notranslate nohighlight">\(\mathbb{E}[X] = \Pr[\text{the ball enters bin }1] = \frac{1}{n}\)</span> and in fact <span class="math notranslate nohighlight">\(\mathbb{E}[X^2] = \mathbb{E}[X] = \frac{1}{n}\)</span>, so</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\mathrm{Var}(X) = \mathbb{E}[X^2] - \mathbb{E}[X]^2 = \frac{1}{n} - \frac{1}{n^2}\]</div>
+</div>
+<p>Recall that the linearity of expectation asserts that <span class="math notranslate nohighlight">\(\mathbb{E}[X + Y] = \mathbb{E}[X] + \mathbb{E}[Y]\)</span> for any <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span>. Unfortunately, we note that it is very much possible that <span class="math notranslate nohighlight">\(\mathbb{E}[XY] = \mathbb{E}[X]\mathbb{E}[Y]\)</span>. This is already evident from the alternative definition of <span class="math notranslate nohighlight">\(\mathrm{Var}(X)\)</span>. Indeed, if <span class="math notranslate nohighlight">\(\mathbb{E}[XY] = \mathbb{E}[X]\mathbb{E}[Y]\)</span> in general, then just by setting <span class="math notranslate nohighlight">\(X = Y\)</span> we have <span class="math notranslate nohighlight">\(\mathrm{Var}(X) = 0\)</span> for any <span class="math notranslate nohighlight">\(X\)</span>, a statement more than easy to disprove.</p>
+<section id="covariance">
+<h3>Covariance<a class="headerlink" href="#covariance" title="Permalink to this heading">#</a></h3>
+<p>The covariance between <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> is defined as follows.</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\mathrm{Cov}(X, Y) := \mathbb{E}[(X - \mathbb{E}[X])(Y - \mathbb{E}[Y])] = \mathbb{E}[XY] - \mathbb{E}[X]\mathbb{E}[Y]\]</div>
+</div>
+<p>where the second equality follows from a similar and slightly generalized calculation as the one used to derive <span class="math notranslate nohighlight">\(\mathrm{Var}(X) = \mathbb{E}[X^2] - \mathbb{E}[X]^2\)</span>. It follows that for every random variables <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> we have the equalities <span class="math notranslate nohighlight">\(\mathrm{Cov}(X, X) = \mathrm{Var}(X)\)</span> and <span class="math notranslate nohighlight">\(\mathrm{Cov}(X, Y) = \mathrm{Cov}(Y, X)\)</span>.</p>
+<p>For specific <span class="math notranslate nohighlight">\(x\in R_X\)</span> and <span class="math notranslate nohighlight">\(y\in R_Y\)</span>, if <span class="math notranslate nohighlight">\((x - \mathbb{E}[X])(y - \mathbb{E}[Y]) &gt; 0\)</span>, then <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> lie on the same side of the mean. Similarly, if <span class="math notranslate nohighlight">\((x - \mathbb{E}[X])(y - \mathbb{E}[Y]) &lt; 0\)</span>, then <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> lie on opposite sides of the mean. By taking the expectation over all <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>, the covariance can intuitively reveal the direction and degree of dependency between <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span>. When <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> are strongly dependent, the magnitude of <span class="math notranslate nohighlight">\(\mathrm{Cov}(X, Y)\)</span> should be large, and vice versa.</p>
+<p>For example, consider distributing <span class="math notranslate nohighlight">\(n\)</span> distinct balls into <span class="math notranslate nohighlight">\(n\)</span> distinct bins independently and uniformly at random, i.e. for every <span class="math notranslate nohighlight">\(i, j\)</span> we have <span class="math notranslate nohighlight">\(\Pr[\text{ball }i\text{ enters bin }j] = \frac{1}{n}\)</span>. Moreover, for every <span class="math notranslate nohighlight">\(i'\neq i\)</span> and every <span class="math notranslate nohighlight">\(j'\)</span> the events <span class="math notranslate nohighlight">\(\text{ball }i'\text{ enters bin }j'\)</span> and <span class="math notranslate nohighlight">\(\text{ball }i\text{ enters bin }j\)</span> are independent. Let <span class="math notranslate nohighlight">\(X_i\)</span> be indicating whether bin <span class="math notranslate nohighlight">\(i\)</span> is empty, then observe that</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\mathbb{E}[X_i] = \Pr[\text{bin }i\text{ is empty}] = \left(1 - \frac{1}{n}\right)^n\]</div>
+</div>
+<p>since every ball has to avoid entering bin <span class="math notranslate nohighlight">\(i\)</span>. Similarly, the random variable <span class="math notranslate nohighlight">\(X_iX_j\)</span> indicates the event that bin <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(j\)</span> are both empty, so when <span class="math notranslate nohighlight">\(i\neq j\)</span>, we have <span class="math notranslate nohighlight">\(\mathbb{E}[X_iX_j] = \left(1 - \frac{2}{n}\right)^n\)</span>. It follows that</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\mathrm{Cov}(X_i, X_j) = \mathbb{E}[X_iX_j] - \mathbb{E}[X_i]\mathbb{E}[X_j] = \left(1 - \frac{2}{n}\right)^n - \left(1 - \frac{1}{n}\right)^{2n}\]</div>
+</div>
+<p>Intuitively, knowing that bin <span class="math notranslate nohighlight">\(j\)</span> is empty reduces the chances for bin <span class="math notranslate nohighlight">\(i\)</span> to be empty, since the balls have to avoid bin <span class="math notranslate nohighlight">\(j\)</span> and thus have less bins to go to. Indeed, we see that</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\begin{split}1 - \frac{2}{n}\leq 1 - \frac{2}{n} + \frac{1}{n^2} = \left(1 - \frac{1}{n}\right)^2 &amp;\implies\left(1 - \frac{2}{n}\right)^n\leq\left(1 - \frac{1}{n}\right)^{2n} \\
+&amp;\implies\mathrm{Cov}(X_i, X_j)\leq 0\end{split}\]</div>
+</div>
+<p>This agrees with the fact that the values of <span class="math notranslate nohighlight">\(X_i\)</span> and <span class="math notranslate nohighlight">\(X_j\)</span> tend to move in opposite directions.</p>
+<p>It is therefore reasonable for us to conjecture that if <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> are independent, then <span class="math notranslate nohighlight">\(\mathrm{Cov}(X, Y) = 0\)</span>, i.e. <span class="math notranslate nohighlight">\(\mathbb{E}[XY] = \mathbb{E}[X]\mathbb{E}[Y]\)</span>. This can be proven via a manipulation of sums.</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbb{E}[XY] &amp;= \sum_{z\in R_{XY}} z\cdot\Pr[XY = z] \\
+&amp;= \sum_{x\in R_X}\sum_{y\in R_Y} xy\cdot\Pr[X = x\cap Y = y] \\
+&amp;= \sum_{x\in R_X}\sum_{y\in R_Y} xy\cdot\Pr[X = x]\Pr[Y = y] \\
+&amp;= \left(\sum_{x\in R_X} x\cdot\Pr[X = x]\right)\left(\sum_{y\in R_Y} y\cdot\Pr[Y = y]\right) \\
+&amp;= \mathbb{E}[X]\mathbb{E}[Y]\end{split}\]</div>
+</div>
+<p>It is important to note that the converse is not necessarily true, i.e. there exist dependent <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> such that <span class="math notranslate nohighlight">\(\mathrm{Cov}(X, Y) = 0\)</span>. For example, let <span class="math notranslate nohighlight">\(X\)</span> be uniformly distributed over <span class="math notranslate nohighlight">\(\{-1, 0, 1\}\)</span>. In other words, we have <span class="math notranslate nohighlight">\(\Pr[X = -1] = \Pr[X = 0] = \Pr[X = 1] = \frac{1}{3}\)</span>. Moreover, let <span class="math notranslate nohighlight">\(Y = X^2\)</span>. Note that <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> are certainly dependent, since for example observing <span class="math notranslate nohighlight">\(Y = 0\)</span> makes <span class="math notranslate nohighlight">\(X\)</span> deterministic. Note that <span class="math notranslate nohighlight">\(XY = X^3\)</span> is still uniformly distributed over <span class="math notranslate nohighlight">\(\{-1, 0, 1\}\)</span> and hence <span class="math notranslate nohighlight">\(\mathbb{E}[XY] = \mathbb{E}[X] = 0\)</span>, so <span class="math notranslate nohighlight">\(\mathbb{E}[XY] = \mathbb{E}[X]\mathbb{E}[Y]\)</span>.</p>
+<p>Moreover, observe that</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathrm{Var}(X + Y) &amp;= \mathbb{E}[(X + Y)^2] - \mathbb{E}[X + Y]^2 \\
+&amp;= \mathbb{E}[X^2 + 2XY + Y^2] - (\mathbb{E}[X] + \mathbb{E}[Y])^2 \\
+&amp;= \mathbb{E}[X^2] + 2\mathbb{E}[XY] + \mathbb{E}[Y^2] - \mathbb{E}[X]^2 - 2\mathbb{E}[X]\mathbb{E}[Y] - \mathbb{E}[Y]^2 \\
+&amp;= (\mathbb{E}[X^2] - \mathbb{E}[X]^2) + (\mathbb{E}[Y^2] - \mathbb{E}[Y]^2) + 2(\mathbb{E}[XY] - \mathbb{E}[X]\mathbb{E}[Y]) \\
+&amp;= \mathrm{Var}(X) + \mathrm{Var}(Y) + 2\mathrm{Cov}(X, Y)\end{split}\]</div>
+</div>
+<p>and so unlike expectation, in general there is no “linearity of variance” unless <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> are independent. One can imagine that a more generalized calculation shows that</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\mathrm{Var}\left(\sum_{i = 1}^n X_i\right) = \sum_{i = 1}^n\mathrm{Var}(X_i) + 2\sum_{i &lt; j}\mathrm{Cov}(X_i, X_j) = \sum_{i, j}\mathrm{Cov}(X_i, X_j)\]</div>
+</div>
+<p>and in particular if <span class="math notranslate nohighlight">\(X_1, X_2, \cdots, X_n\)</span> are pairwise independent, then <span class="math notranslate nohighlight">\(\mathrm{Var}\left(\sum_{i = 1}^n X_i\right) = \sum_{i = 1}^n\mathrm{Var}(X_i)\)</span>.</p>
+</section>
+</section>
+<section id="concentration-bounds">
+<h2>(*) Concentration Bounds<a class="headerlink" href="#concentration-bounds" title="Permalink to this heading">#</a></h2>
+<p>A very major application of probability theory in theoretical computer science is on establishing concentration bounds. Intuitively, a random variable is concentrated around its mean if it is very unlikely that it deviates too much from its mean. Say we need to design an algorithm that estimates some property of the input data (e.g. the input data is the binary string, and we want to estimate the number of <span class="math notranslate nohighlight">\(1\)</span>s in the string). If we can show that our algorithm output <span class="math notranslate nohighlight">\(\hat{X}\)</span> satisfies <span class="math notranslate nohighlight">\(\mathbb{E}[\hat{X}] = X\)</span> where <span class="math notranslate nohighlight">\(X\)</span> is the true value, then establishing a concentration bound on <span class="math notranslate nohighlight">\(\hat{X}\)</span> provides a theoretical guarantee that our algorithm produces a good estimate with high probability.</p>
+<p>In this section, we will see three main tools for establishing such concentration bounds.</p>
+<section id="markov-s-inequality">
+<h3>Markov’s Inequality<a class="headerlink" href="#markov-s-inequality" title="Permalink to this heading">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(X\)</span> be a non-negative random variable, i.e. for every <span class="math notranslate nohighlight">\(x\in R_X\)</span> we have <span class="math notranslate nohighlight">\(x\geq 0\)</span>. Moreover, let <span class="math notranslate nohighlight">\(\alpha &gt; 0\)</span>. By partitioning the sample space into whether <span class="math notranslate nohighlight">\(X\leq\alpha\mathbb{E}[X]\)</span>, we have</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\mathbb{E}[X] = \Pr[X\leq\alpha\mathbb{E}[X]]\cdot\mathbb{E}[X\mid X\leq\alpha\mathbb{E}[X]] + \Pr[X &gt; \alpha\mathbb{E}[X]]\cdot\mathbb{E}[X\mid X &gt; \alpha\mathbb{E}[X]]\]</div>
+</div>
+<p>Recall that probabilities are non-negative. Since <span class="math notranslate nohighlight">\(X\)</span> is non-negative, we have <span class="math notranslate nohighlight">\(\mathbb{E}[X\mid X\leq\alpha\mathbb{E}[X]]\geq 0\)</span> in particular. It follows that we can drop the first term and be no larger, i.e.</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\mathbb{E}[X]\geq\Pr[X &gt; \alpha\mathbb{E}[X]]\cdot\mathbb{E}[X\mid X &gt; \alpha\mathbb{E}[X]]\]</div>
+</div>
+<p>Intuitively, given <span class="math notranslate nohighlight">\(X &gt; \alpha\mathbb{E}[X]\)</span>, the mean of <span class="math notranslate nohighlight">\(X\)</span> must always be strictly larger than <span class="math notranslate nohighlight">\(\alpha\mathbb{E}[X]\)</span> as well, so</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\mathbb{E}[X] &gt; \Pr[X &gt; \alpha\mathbb{E}[X]]\cdot\alpha\mathbb{E}[X]\implies\Pr[X &gt; \alpha\mathbb{E}[X]] &lt; \frac{1}{\alpha}\]</div>
+</div>
+<p>This is known as Markov’s inequality.</p>
+<p>In our balls into bins example, let <span class="math notranslate nohighlight">\(Y_i\)</span> be indicating whether ball <span class="math notranslate nohighlight">\(i\)</span> enters bin <span class="math notranslate nohighlight">\(1\)</span>, so that the total number of balls in bin <span class="math notranslate nohighlight">\(1\)</span> is <span class="math notranslate nohighlight">\(Y := \sum_{i = 1}^n Y_i\)</span>. Note that <span class="math notranslate nohighlight">\(\mathbb{E}[Y_i] = \Pr[\text{ball }i\text{ enters bin }1] = \frac{1}{n}\)</span>, and so by the linearity of expectation we have</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\mathbb{E}[Y] = \sum_{i = 1}^n\mathbb{E}[Y_i] = 1\]</div>
+</div>
+<p>By Markov’s inequality, for any <span class="math notranslate nohighlight">\(\alpha\geq 0\)</span> we have <span class="math notranslate nohighlight">\(\Pr[Y &gt; \alpha] &lt; \frac{1}{\alpha}\)</span>. The more balls we want to enter bin <span class="math notranslate nohighlight">\(1\)</span>, there is a less chance that we will be happy.</p>
+</section>
+<section id="chebyshev-s-inequality">
+<h3>Chebyshev’s Inequality<a class="headerlink" href="#chebyshev-s-inequality" title="Permalink to this heading">#</a></h3>
+<p>For any random variable <span class="math notranslate nohighlight">\(X\)</span>, note that <span class="math notranslate nohighlight">\((X - \mathbb{E}[X])^2\)</span> is a non-negative random variable. Therefore, by Markov’s inequality, for any <span class="math notranslate nohighlight">\(\alpha\geq 0\)</span> we have</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;\Pr[(X - \mathbb{E}[X])^2 &gt; \alpha^2\mathbb{E}[(X - \mathbb{E}[X])^2]] &lt; \frac{1}{\alpha^2} \\
+&amp;\implies\Pr[(X - \mathbb{E}[X])^2 &gt; \alpha^2\mathrm{Var}(X)] &lt; \frac{1}{\alpha^2} \\
+&amp;\implies\Pr\left[| X - \mathbb{E}[X] | &gt; \alpha\sqrt{\mathrm{Var}(X)}\right] &lt; \frac{1}{\alpha^2}\end{split}\]</div>
+</div>
+<p>This is known as Chebyshev’s inequality. Via a change of variables, we can equivalently state the inequality as</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\Pr\left[| X - \mathbb{E}[X] | &gt; \alpha\right] &lt; \frac{\mathrm{Var}(X)}{\alpha^2}\]</div>
+</div>
+<p>Recall that in our balls into bins example, we let <span class="math notranslate nohighlight">\(X_i\)</span> be indicating whether bin <span class="math notranslate nohighlight">\(i\)</span> is empty, for every <span class="math notranslate nohighlight">\(i\neq j\)</span> we had <span class="math notranslate nohighlight">\(\mathbb{E}[X_i] = \left(1 - \frac{1}{n}\right)^n\)</span> and <span class="math notranslate nohighlight">\(\mathrm{Cov}(X_i, X_j)\leq 0\)</span>. We can moreover calculate that</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\mathrm{Var}(X_i) = \left(1 - \frac{1}{n}\right)^n - \left(1 - \frac{1}{n}\right)^{2n}\]</div>
+</div>
+<p>Now let <span class="math notranslate nohighlight">\(X := \sum_{i = 1}^n X_i\)</span> be the total number of empty bins. We show that <span class="math notranslate nohighlight">\(\Pr[| X - \mathbb{E}[X] | &gt; \alpha n]\)</span> is small for every <span class="math notranslate nohighlight">\(\alpha\geq 0\)</span> using Chebyshev’s inequality. To do so, we first need to compute <span class="math notranslate nohighlight">\(\mathrm{Var}(X)\)</span>.</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathrm{Var}(X) &amp;= \sum_{i = 1}^n\mathrm{Var}(X_i) + 2\sum_{i &lt; j}\mathrm{Cov}(X_i, X_j)\leq\sum_{i = 1}^n\mathrm{Var}(X_i) \\
+&amp;= n\left(\left(1 - \frac{1}{n}\right)^n - \left(1 - \frac{1}{n}\right)^{2n}\right)\end{split}\]</div>
+</div>
+<p>To simplify notations, denote <span class="math notranslate nohighlight">\(a := \left(1 - \frac{1}{n}\right)^n\)</span>, so that <span class="math notranslate nohighlight">\(\mathrm{Var}(X) = na(1 - a)\)</span>. Since <span class="math notranslate nohighlight">\(0\leq a\leq 1\)</span>, it follows that <span class="math notranslate nohighlight">\(a(1 - a)\leq\frac{1}{4}\)</span>, and so <span class="math notranslate nohighlight">\(\mathrm{Var}(X)\leq\frac{n}{4}\)</span>. Applying Chebyshev’s inequality, for any <span class="math notranslate nohighlight">\(\alpha\geq 0\)</span>, we have</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\Pr\left[| X - \mathbb{E}[X] | &gt; \alpha n\right] &lt; \frac{\mathrm{Var}(X)}{\alpha^2n^2}\leq\frac{n}{4\alpha^2n^2} = \frac{1}{4\alpha^2n}\]</div>
+</div>
+<p>so intuitively it is extremely unlikely that there are a lot more empty bins than expected, so much so that the probability is upper-bounded by a value that tends to <span class="math notranslate nohighlight">\(0\)</span> as <span class="math notranslate nohighlight">\(n\)</span> tends to infinity. The number of empty bins is really concentrated around its expectation.</p>
+<p>Chebyshev’s inequality is especially applicable when <span class="math notranslate nohighlight">\(X\)</span> can be written as a sum <span class="math notranslate nohighlight">\(X = \sum_{i = 1}^n X_i\)</span> for pairwise independent random variables <span class="math notranslate nohighlight">\(X_1, X_2, \cdots, X_n\)</span>. Since <span class="math notranslate nohighlight">\(\mathrm{Var}(X) = \sum_{i = 1}^n\mathrm{Var}(X_i)\)</span>, there is no need to worry about covariances, and the calculation of <span class="math notranslate nohighlight">\(\mathrm{Var}(X_i)\)</span> should be simpler than that the calculation of <span class="math notranslate nohighlight">\(\mathrm{Var}(X)\)</span> given that each <span class="math notranslate nohighlight">\(X_i\)</span> is an indicator random variable.</p>
+<p>In our balls into bins example, recall that <span class="math notranslate nohighlight">\(Y_i\)</span> indicates whether ball <span class="math notranslate nohighlight">\(i\)</span> enters bin <span class="math notranslate nohighlight">\(1\)</span>, and we had <span class="math notranslate nohighlight">\(\mathbb{E}[Y] = 1\)</span> where <span class="math notranslate nohighlight">\(Y\)</span> is the number of balls in bin <span class="math notranslate nohighlight">\(1\)</span>. Since <span class="math notranslate nohighlight">\(Y_1, Y_2, \cdots, Y_n\)</span> are pairwise independent, it is easy to apply Chebyshev’s inequality to establish a concentration bound on <span class="math notranslate nohighlight">\(Y\)</span>. In particular, we will aim to show that <span class="math notranslate nohighlight">\(\Pr[| Y - \mathbb{E}[Y] | \geq\alpha\mathbb{E}[Y]] = \Pr[| Y - \mathbb{E}[Y] | \geq\alpha]\)</span> is small. First, note that</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathrm{Var}(Y_i) &amp;= \frac{1}{n} - \frac{1}{n^2} \\
+\implies\mathrm{Var}(Y) &amp;= \sum_{i = 1}^n\mathrm{Var}(Y_i) = 1 - \frac{1}{n} &lt; 1\end{split}\]</div>
+</div>
+<p>and so by Chebyshev’s inequality, for any <span class="math notranslate nohighlight">\(\alpha\geq 0\)</span>, we have</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\Pr\left[| Y - \mathbb{E}[Y] | &gt; \alpha\right] &lt; \frac{\mathrm{Var}(Y)}{\alpha^2} &lt; \frac{1}{\alpha^2}\]</div>
+</div>
+<p>so again, it is extremely unlikely that there are a lot more (or a lot less) balls in bin <span class="math notranslate nohighlight">\(1\)</span> than expected.</p>
+<p>Note that <span class="math notranslate nohighlight">\(Y_1, Y_2, \cdots, Y_n\)</span> are not only pairwise independent, but also mutually independent and identically distributed indicator random variables. This specific structure allows us to establish even stronger concetration bounds on <span class="math notranslate nohighlight">\(Y\)</span> via the following tool.</p>
+</section>
+<section id="chernoff-bounds">
+<h3>Chernoff Bounds<a class="headerlink" href="#chernoff-bounds" title="Permalink to this heading">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(X := \sum_{i = 1}^n X_i\)</span> where <span class="math notranslate nohighlight">\(X_1, X_2, \cdots, X_n\)</span> are mutually independent and identically distributed (often abbreviated i.i.d.) random variables whose ranges are a subset of <span class="math notranslate nohighlight">\([0, 1]\)</span>. Moreover, denote <span class="math notranslate nohighlight">\(\mu := \mathbb{E}[X]\)</span>. The Chernoff bounds assert the following for any <span class="math notranslate nohighlight">\(\delta\geq 0\)</span>.</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\Pr[X\geq (1 + \delta)\mu]\leq\left(\frac{e^\delta}{(1 + \delta)^{1 + \delta}}\right)^\mu\]</div>
+</div>
+<p>Due to the complicated expression on the right hand side, the following looser upper bound is typically more helpful.</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\Pr[X\geq (1 + \delta)\mu]\leq e^{-\frac{\delta^2\mu}{2 + \delta}}\]</div>
+</div>
+<p>Moreover, for any <span class="math notranslate nohighlight">\(0\leq\delta &lt; 1\)</span>, we have</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\Pr[X\leq (1 - \delta)\mu]\leq\left(\frac{e^{-\delta}}{(1 - \delta)^{1 - \delta}}\right)^\mu\]</div>
+</div>
+<p>A looser bound but more helpful bound asserts that for any <span class="math notranslate nohighlight">\(0\leq\delta\leq 1\)</span>, we have</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\Pr[| X - \mu | \geq\delta\mu]\leq 2e^{-\frac{\delta^2\mu}{3}}\]</div>
+</div>
+<p>Lastly, it is also helpful that for any <span class="math notranslate nohighlight">\(\delta &gt; 1\)</span>, we have</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\Pr[X\geq (1 + \delta)\mu]\leq e^{-\frac{\delta\mu}{3}}\]</div>
+</div>
+<p>As we can see, the Chernoff bounds are not one inequality, but a family of inequalities helpful in various situations, and they all establish upper bounds that are exponential with respect to the expectation. We will not prove the Chernoff bounds here, but essentially it involves an application of Markov’s inequality (much like the proof of Chebyshev’s inequality) to arrive at the moment generating function of <span class="math notranslate nohighlight">\(X\)</span>, which can in turn be further bounded using the i.i.d. assumption to arrive at the Chernoff bounds.</p>
+<p>In our balls into bins example, we will establish a much sharper concentration bound on <span class="math notranslate nohighlight">\(Y\)</span>, i.e. the number of balls in bin <span class="math notranslate nohighlight">\(1\)</span> using the Chernoff bound that asserts that for any <span class="math notranslate nohighlight">\(0\leq\alpha\leq 1\)</span>, we have</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\Pr[| Y - \mu | \geq\alpha\mu]\leq 2e^{-\frac{\alpha^2\mu}{3}}\]</div>
+</div>
+<p>where <span class="math notranslate nohighlight">\(\mu := \mathbb{E}[Y] = 1\)</span>. This gives us</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\Pr[| Y - \mathbb{E}[Y] | \geq\alpha]\leq 2e^{-\frac{\alpha^2}{3}}\]</div>
+</div>
+<p>This is a much sharper bound compared to <span class="math notranslate nohighlight">\(\frac{1}{\alpha^2}\)</span>, in the sense that the dependence on <span class="math notranslate nohighlight">\(\alpha\)</span> is now exponential rather than polynomial.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>While we’re at it, let us also recall the union bound. Say there are now <span class="math notranslate nohighlight">\(\lceil 10n\ln n\rceil\)</span> balls to be distributed into <span class="math notranslate nohighlight">\(n\)</span> bins, and we are considered successful if and only if no bin is empty. We can therefore define the bad events <span class="math notranslate nohighlight">\(A_i\)</span> as the event that bin <span class="math notranslate nohighlight">\(i\)</span> is empty, and we are successful if and only if we avoid all these bad events. In other words, the error probability is</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\Pr\left[\bigcup_{i = 1}^n A_i\right]\leq\sum_{i = 1}^n\Pr[A_i]\]</div>
+</div>
+<p>where the inequality is the application of the union bound. Since there are now <span class="math notranslate nohighlight">\(\lceil 10n\ln n\rceil\)</span> balls, for every <span class="math notranslate nohighlight">\(i\)</span> we have</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\begin{split}\Pr[A_i] &amp;= \left(1 - \frac{1}{n}\right)^{\lceil 10n\ln n\rceil}\leq\left(1 - \frac{1}{n}\right)^{10n\ln n} \\
+&amp;\leq e^{-\frac{1}{n}\cdot 10n\ln n} = \frac{1}{n^{10}}\end{split}\]</div>
+</div>
+<p>where the second inequality uses the fact that <span class="math notranslate nohighlight">\(1 + x\leq e^x\)</span> for all <span class="math notranslate nohighlight">\(x\)</span>, as can be proven via the Taylor expansion of <span class="math notranslate nohighlight">\(e^x\)</span>. It then follows from the union bound that the error probability is</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\Pr\left[\bigcup_{i = 1}^n A_i\right]\leq n\cdot\frac{1}{n^{10}} = \frac{1}{n^9}\]</div>
+</div>
+<p>so intuitively it is extremely unlikely that we make an error.</p>
+</div>
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="../../contact.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Contact</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="../combinatorics/index.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Combinatorics</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2026, Chin Herng
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              <a class="muted-link fa-solid fa-envelope fa-2x" href="mailto:chinherng@u.nus.edu" aria-label="Email"></a>
+              <a class="muted-link fa-brands fa-solid fa-linkedin fa-2x" href="https://linkedin.com/in/chong-chin-herng" aria-label="LinkedIn"></a>
+              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/chin-herng" aria-label="GitHub"></a>
+              <a class="muted-link fa-brands fa-solid fa-instagram fa-2x" href="https://instagram.com/chongahzong" aria-label="Instagram"></a>
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Probability Theory</a><ul>
+<li><a class="reference internal" href="#sample-space-and-probability">Sample Space and Probability</a></li>
+<li><a class="reference internal" href="#event">Event</a><ul>
+<li><a class="reference internal" href="#law-of-total-probability">(*) Law of Total Probability</a></li>
+<li><a class="reference internal" href="#union-bound">(*) Union Bound</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#conditional-probability">Conditional Probability</a><ul>
+<li><a class="reference internal" href="#bayes-theorem">Bayes’ Theorem</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#independence">Independence</a><ul>
+<li><a class="reference internal" href="#mutual-independence">(*) Mutual Independence</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#random-variable">Random Variable</a><ul>
+<li><a class="reference internal" href="#indicator-random-variable">(*) Indicator Random Variable</a></li>
+<li><a class="reference internal" href="#id1">(*) Independence</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#expectation">Expectation</a><ul>
+<li><a class="reference internal" href="#linearity-of-expectation">Linearity of Expectation</a></li>
+<li><a class="reference internal" href="#conditional-expectation">(*) Conditional Expectation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#variance">(*) Variance</a><ul>
+<li><a class="reference internal" href="#covariance">Covariance</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#concentration-bounds">(*) Concentration Bounds</a><ul>
+<li><a class="reference internal" href="#markov-s-inequality">Markov’s Inequality</a></li>
+<li><a class="reference internal" href="#chebyshev-s-inequality">Chebyshev’s Inequality</a></li>
+<li><a class="reference internal" href="#chernoff-bounds">Chernoff Bounds</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=b3ba4146"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/scripts/furo.js?v=32e29ea5"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </body>
+</html>

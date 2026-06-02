@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Contact" href="../../contact.html" /><link rel="prev" title="Cardinality" href="../cardinality/index.html" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Probability Theory" href="../probability/index.html" /><link rel="prev" title="Cardinality" href="../cardinality/index.html" />
 
     <!-- Generated with Sphinx 7.1.2 and Furo 2023.09.10 -->
         <title>Combinatorics - Chin Herng</title>
@@ -169,6 +169,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../propositional-logic/index.html">Propositional Logic</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cardinality/index.html">Cardinality</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Combinatorics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../probability/index.html">Probability Theory</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact</a></li>
@@ -217,7 +218,7 @@
 <h2>Addition Principle<a class="headerlink" href="#addition-principle" title="Permalink to this heading">#</a></h2>
 <p>Intuitively, if the objects we are counting can be grouped into two types that are disjoint from one another, then our desired count is exactly the sum of the number of objects of each type.</p>
 <p>To formulate this idea in set-theoretic language, say we are trying to determine <span class="math notranslate nohighlight">\(| S | \)</span>. If we can in fact write <span class="math notranslate nohighlight">\(S = A\sqcup B\)</span> (where <span class="math notranslate nohighlight">\(\sqcup\)</span> denotes a disjoint union), then the addition principle allows us to assert the equality <span class="math notranslate nohighlight">\(| S | = | A | + | B | \)</span>.</p>
-<p>Crucially, note that even though we only stated the addition principle for two steps (or two sets), by an inductive argument the principle can be generalized to any finite number of steps (or sets).</p>
+<p>Crucially, note that even though we only stated the addition principle for two types (or two sets), by an inductive argument the principle can be generalized to any finite number of types (or sets).</p>
 <figure class="align-default" id="id1">
 <img alt="Illustrate of the addition principle." src="../../_images/ap.png" style="width: 300px;" />
 <figcaption>
@@ -457,6 +458,10 @@
 </section>
 <section id="gian-carlo-rota-s-twelvefold-way">
 <h3>Gian-Carlo Rota’s Twelvefold Way<a class="headerlink" href="#gian-carlo-rota-s-twelvefold-way" title="Permalink to this heading">#</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This subsection is out of the scope of CS1231S as of AY25/26 S1.</p>
+</div>
 <p>To state the distribution problems more formally, there is a set <span class="math notranslate nohighlight">\(X\)</span> of balls and a set <span class="math notranslate nohighlight">\(Y\)</span> of bins. A distribution problem is counting the number of equivalence classes in the set of functions from <span class="math notranslate nohighlight">\(X\)</span> to <span class="math notranslate nohighlight">\(Y\)</span>, with respect to some equivalence relation defined below.</p>
 <ul class="simple">
 <li><p>When the balls and bins are distinct, every function forms its own equivalence class.</p></li>
@@ -527,12 +532,12 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../../contact.html">
+          <a class="next-page" href="../probability/index.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Contact</div>
+                <div class="title">Probability Theory</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
