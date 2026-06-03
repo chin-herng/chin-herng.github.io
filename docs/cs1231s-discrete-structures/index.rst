@@ -7,7 +7,7 @@ CS1231S Discrete Structures
     propositional-logic/index
     cardinality/index
     combinatorics/index
-    probability/index
+    probability-theory/index
 
 .. note::
     The current set of CS1231S notes is incomplete. The following is a list of missing topics:
