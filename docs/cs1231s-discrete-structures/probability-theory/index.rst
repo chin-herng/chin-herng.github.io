@@ -517,7 +517,7 @@ and so by Chebyshev's inequality, for any $\alpha\geq 0$, we have
 
 so again, it is extremely unlikely that there are a lot more (or a lot less) balls in bin $1$ than expected.
 
-Note that $Y_1, Y_2, \cdots, Y_n$ are not only pairwise independent, but also mutually independent and identically distributed indicator random variables. This specific structure allows us to establish even stronger concetration bounds on $Y$ via the following tool.
+Note that $Y_1, Y_2, \cdots, Y_n$ are not only pairwise independent, but also mutually independent and identically distributed indicator random variables. This specific structure allows us to establish even stronger concentration bounds on $Y$ via the following tool.
 
 Chernoff Bounds
 ^^^^^^^^^^^^^^^
