@@ -8,7 +8,7 @@ My last semester as an undergraduate has come to an end, and I would say that it
 CS5275 The Algorithm Designer's Toolkit
 _______________________________________
 
-I took this in AY25/26 Sem 2 under Prof. Chang Yi-Jun. My final grade is *[TO BE ANNOUNCED]*.
+I took this in AY25/26 Sem 2 under Prof. Chang Yi-Jun. My final grade is A-.
 
 * Midterm (25%)
 * Problem Sets (35%)
