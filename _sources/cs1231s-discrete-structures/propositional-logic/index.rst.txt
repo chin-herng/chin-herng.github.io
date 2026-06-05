@@ -469,7 +469,7 @@ With these laws at hand, we now have two methods to go around establishing the l
   * Hereafter, we use $\text{true}$ and $\text{false}$ to denote some tautology and contradiction respectively. We can rightfully treat them as shorthands for some "legit" propositions like $p\vee\sim p$ and $p\wedge\sim p$.
   * The various techniques used to simplify propositions will be covered verbally as needed.
 
-We can similar establish logical nonequivalence between propositions. Two propositions are not logically equivalent whenever we can find a truth assignment to their statement variables such that the resulting truth values of the propositions are different.
+We can similarly establish logical nonequivalence between propositions. Two propositions are not logically equivalent whenever we can find a truth assignment to their statement variables such that the resulting truth values of the propositions are different.
 
 When $\phi$ and $\psi$ are logically equivalent, we can use a truth table and see that the columns of $\phi$ and $\psi$ are exactly the same. When they're not logically equivalent, we must be able to find a row in the truth table in which the columns of $\phi$ and $\psi$ mismatch.
 
@@ -723,7 +723,7 @@ An *argument form* is a sequence of propositions $\phi_1, \phi_2, \cdots , \phi_
   \therefore\psi
   \end{array}
 
-Moreover, if $\phi_1\wedge\phi_2\wedge\cdots\wedge\phi_k\rightarrow\psi$ is a tautology, we say that the argument form is *valid*.
+Moreover, whenever $\phi_1\wedge\phi_2\wedge\cdots\wedge\phi_k\rightarrow\psi$ is a tautology, we say that the argument form is *valid*.
 
 For example, here is an argument form with two premises $p\rightarrow q$ and $p$, followed by the conclusion $q$:
 
@@ -995,7 +995,7 @@ respectively. For example, to see that the argument form for converse error is i
 Arguments
 ^^^^^^^^^
 
-An *argument* is an argument form whose statement variables are substituted for actual statements. For example, here is an argument having the argument form mentioned above:
+An *argument* is an argument form whose statement variables are substituted for actual statements. For example, here is an argument having the modus ponens argument form:
 
 .. math::
 
@@ -1364,7 +1364,7 @@ Allow me to spend a few paragraphs explaining the intricacies of this seemingly 
 
   * As discussed above, the strategy is to suppose $p$, then try to deduce $q$. This is exactly what line 1 and line 5 are doing, so it is reasonable to write these two lines first (although we wouldn't know that the proof has 5 lines in advance).
   * Line 2 uses the definition of an even integer, which is true (because we literally defined it ourselves), along with modus ponens, to conclude that $n = 2k$ for some integer $k$. Usually, the application of rules of inference is only explicitly written down when we are arguing validity of argument forms, so it is omitted here.
-  * Arguably, the "trickiest" of the proof lies in line 3 and 4. One has to have gained the intuition to try to square $n$, then use basic algebra to discover that the resulting expression resembles an even number, thus filling in the gap between line 1 and 5.
+  * Arguably, the "trickiest" part of the proof lies in line 3 and 4. One has to have gained the intuition to try to square $n$, then use basic algebra to discover that the resulting expression resembles an even number, thus filling in the gap between line 1 and 5.
   * Notice our preliminary intuition in action in line 3: when $n$ is squared, not only did its factor of $2$ not disappear, it became $2^2 = 4$ which is of course even.
 
 * Each variable ($n$, $m$, $k$) must be defined properly. For example, in line 2, it is insufficient to only write $n = 2k$ and omit "for some integer $k$", since that phrase is supposed to introduce what $k$ is by specifying its range. Without the fact that $k$ is an integer, line 4 wouldn't work.
@@ -1396,17 +1396,17 @@ There is in fact a direct proof for the statement above:
 Proof by Contradiction
 ^^^^^^^^^^^^^^^^^^^^^^
 
-In a proof by contradiction (also known as *reductio ad impossible* if you want to sound fancy), the idea is to use the fact that the following argument form is valid:
+In a proof by contradiction (also known as *reductio ad absurdum* if you want to sound fancy), the idea is to use the fact that the following argument form is valid:
 
 .. math::
 
   \begin{array}{l}
-  \sim\phi\rightarrow F \\
+  \sim\phi\rightarrow\text{false} \\
   \hline
   \therefore\phi
   \end{array}
 
-where recall that $F$ is some contradiction. Thus, the strategy to prove a statement $p$ is to prove $\sim p\rightarrow F$ instead, since once the truth of $\sim p\rightarrow F$ is established, we can apply the valid argument form above to conclude $p$.
+where $\text{false}$ is some contradiction. Thus, the strategy to prove a statement $p$ is to prove $\sim p\rightarrow\text{false}$ instead, since once the truth of $\sim p\rightarrow\text{false}$ is established, we can apply the valid argument form above to conclude $p$.
 
 The most classic example of a proof by contradiction is the proof of the irrationality of $\sqrt{2}$:
 
@@ -1420,7 +1420,7 @@ The most classic example of a proof by contradiction is the proof of the irratio
 
 We will not focus too much on the intuition behind this proof. After all, the discovery of this proof by Hippasus was a shock to the Pythagorean school of mathematics insisting that all numbers are rational, so much so that Pythagoras allegedly `drowned him at a sea afterwards <https://en.wikipedia.org/wiki/Hippasus#Irrational_numbers>`_. This goes to show the elusiveness of this result.
 
-More importantly, note the structure of the proof: recall that our goal is to prove $\sim p\rightarrow F$. To do so, we work under the case where the hypothesis $\sim p$ is true (and hence write down line 1) and try to arrive at some contradiction. The contradiction in this case is $q\wedge\sim q$, where $q$ is "$\frac{p}{q}$ cannot be reduced further".
+More importantly, note the structure of the proof: recall that our goal is to prove $\sim p\rightarrow\text{false}$. To do so, we work under the premise that $\sim p$ is true (and hence write down line 1) and try to arrive at some contradiction. The contradiction in this case is $q\wedge\sim q$, where $q$ is "$\frac{p}{q}$ cannot be reduced further".
 
 If we were to prove $p\rightarrow q$ by contradiction, we should first suppose that $p\wedge\sim q$, since that is the negation of our goal. A common mistake is to suppose $\sim q$, then arrive at $\sim p$, then incorrectly claim that this is a contradiction. This is incorrect because $p$ was never part of the supposition. Instead, such students have produced a proof by contraposition. Note that a proof by contradiction for $p\rightarrow q$ need not contradict $p$ in the proof, and could instead contradict something else, so not every proof by contradiction can be translated into a proof by contraposition.
 

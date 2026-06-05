@@ -106,6 +106,14 @@ Effectiveness
     - Course
     - Score
     - Nomination
+  * - AY2025/26 S2
+    - CS3230 Design and Analysis of Algorithms
+    - 4.9/5.0
+    - 8/22 (36%)
+  * - AY2025/26 S2
+    - CS2040S Data Structures and Algorithms
+    - 4.5/5.0
+    - 3/14 (21%)
   * - AY2025/26 S1
     - CS2040S Data Structures and Algorithms
     - 4.8/5.0

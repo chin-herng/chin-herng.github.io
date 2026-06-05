@@ -817,7 +817,7 @@ Answer<div class="sd-summary-down docutils">
 <li><p class="sd-card-text">The various techniques used to simplify propositions will be covered verbally as needed.</p></li>
 </ul>
 </div>
-</details><p>We can similar establish logical nonequivalence between propositions. Two propositions are not logically equivalent whenever we can find a truth assignment to their statement variables such that the resulting truth values of the propositions are different.</p>
+</details><p>We can similarly establish logical nonequivalence between propositions. Two propositions are not logically equivalent whenever we can find a truth assignment to their statement variables such that the resulting truth values of the propositions are different.</p>
 <p>When <span class="math notranslate nohighlight">\(\phi\)</span> and <span class="math notranslate nohighlight">\(\psi\)</span> are logically equivalent, we can use a truth table and see that the columns of <span class="math notranslate nohighlight">\(\phi\)</span> and <span class="math notranslate nohighlight">\(\psi\)</span> are exactly the same. When they’re not logically equivalent, we must be able to find a row in the truth table in which the columns of <span class="math notranslate nohighlight">\(\phi\)</span> and <span class="math notranslate nohighlight">\(\psi\)</span> mismatch.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -1151,7 +1151,7 @@ Answer<div class="sd-summary-down docutils">
 \therefore\psi
 \end{array}\end{split}\]</div>
 </div>
-<p>Moreover, if <span class="math notranslate nohighlight">\(\phi_1\wedge\phi_2\wedge\cdots\wedge\phi_k\rightarrow\psi\)</span> is a tautology, we say that the argument form is <em>valid</em>.</p>
+<p>Moreover, whenever <span class="math notranslate nohighlight">\(\phi_1\wedge\phi_2\wedge\cdots\wedge\phi_k\rightarrow\psi\)</span> is a tautology, we say that the argument form is <em>valid</em>.</p>
 <p>For example, here is an argument form with two premises <span class="math notranslate nohighlight">\(p\rightarrow q\)</span> and <span class="math notranslate nohighlight">\(p\)</span>, followed by the conclusion <span class="math notranslate nohighlight">\(q\)</span>:</p>
 <div class="math-wrapper docutils container">
 <div class="math notranslate nohighlight">
@@ -1468,7 +1468,7 @@ Answer<div class="sd-summary-down docutils">
 </details></section>
 <section id="arguments">
 <h3>Arguments<a class="headerlink" href="#arguments" title="Permalink to this heading">#</a></h3>
-<p>An <em>argument</em> is an argument form whose statement variables are substituted for actual statements. For example, here is an argument having the argument form mentioned above:</p>
+<p>An <em>argument</em> is an argument form whose statement variables are substituted for actual statements. For example, here is an argument having the modus ponens argument form:</p>
 <div class="math-wrapper docutils container">
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{array}{l}
@@ -1896,7 +1896,7 @@ Answer<div class="sd-summary-down docutils">
 <ul>
 <li><p>As discussed above, the strategy is to suppose <span class="math notranslate nohighlight">\(p\)</span>, then try to deduce <span class="math notranslate nohighlight">\(q\)</span>. This is exactly what line 1 and line 5 are doing, so it is reasonable to write these two lines first (although we wouldn’t know that the proof has 5 lines in advance).</p></li>
 <li><p>Line 2 uses the definition of an even integer, which is true (because we literally defined it ourselves), along with modus ponens, to conclude that <span class="math notranslate nohighlight">\(n = 2k\)</span> for some integer <span class="math notranslate nohighlight">\(k\)</span>. Usually, the application of rules of inference is only explicitly written down when we are arguing validity of argument forms, so it is omitted here.</p></li>
-<li><p>Arguably, the “trickiest” of the proof lies in line 3 and 4. One has to have gained the intuition to try to square <span class="math notranslate nohighlight">\(n\)</span>, then use basic algebra to discover that the resulting expression resembles an even number, thus filling in the gap between line 1 and 5.</p></li>
+<li><p>Arguably, the “trickiest” part of the proof lies in line 3 and 4. One has to have gained the intuition to try to square <span class="math notranslate nohighlight">\(n\)</span>, then use basic algebra to discover that the resulting expression resembles an even number, thus filling in the gap between line 1 and 5.</p></li>
 <li><p>Notice our preliminary intuition in action in line 3: when <span class="math notranslate nohighlight">\(n\)</span> is squared, not only did its factor of <span class="math notranslate nohighlight">\(2\)</span> not disappear, it became <span class="math notranslate nohighlight">\(2^2 = 4\)</span> which is of course even.</p></li>
 </ul>
 </li>
@@ -1927,16 +1927,16 @@ Answer<div class="sd-summary-down docutils">
 </section>
 <section id="proof-by-contradiction">
 <h3>Proof by Contradiction<a class="headerlink" href="#proof-by-contradiction" title="Permalink to this heading">#</a></h3>
-<p>In a proof by contradiction (also known as <em>reductio ad impossible</em> if you want to sound fancy), the idea is to use the fact that the following argument form is valid:</p>
+<p>In a proof by contradiction (also known as <em>reductio ad absurdum</em> if you want to sound fancy), the idea is to use the fact that the following argument form is valid:</p>
 <div class="math-wrapper docutils container">
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{array}{l}
-\sim\phi\rightarrow F \\
+\sim\phi\rightarrow\text{false} \\
 \hline
 \therefore\phi
 \end{array}\end{split}\]</div>
 </div>
-<p>where recall that <span class="math notranslate nohighlight">\(F\)</span> is some contradiction. Thus, the strategy to prove a statement <span class="math notranslate nohighlight">\(p\)</span> is to prove <span class="math notranslate nohighlight">\(\sim p\rightarrow F\)</span> instead, since once the truth of <span class="math notranslate nohighlight">\(\sim p\rightarrow F\)</span> is established, we can apply the valid argument form above to conclude <span class="math notranslate nohighlight">\(p\)</span>.</p>
+<p>where <span class="math notranslate nohighlight">\(\text{false}\)</span> is some contradiction. Thus, the strategy to prove a statement <span class="math notranslate nohighlight">\(p\)</span> is to prove <span class="math notranslate nohighlight">\(\sim p\rightarrow\text{false}\)</span> instead, since once the truth of <span class="math notranslate nohighlight">\(\sim p\rightarrow\text{false}\)</span> is established, we can apply the valid argument form above to conclude <span class="math notranslate nohighlight">\(p\)</span>.</p>
 <p>The most classic example of a proof by contradiction is the proof of the irrationality of <span class="math notranslate nohighlight">\(\sqrt{2}\)</span>:</p>
 <ol class="arabic simple">
 <li><p>Suppose <span class="math notranslate nohighlight">\(\sqrt{2}\)</span> is not irrational, then it is rational.</p></li>
@@ -1948,7 +1948,7 @@ Answer<div class="sd-summary-down docutils">
 <li><p>Since <span class="math notranslate nohighlight">\(p\)</span> is even and <span class="math notranslate nohighlight">\(q\)</span> is even, the fraction <span class="math notranslate nohighlight">\(\frac{p}{q}\)</span> can be reduced further, contradicting line 2, so <span class="math notranslate nohighlight">\(\sqrt{2}\)</span> has to be irrational.</p></li>
 </ol>
 <p>We will not focus too much on the intuition behind this proof. After all, the discovery of this proof by Hippasus was a shock to the Pythagorean school of mathematics insisting that all numbers are rational, so much so that Pythagoras allegedly <a class="reference external" href="https://en.wikipedia.org/wiki/Hippasus#Irrational_numbers">drowned him at a sea afterwards</a>. This goes to show the elusiveness of this result.</p>
-<p>More importantly, note the structure of the proof: recall that our goal is to prove <span class="math notranslate nohighlight">\(\sim p\rightarrow F\)</span>. To do so, we work under the case where the hypothesis <span class="math notranslate nohighlight">\(\sim p\)</span> is true (and hence write down line 1) and try to arrive at some contradiction. The contradiction in this case is <span class="math notranslate nohighlight">\(q\wedge\sim q\)</span>, where <span class="math notranslate nohighlight">\(q\)</span> is “<span class="math notranslate nohighlight">\(\frac{p}{q}\)</span> cannot be reduced further”.</p>
+<p>More importantly, note the structure of the proof: recall that our goal is to prove <span class="math notranslate nohighlight">\(\sim p\rightarrow\text{false}\)</span>. To do so, we work under the premise that <span class="math notranslate nohighlight">\(\sim p\)</span> is true (and hence write down line 1) and try to arrive at some contradiction. The contradiction in this case is <span class="math notranslate nohighlight">\(q\wedge\sim q\)</span>, where <span class="math notranslate nohighlight">\(q\)</span> is “<span class="math notranslate nohighlight">\(\frac{p}{q}\)</span> cannot be reduced further”.</p>
 <p>If we were to prove <span class="math notranslate nohighlight">\(p\rightarrow q\)</span> by contradiction, we should first suppose that <span class="math notranslate nohighlight">\(p\wedge\sim q\)</span>, since that is the negation of our goal. A common mistake is to suppose <span class="math notranslate nohighlight">\(\sim q\)</span>, then arrive at <span class="math notranslate nohighlight">\(\sim p\)</span>, then incorrectly claim that this is a contradiction. This is incorrect because <span class="math notranslate nohighlight">\(p\)</span> was never part of the supposition. Instead, such students have produced a proof by contraposition. Note that a proof by contradiction for <span class="math notranslate nohighlight">\(p\rightarrow q\)</span> need not contradict <span class="math notranslate nohighlight">\(p\)</span> in the proof, and could instead contradict something else, so not every proof by contradiction can be translated into a proof by contraposition.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
