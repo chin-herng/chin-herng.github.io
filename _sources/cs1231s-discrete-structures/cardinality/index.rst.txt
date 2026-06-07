@@ -68,6 +68,10 @@ We shall list out the elements of $\mathbb{Z}^+\times\mathbb{Z}^+$ in the sequen
 
 We now have a sequence such that every entry is in $\mathbb{Z}^+\times\mathbb{Z}^+$, and every pair in $\mathbb{Z}^+\times\mathbb{Z}^+$ appears exactly once, so we have shown that $\mathbb{Z}^+\times\mathbb{Z}^+$ is countably infinite. In the function view, we have constructed the bijection $f : \mathbb{Z}^+\rightarrow\mathbb{Z}^+\times\mathbb{Z}^+$ such that $f(1) = (1, 1)$, $f(2) = (1, 2)$, $f(3) = (2, 1)$ and so on. It is also possible to specify $f$ as a singe-line formula, but for our purposes it suffices to know that this can be done without actually doing it.
 
+.. dropdown:: Exercise
+
+    Show that $\mathbb{Z}$ is countably infinite.
+
 It is usually easier to show that a set is infinite than to show that it is countable. Hence, to argue that a set is countably infinite, most of the time we really only need to focus on the latter. For this reason, the following result is often helpful.
 
 .. admonition:: Theorem: Surjection Implies Countability
@@ -80,7 +84,7 @@ So, if we want to use the sequence argument to argue that a given set $A$ is cou
 
 .. dropdown:: Exercise
 
-    Show that $\mathbb{Z}$ is countably infinite.
+    Show that $\mathbb{Q}$ is countably infinite.
 
 Now we are in a good position to analyze $A\cup B$, given countably infinite $A$ and $B$. In fact, we claim that $A\cup B$ will also be countably infinite. The infinity is clear, and the countability can be demonstrated by showing a sequence in which every element of $A\cup B$ appears.
 
